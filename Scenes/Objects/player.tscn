@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://be1cu1y3l22ka"]
+
+[ext_resource type="Script" uid="uid://bgmowhbppdrbv" path="res://Scripts/PlayerController.gd" id="1_4qkr3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhgpk"]
+size = Vector3(1, 2.8476257, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bhgpk"]
+
+[node name="Player" type="CharacterBody3D" unique_id=2044129607]
+script = ExtResource("1_4qkr3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1122739137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.010818481, 0)
+shape = SubResource("BoxShape3D_bhgpk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=131842200]
+transform = Transform3D(1, 0, 0, 0, 2.8000002, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_bhgpk")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=241818227]
+transform = Transform3D(-0.99999785, 0, 0.0020770137, 0, 1, 0, -0.0020770137, 0, -0.99999785, 0, 1, 0.45482665)
