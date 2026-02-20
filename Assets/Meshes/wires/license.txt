@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wires
+* source:	https://sketchfab.com/3d-models/wires-27c8e5c8188543a780e38fc04b93ec26
+* author:	kirbinator505_ (https://sketchfab.com/kirbinator505_)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wires" (https://sketchfab.com/3d-models/wires-27c8e5c8188543a780e38fc04b93ec26) by kirbinator505_ (https://sketchfab.com/kirbinator505_) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
