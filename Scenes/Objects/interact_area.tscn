@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bf30ipioda2nk" path="res://Scripts/dialog_interactable.gd" id="1_7xej4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_igwwj"]
-radius = 11.433495
+radius = 19.707127
 
 [node name="InteractArea" type="Area3D" unique_id=461385779]
 script = ExtResource("1_7xej4")
