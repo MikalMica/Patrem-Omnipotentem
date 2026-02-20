@@ -1,12 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://fhuk0vhv67eb"]
+[gd_scene format=3 uid="uid://fhuk0vhv67eb"]
 
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
+[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/come_cables.tscn" id="3_w31q3"]
+[ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
 
-[node name="MainScene" type="Node3D"]
+[node name="MainScene" type="Node3D" unique_id=1885870270]
 
-[node name="Floor_Placeholder" parent="." instance=ExtResource("1_vnmfx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+[node name="Floor_Placeholder" parent="." unique_id=227886876 instance=ExtResource("1_vnmfx")]
+transform = Transform3D(6.555977, 0, 0, 0, 6.555977, 0, 0, 0, 6.555977, 0, 0, -1)
 
-[node name="Player" parent="." instance=ExtResource("2_ulksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -3)
+[node name="Player" parent="." unique_id=1268550398 instance=ExtResource("2_ulksl")]
+transform = Transform3D(2.8840814, 0, 0, 0, 2.8840814, 0, 0, 0, 2.8840814, -1, 4.931196, -34.042633)
+speed = 100.0
+
+[node name="come_cables" parent="." unique_id=1354543446 node_paths=PackedStringArray("player") instance=ExtResource("3_w31q3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2423525, 6.3030586, 13.308527)
+player = NodePath("../Player")
+
+[node name="InteractArea" parent="come_cables" index="3" unique_id=461385779 node_paths=PackedStringArray("interact_canvas")]
+interact_canvas = NodePath("../../InteractUI")
+
+[node name="InteractUI" parent="." unique_id=1514035945 instance=ExtResource("4_jm5ki")]
+
+[editable path="come_cables"]
+[editable path="come_cables/InteractArea"]

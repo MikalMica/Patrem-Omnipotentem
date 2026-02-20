@@ -1,29 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://be1cu1y3l22ka"]
+[gd_scene format=3 uid="uid://be1cu1y3l22ka"]
 
-[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_4qkr3"]
-[ext_resource type="Script" path="res://Scripts/camera_3d.gd" id="2_074ri"]
+[ext_resource type="Script" uid="uid://bgmowhbppdrbv" path="res://Scripts/PlayerController.gd" id="1_4qkr3"]
+[ext_resource type="Script" uid="uid://cwbbc1ru6ed5y" path="res://Scripts/camera_3d.gd" id="2_074ri"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bhgpk"]
 size = Vector3(1, 2.84763, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bhgpk"]
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" unique_id=597419909]
 script = ExtResource("1_4qkr3")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=959522936]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0108185, 0)
 shape = SubResource("BoxShape3D_bhgpk")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1215534163]
 transform = Transform3D(1, 0, 0, 0, 2.8, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_bhgpk")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2099334786]
 transform = Transform3D(-0.999998, 0, 0.00207701, 0, 1, 0, -0.00207701, 0, -0.999998, 0, 1, 0.454827)
 script = ExtResource("2_074ri")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D" unique_id=1411570669]
 
 [connection signal="startMoving" from="." to="Camera3D" method="_startMoving"]
 [connection signal="stopMoving" from="." to="Camera3D" method="_stopMoving"]
