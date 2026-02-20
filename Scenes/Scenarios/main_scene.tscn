@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
 [ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="3_w31q3"]
 [ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
+[ext_resource type="PackedScene" uid="uid://dsq72w1pdelyg" path="res://Assets/Meshes/wires/scene.gltf" id="5_eelup"]
 
 [sub_resource type="Environment" id="Environment_jm5ki"]
 background_energy_multiplier = 0.3
@@ -32,6 +33,9 @@ environment = SubResource("Environment_jm5ki")
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=126211590]
 transform = Transform3D(1, 0, 0, 0, 0.037446085, 0.9992987, 0, -0.9992987, 0.037446085, 0, 21.907537, 1.5541878)
 spot_range = 39.677555
+
+[node name="Sketchfab_Scene" parent="." unique_id=1404806417 instance=ExtResource("5_eelup")]
+transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 3.662481, 0.9844904, -8.221584)
 
 [editable path="come_cables"]
 [editable path="come_cables/InteractArea"]
