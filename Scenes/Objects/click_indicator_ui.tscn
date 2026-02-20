@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cjfmlxijf5vw3"]
+
+[ext_resource type="Script" uid="uid://b4uh5b0nulk3d" path="res://Scripts/text_fade_in.gd" id="1_q7427"]
+
+[sub_resource type="Animation" id="Animation_oosiq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sw753"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6lox4"]
+_data = {
+&"RESET": SubResource("Animation_oosiq"),
+&"fade_in": SubResource("Animation_sw753")
+}
+
+[node name="InteractUI" type="CanvasLayer" unique_id=1514035945 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1_q7427")
+animation_player = NodePath("Control/RichTextLabel/AnimationPlayer")
+
+[node name="Control" type="Control" parent="." unique_id=1246801596]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1373918540]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.94000006
+anchor_right = 1.0
+anchor_bottom = 0.94000006
+offset_left = -353.0
+offset_top = -34.120056
+offset_bottom = -0.12005615
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 23
+text = "Left click to interact..."
+fit_content = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/RichTextLabel" unique_id=334548409]
+libraries/ = SubResource("AnimationLibrary_6lox4")

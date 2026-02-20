@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bfo4gsietvbv7" path="res://Scripts/billboarding.gd" id="1_fsmn8"]
 [ext_resource type="Texture2D" uid="uid://c2v1cmyu7nu6h" path="res://Assets/Sprites/ComeCables/Comecables.png" id="1_m6sju"]
 [ext_resource type="Texture2D" uid="uid://3o5h4jfshbyp" path="res://Assets/Sprites/ComeCables/ComecablesOutline.png" id="2_wnia6"]
+[ext_resource type="PackedScene" uid="uid://cjbmxvjw7qqpp" path="res://Scenes/Objects/interact_area.tscn" id="4_h6nuc"]
+[ext_resource type="Resource" uid="uid://dvgagihqd5wgv" path="res://Assets/Dialogues/lesbiana.dialogue" id="5_650sn"]
 
 [sub_resource type="Animation" id="Animation_tfl54"]
 resource_name = "Idle"
@@ -82,10 +84,17 @@ region_rect = Rect2(281.373, 0, 1301.63, 1369)
 
 [node name="outline" type="Sprite3D" parent="body" unique_id=1896000513]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43301, 0, -0.386297)
+visible = false
 texture = ExtResource("2_wnia6")
 
 [node name="mandible" type="Sprite3D" parent="." unique_id=1014832407]
-transform = Transform3D(0.957702, -0.28776184, 0, 0.28776184, 0.957702, 0, 0, 0, 1, -0.586587, 1.82702, 0.232691)
+transform = Transform3D(0.9577019, -0.2877618, 0, 0.2877618, 0.9577019, 0, 0, 0, 1, -0.586587, 1.82702, 0.232691)
 texture = ExtResource("1_m6sju")
 region_enabled = true
 region_rect = Rect2(39, 938, 201, 320)
+
+[node name="InteractArea" parent="." unique_id=461385779 node_paths=PackedStringArray("outline") instance=ExtResource("4_h6nuc")]
+outline = NodePath("../body/outline")
+dialog = ExtResource("5_650sn")
+
+[editable path="InteractArea"]
