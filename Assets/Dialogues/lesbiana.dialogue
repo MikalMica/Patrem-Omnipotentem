@@ -1,11 +1,18 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+La Ingeniera: El Padre recompensa con el castigo y castiga con el trabajo. Mi trabajo es mi castigo, y a través del trabajo siento el amor del Padre.
+La Ingeniera: Siento su gratitud y su energía. Siento la electricidad que le alimenta en el pelo levantado de mi nuca. Siento su falta de sentir, su castigo, su dolor que no siente y su enfado. 
+La Ingeniera: Mi castigo es no ser uno con Él, el eterno trabajo de cuidarle. 
+La Ingeniera: Tal vez, en un mundo perfecto, cuando el mundo empiece a dejar de ser y sea solo el Padre, tal vez entonces abra sus brazos a mi sucio cuerpo, tal vez me libere de mi triste carne. 
+La Ingeniera: Hasta entonces, el trabajo me mece y los cables del Padre me reclaman.
+[pulse] Et haereticus cogitat... [/pulse]
+- <<No entiende que su decisión es suya.>>
+- <<Su discurso está lleno de falacias.>>
+La Ingeniera: Un [i]vitium[/i] ha escapado de su muerte y de su tumba. Y osa contradecirme. ¿Anhelas al Padre, acaso? ¿Le sientes en tu corazón?
+[pulse] Et haereticus cogitat... [/pulse]
+- <<En tu corazón no cabe nada.>>
+	La Ingeniera: ¿Y qué hay en tu corazón, que ocupa más que el Padre?
+- <<Tu corazón está completamente vacío.>>
+	La Ingeniera: ¿Vacío? ¿Es tu tara, acaso, el agujero que hace que el Padre escape de tu corazón?
+La Ingeniera: En este estado, no mereces sentir el amor del Padre. No mereces el cariño ni el castigo. No más que yo.
+
 => END
