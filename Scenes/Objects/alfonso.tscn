@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ck3dnnn5jld3w"]
+
+[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="1_rhcmo"]
+[ext_resource type="Texture2D" uid="uid://0whuoblqtb1n" path="res://Assets/Sprites/Alfonso/Alfonso.png" id="2_1y3lj"]
+
+[node name="alfonso" unique_id=840245654 instance=ExtResource("1_rhcmo")]
+
+[node name="body" parent="." index="1" unique_id=1387285422]
+texture = ExtResource("2_1y3lj")
+region_rect = Rect2(445, 100, 1458, 2199)
+
+[editable path="InteractArea"]

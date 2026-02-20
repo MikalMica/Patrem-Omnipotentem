@@ -10,11 +10,17 @@ signal stopMoving
 @export var min_rotation := -50
 @export var max_rotation := 50
 
+var is_enabled := true
+
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	rotation.x = 0
+	DialogueManager.dialogue_started.connect(func(dialogue) -> void: is_enabled = false)
+	DialogueManager.dialogue_ended.connect(func(dialogue) -> void: is_enabled = true)
 
 func _input(event: InputEvent) -> void:
+	if not is_enabled: return
+	
 	if event is InputEventMouseMotion:
 		event = event as InputEventMouseMotion
 		rotate_y(-event.relative.x * horizontal_sensitivity)
@@ -27,6 +33,8 @@ func _input(event: InputEvent) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _physics_process(delta: float) -> void:
+	if not is_enabled: return
+	
 	var dir: Vector3 
 	dir.z = Input.get_axis("Backward", "Forward")
 	dir.x = Input.get_axis("Right", "Left")
