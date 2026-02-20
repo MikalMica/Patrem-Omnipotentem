@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
-[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/come_cables.tscn" id="3_w31q3"]
+[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="3_w31q3"]
 [ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
 
 [node name="MainScene" type="Node3D" unique_id=1885870270]
@@ -18,7 +18,10 @@ speed = 100.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2423525, 6.3030586, 13.308527)
 player = NodePath("../Player")
 
-[node name="InteractArea" parent="come_cables" index="3" unique_id=461385779 node_paths=PackedStringArray("interact_canvas")]
+[node name="animation" parent="come_cables" index="0"]
+autoplay = &"Idle"
+
+[node name="InteractArea" parent="come_cables" index="2" node_paths=PackedStringArray("interact_canvas")]
 interact_canvas = NodePath("../../InteractUI")
 
 [node name="InteractUI" parent="." unique_id=1514035945 instance=ExtResource("4_jm5ki")]
