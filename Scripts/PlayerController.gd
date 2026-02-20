@@ -11,10 +11,9 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		var ev: InputEventMouseMotion
-		ev = event
+		event = event as InputEventMouseMotion
 		
-		rotate_y(-ev.relative.x * sensibility)
+		rotate_y(-event.relative.x * sensibility)
 	elif event.is_action_pressed("Moving"):
 		startMoving.emit()
 	elif event.is_action_released("Moving"):
