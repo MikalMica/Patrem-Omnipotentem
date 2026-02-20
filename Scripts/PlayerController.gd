@@ -19,6 +19,8 @@ func _input(event: InputEvent) -> void:
 		startMoving.emit()
 	elif event.is_action_released("Moving"):
 		stopMoving.emit()
+	elif event.is_action_pressed("Escape"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _physics_process(delta: float) -> void:
 	var dir: Vector3 
