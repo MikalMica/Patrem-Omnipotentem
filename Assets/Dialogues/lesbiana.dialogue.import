@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dvgagihqd5wgv"
+path="res://.godot/imported/lesbiana.dialogue-292d0bfe95eeaa02ca84dd1fadf1e19a.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/lesbiana.dialogue"
+dest_files=["res://.godot/imported/lesbiana.dialogue-292d0bfe95eeaa02ca84dd1fadf1e19a.tres"]
+
+[params]
+
+defaults=true
