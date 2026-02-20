@@ -19,9 +19,6 @@ func _input(event: InputEvent) -> void:
 		event = event as InputEventMouseMotion
 		rotate_y(-event.relative.x * horizontal_sensitivity)
 		
-		rotate_object_local(Vector3.RIGHT, event.relative.y * vertical_sensitivity)
-		rotation.x = clamp(rotation.x, deg_to_rad(min_rotation), deg_to_rad(max_rotation))
-		
 	elif event.is_action_pressed("Moving"):
 		startMoving.emit()
 	elif event.is_action_released("Moving"):
