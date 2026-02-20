@@ -1,8 +1,7 @@
 extends Area3D
 
-@export var sprite : Sprite3D 
-@export var normal_image : Texture2D
-@export var affected_image : Texture2D
+@export var outline : Sprite3D 
+
 
 @export var dialog : DialogueResource
 	
@@ -16,6 +15,5 @@ func on_body_change(body : Node3D, entered : bool) -> void:
 	if(body is not CharacterBody3D): 
 		pass
 		
-		
 	player_is_near = entered
-	sprite.texture = affected_image if entered else normal_image
+	outline.visible = entered

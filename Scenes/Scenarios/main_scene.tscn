@@ -2,11 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
+[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/come_cables.tscn" id="3_w31q3"]
 
 [node name="MainScene" type="Node3D" unique_id=1902521260]
 
 [node name="Floor_Placeholder" parent="." unique_id=1513593116 instance=ExtResource("1_vnmfx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+transform = Transform3D(4.1375494, 0, 0, 0, 4.1375494, 0, 0, 0, 4.1375494, 0, 0, -1)
 
 [node name="Player" parent="." unique_id=2044129607 instance=ExtResource("2_ulksl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -3)
+transform = Transform3D(5.1040845, 0, 0, 0, 5.1040845, 0, 0, 0, 5.1040845, -1, 7.8244925, -3)
+
+[node name="come_cables" parent="." unique_id=1774158834 node_paths=PackedStringArray("player") instance=ExtResource("3_w31q3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9026184, 6.729835, 7.5516434)
+player = NodePath("../Player")
