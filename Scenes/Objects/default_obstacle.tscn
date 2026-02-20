@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://vk57mqgd0go0"]
+
+[ext_resource type="Texture2D" uid="uid://bv5utx1o05rbt" path="res://Assets/Placeholders/linkedIn.png" id="1_im0eb"]
+[ext_resource type="Script" uid="uid://dosmxk3i22yjh" path="res://Scripts/HurtPlayer.gd" id="1_yeiyo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeiyo"]
+size = Vector2(86, 80)
+
+[node name="Area2D" type="Area2D" unique_id=73776798]
+script = ExtResource("1_yeiyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=840487336]
+shape = SubResource("RectangleShape2D_yeiyo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=80212694]
+scale = Vector2(0.07017484, 0.06660914)
+texture = ExtResource("1_im0eb")
+
+[connection signal="body_entered" from="." to="." method="_playerCollided"]
