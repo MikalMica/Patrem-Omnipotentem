@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://df0xiy43rcafe"]
+[gd_scene load_steps=6 format=3 uid="uid://df0xiy43rcafe"]
 
 [ext_resource type="Texture2D" uid="uid://c2v1cmyu7nu6h" path="res://Assets/Sprites/ComeCables/Comecables.png" id="1_m6sju"]
 [ext_resource type="Texture2D" uid="uid://3o5h4jfshbyp" path="res://Assets/Sprites/ComeCables/ComecablesOutline.png" id="2_wnia6"]

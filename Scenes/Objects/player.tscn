@@ -1,86 +1,29 @@
-[gd_scene format=3 uid="uid://be1cu1y3l22ka"]
+[gd_scene load_steps=5 format=3 uid="uid://be1cu1y3l22ka"]
 
-[ext_resource type="Script" uid="uid://bgmowhbppdrbv" path="res://Scripts/PlayerController.gd" id="1_4qkr3"]
-[ext_resource type="Script" uid="uid://b7pjxwwa45v5v" path="res://Scripts/CameraMovement.gd" id="2_kvv6r"]
+[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_4qkr3"]
+[ext_resource type="Script" path="res://Scripts/camera_3d.gd" id="2_074ri"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bhgpk"]
-size = Vector3(1, 2.8476257, 1)
+size = Vector3(1, 2.84763, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bhgpk"]
 
-[sub_resource type="Animation" id="Animation_4qkr3"]
-resource_name = "Idle"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 1, 0.45482665), Vector3(0, 1.0984251, 0.45482665), Vector3(0, 1, 0.45482665)]
-}
-
-[sub_resource type="Animation" id="Animation_kvv6r"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1, 0.45482665)]
-}
-
-[sub_resource type="Animation" id="Animation_picsy"]
-resource_name = "Walk"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.19999999, 0.39999998),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 1, 0.45482665), Vector3(0, 1.213, 0.455), Vector3(0, 1, 0.45482665)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_picsy"]
-_data = {
-&"Idle": SubResource("Animation_4qkr3"),
-&"RESET": SubResource("Animation_kvv6r"),
-&"Walk": SubResource("Animation_picsy")
-}
-
-[node name="Player" type="CharacterBody3D" unique_id=2044129607]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_4qkr3")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1122739137]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.010818481, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0108185, 0)
 shape = SubResource("BoxShape3D_bhgpk")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=131842200]
-transform = Transform3D(1, 0, 0, 0, 2.8000002, 0, 0, 0, 1, 0, 0, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.8, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_bhgpk")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=241818227]
-transform = Transform3D(-0.99999785, 0, 0.0020770137, 0, 1, 0, -0.0020770137, 0, -0.99999785, 0, 1, 0.45482665)
-script = ExtResource("2_kvv6r")
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999998, 0, 0.00207701, 0, 1, 0, -0.00207701, 0, -0.999998, 0, 1, 0.454827)
+script = ExtResource("2_074ri")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D" unique_id=894663026]
-libraries/ = SubResource("AnimationLibrary_picsy")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
 
 [connection signal="startMoving" from="." to="Camera3D" method="_startMoving"]
 [connection signal="stopMoving" from="." to="Camera3D" method="_stopMoving"]

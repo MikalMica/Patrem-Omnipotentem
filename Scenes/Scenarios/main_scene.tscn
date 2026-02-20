@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://fhuk0vhv67eb"]
+[gd_scene load_steps=3 format=3 uid="uid://fhuk0vhv67eb"]
 
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
 
-[node name="MainScene" type="Node3D" unique_id=1902521260]
+[node name="MainScene" type="Node3D"]
 
-[node name="Floor_Placeholder" parent="." unique_id=1513593116 instance=ExtResource("1_vnmfx")]
+[node name="Floor_Placeholder" parent="." instance=ExtResource("1_vnmfx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
-[node name="Player" parent="." unique_id=2044129607 instance=ExtResource("2_ulksl")]
+[node name="Player" parent="." instance=ExtResource("2_ulksl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -3)
