@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://df0xiy43rcafe"]
+[gd_scene format=3 uid="uid://cnklvawlvsqr"]
 
+[ext_resource type="Script" uid="uid://bfo4gsietvbv7" path="res://Scripts/billboarding.gd" id="1_fsmn8"]
 [ext_resource type="Texture2D" uid="uid://c2v1cmyu7nu6h" path="res://Assets/Sprites/ComeCables/Comecables.png" id="1_m6sju"]
 [ext_resource type="Texture2D" uid="uid://3o5h4jfshbyp" path="res://Assets/Sprites/ComeCables/ComecablesOutline.png" id="2_wnia6"]
 
@@ -62,30 +63,29 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h351w"]
 _data = {
-"Idle": SubResource("Animation_tfl54"),
-"RESET": SubResource("Animation_s56qr")
+&"Idle": SubResource("Animation_tfl54"),
+&"RESET": SubResource("Animation_s56qr")
 }
 
-[node name="come_cables" type="Node3D"]
+[node name="come_cables" type="Node3D" unique_id=1434574319]
+script = ExtResource("1_fsmn8")
 
-[node name="animation" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_h351w")
-}
-autoplay = "Idle"
+[node name="animation" type="AnimationPlayer" parent="." unique_id=1521906093]
+libraries/ = SubResource("AnimationLibrary_h351w")
+autoplay = &"Idle"
 
-[node name="body" type="Sprite3D" parent="."]
+[node name="body" type="Sprite3D" parent="." unique_id=685531247]
+transform = Transform3D(-0.99993974, 0, -0.010977914, 0, 1, 0, 0.010977914, 0, -0.99993974, -0.5852921, 0, 0.23590374)
 texture = ExtResource("1_m6sju")
 region_enabled = true
 region_rect = Rect2(281.373, 0, 1301.63, 1369)
 
-[node name="outline" type="Sprite3D" parent="body"]
+[node name="outline" type="Sprite3D" parent="body" unique_id=1896000513]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43301, 0, -0.386297)
-visible = false
 texture = ExtResource("2_wnia6")
 
-[node name="mandible" type="Sprite3D" parent="."]
-transform = Transform3D(0.957702, -0.287762, 0, 0.287762, 0.957702, 0, 0, 0, 1, -0.586587, 1.82702, 0.232691)
+[node name="mandible" type="Sprite3D" parent="." unique_id=1014832407]
+transform = Transform3D(0.957702, -0.28776184, 0, 0.28776184, 0.957702, 0, 0, 0, 1, -0.586587, 1.82702, 0.232691)
 texture = ExtResource("1_m6sju")
 region_enabled = true
 region_rect = Rect2(39, 938, 201, 320)
