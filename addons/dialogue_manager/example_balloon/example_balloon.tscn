@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="2_nlsx6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="FontFile" uid="uid://c77ctv1jc5aj7" path="res://Assets/fonts/ACID_REF.TTF" id="4_1337t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -63,6 +65,14 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
+[sub_resource type="Theme" id="Theme_1337t"]
+default_font = ExtResource("2_nlsx6")
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_kmygl"]
+default_font = ExtResource("4_1337t")
+default_font_size = 30
+
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -98,6 +108,10 @@ _data = {
 &"RESET": SubResource("Animation_nlsx6"),
 &"progress": SubResource("Animation_qkmqt")
 }
+
+[sub_resource type="Theme" id="Theme_r5ei8"]
+default_font = ExtResource("4_1337t")
+default_font_size = 30
 
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=315637657]
 layer = 100
@@ -144,6 +158,7 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme = SubResource("Theme_1337t")
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -153,6 +168,7 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_kmygl")
 theme_override_colors/selection_color = Color(0, 0.41568628, 0.34117648, 1)
 text = "Dialogue..."
 
@@ -172,15 +188,14 @@ autoplay = &"progress"
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=1462429862 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 46.0
-offset_top = -215.0
-offset_right = 446.0
-offset_bottom = -104.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 51.0
+offset_top = -172.0
+offset_right = 560.0
+offset_bottom = -61.0
+grow_vertical = 0
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
@@ -190,6 +205,7 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=2089461182]
 modulate = Color(0.12941177, 1, 0.05490196, 1)
 layout_mode = 2
+theme = SubResource("Theme_r5ei8")
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=661979726]
