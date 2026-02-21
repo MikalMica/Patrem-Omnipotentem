@@ -15,6 +15,9 @@ func _ready() -> void:
 	_spawn_random_attack()
 
 func _spawn_random_attack() -> void:
+	if(attacks.size() == 0): 
+		return
+	
 	attacksSpawned += 1
 	currIndex = randi() % attacks.size()
 	currAttack = attacks[currIndex].instantiate() as IAttack

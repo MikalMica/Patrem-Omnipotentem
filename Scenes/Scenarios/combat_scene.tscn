@@ -2,7 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_ppn0g"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_px3ck"]
-[ext_resource type="PackedScene" uid="uid://dggu6qiims6fa" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_px3ck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_px3ck"]
+size = Vector2(1154, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ianbq"]
+size = Vector2(1154, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jeusc"]
+size = Vector2(20, 669)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rcf7"]
+size = Vector2(20, 670)
 
 [node name="CombatScene" type="Node2D" unique_id=835763651]
 
@@ -12,4 +23,21 @@ position = Vector2(521, 272)
 [node name="CombatHandler" type="Node2D" parent="." unique_id=1442692332]
 position = Vector2(585, 362)
 script = ExtResource("2_px3ck")
-attacks = Array[PackedScene]([ExtResource("3_px3ck")])
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
+
+[node name="BottomWall" type="CollisionShape2D" parent="Walls" unique_id=1534140838]
+position = Vector2(577, 651)
+shape = SubResource("RectangleShape2D_px3ck")
+
+[node name="TopWall" type="CollisionShape2D" parent="Walls" unique_id=252940894]
+position = Vector2(576, 0)
+shape = SubResource("RectangleShape2D_ianbq")
+
+[node name="LeftWall" type="CollisionShape2D" parent="Walls" unique_id=1565301508]
+position = Vector2(0, 326.5)
+shape = SubResource("RectangleShape2D_jeusc")
+
+[node name="RightWall" type="CollisionShape2D" parent="Walls" unique_id=1159334862]
+position = Vector2(1145, 325)
+shape = SubResource("RectangleShape2D_0rcf7")
