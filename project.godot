@@ -76,4 +76,4 @@ Interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Assets/Dialogues/lesbiana.dialogue", "res://Assets/Dialogues/ComeCables.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Assets/Dialogues/lesbiana.dialogue", "res://Assets/Dialogues/ComeCables.dialogue", "res://Assets/Dialogues/BOCABAJO.dialogue", "res://Assets/Dialogues/ALFONSO.dialogue")
