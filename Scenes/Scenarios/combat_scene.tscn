@@ -19,11 +19,12 @@ size = Vector2(20, 670)
 [node name="CombatScene" type="Node2D" unique_id=835763651]
 
 [node name="PlayerSymbol" parent="." unique_id=1723358663 instance=ExtResource("1_ppn0g")]
-position = Vector2(223, 149)
+position = Vector2(643, 352)
 
 [node name="CombatHandler" type="Node2D" parent="." unique_id=1442692332]
 position = Vector2(585, 317)
 script = ExtResource("2_px3ck")
+density = 4.0
 attacks = Array[PackedScene]([ExtResource("3_px3ck")])
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
@@ -43,3 +44,6 @@ shape = SubResource("RectangleShape2D_jeusc")
 [node name="RightWall" type="CollisionShape2D" parent="Walls" unique_id=1159334862]
 position = Vector2(1145, 325)
 shape = SubResource("RectangleShape2D_0rcf7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1280868185]
+position = Vector2(581, 328)

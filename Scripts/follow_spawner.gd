@@ -1,24 +1,17 @@
 extends IAttack
 @export var time_between_spawns := 1.0 
 @export var obstacle : PackedScene
-var rng : RandomNumberGenerator = RandomNumberGenerator.new()
+@onready var player : CharacterBody2D = get_tree().get_first_node_in_group("Player2D")
 
 func _attack() -> void:
 	for i in density:
 		_spawn_obstacle()
 		await get_tree().create_timer(time_between_spawns / speed).timeout
-		
+
 func _spawn_obstacle():
-	var child = obstacle.instantiate() as FollowObstacle 
-	
-	var float1 = rng.randf_range(-radius, radius)
-	var float2 = rng.randf_range(-radius, radius)
-	child.global_position += Vector2(
-		float1,
-		float2
-	)
-	
-	print("", float1, " ", float2)
-	print(child.global_position)
-	
+	var child = obstacle.instantiate()
 	add_child(child)
+	
+	var randomAngle := randf_range(0, 360)
+	var randomDir := Vector2(sin(deg_to_rad(randomAngle)), cos(deg_to_rad(randomAngle)))
+	child.global_position = player.global_position + randomDir * radius

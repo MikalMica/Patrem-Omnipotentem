@@ -21,6 +21,7 @@ func _spawn_random_attack() -> void:
 	attacksSpawned += 1
 	currIndex = randi() % attacks.size()
 	currAttack = attacks[currIndex].instantiate() as IAttack
+	currAttack.set_speed_and_density(speed, density)
 	add_child(currAttack)
 	currAttack.global_position = global_position
 	currAttack.attack_finished.connect(_despawn_attack)
