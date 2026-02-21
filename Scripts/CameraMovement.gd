@@ -10,9 +10,13 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if player.velocity.length() > non_zero_speed and not moving: 
+		print("Started Walking")
+		moving = true
 		play("Walk")
 	
 	elif moving and player.velocity.length() < non_zero_speed:
+		print("Stopped Walking")
+		moving = false
 		play("Idle")
 		
 func _startMoving():

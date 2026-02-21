@@ -15,8 +15,8 @@ var is_enabled := true
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	rotation.x = 0
-	DialogueManager.dialogue_started.connect(func(dialogue) -> void: is_enabled = false)
-	DialogueManager.dialogue_ended.connect(func(dialogue) -> void: is_enabled = true)
+	DialogueManager.dialogue_started.connect(func(_dialogue) -> void: is_enabled = false)
+	DialogueManager.dialogue_ended.connect(func(_dialogue) -> void: is_enabled = true)
 
 func _input(event: InputEvent) -> void:
 	if not is_enabled: return

@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
 [ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="3_w31q3"]
 [ext_resource type="Texture2D" uid="uid://c2v1cmyu7nu6h" path="res://Assets/Sprites/ComeCables/Comecables.png" id="4_h6kwc"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
+[ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
 [ext_resource type="Texture2D" uid="uid://dw2inoii52fcv" path="res://Assets/pexels-pixabay-159220.jpg" id="6_h6kwc"]
-[ext_resource type="ArrayMesh" uid="uid://cek50iv2jqrjo" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
+[ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("6_h6kwc")
