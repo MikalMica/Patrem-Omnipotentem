@@ -4,7 +4,7 @@ class_name IAttack
 @export var speed = 1.0
 @export var density := 1
 @export var lifeTime = 15.0
-@export var radius = 15.0
+@export var radius = 250.0
 signal attack_finished
 
 func _ready() -> void:

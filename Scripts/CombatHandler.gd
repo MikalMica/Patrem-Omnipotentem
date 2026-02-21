@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 @export var speed = 1.0
 @export var density = 1.0
@@ -22,6 +22,7 @@ func _spawn_random_attack() -> void:
 	currIndex = randi() % attacks.size()
 	currAttack = attacks[currIndex].instantiate() as IAttack
 	add_child(currAttack)
+	currAttack.global_position = global_position
 	currAttack.attack_finished.connect(_despawn_attack)
 	# añade velocidad y densidad al ataque
 

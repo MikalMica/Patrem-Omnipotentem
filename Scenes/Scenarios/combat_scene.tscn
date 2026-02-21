@@ -19,10 +19,10 @@ size = Vector2(20, 670)
 [node name="CombatScene" type="Node2D" unique_id=835763651]
 
 [node name="PlayerSymbol" parent="." unique_id=1723358663 instance=ExtResource("1_ppn0g")]
-position = Vector2(521, 272)
+position = Vector2(223, 149)
 
 [node name="CombatHandler" type="Node2D" parent="." unique_id=1442692332]
-position = Vector2(585, 362)
+position = Vector2(585, 317)
 script = ExtResource("2_px3ck")
 attacks = Array[PackedScene]([ExtResource("3_px3ck")])
 

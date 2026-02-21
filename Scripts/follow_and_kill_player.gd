@@ -5,19 +5,18 @@ class_name FollowObstacle
 var direction := Vector2.ZERO
 var rotation_time : float = 2.
 var speed : float = 100.
+var speed_factor = 2
 
 var current_time : float = .0 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	current_time += delta
 	if(current_time < rotation_time):
 		_look_towards_player()
 		return 
 		
-	position += direction * speed * delta
+	position += direction * speed * speed_factor * delta
 	
 func _look_towards_player() -> void:
 	look_at(player.global_position)
-	print("Looking at player")
 	direction = (player.global_position - global_position).normalized()
