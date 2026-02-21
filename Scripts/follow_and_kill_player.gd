@@ -4,7 +4,7 @@ class_name FollowObstacle
 @onready var player_position : Vector2 = get_tree().get_nodes_in_group("Player2D")[0].global_position
 var direction := Vector2.ZERO
 var rotation_time : float = 2.
-var speed : float = 1
+var speed : float = 100.
 
 var current_time : float = .0 
 
@@ -19,4 +19,4 @@ func _process(delta: float) -> void:
 	
 func _look_towards_player() -> void:
 	look_at(player_position)
-	direction = (global_position - player_position).normalized()
+	direction = (player_position - global_position).normalized()

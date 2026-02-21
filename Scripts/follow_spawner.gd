@@ -11,3 +11,4 @@ func _attack() -> void:
 func _spawn_obstacle():
 	var child = obstacle.instantiate() as FollowObstacle 
 	child.position += Vector2(randf_range(0, radius), randf_range(0, radius))
+	add_child(child)
