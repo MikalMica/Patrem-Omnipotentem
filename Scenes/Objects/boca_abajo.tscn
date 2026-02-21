@@ -13,7 +13,6 @@ region_rect = Rect2(229, 138, 1271, 4015)
 
 [node name="outline" parent="body" index="0" unique_id=1805235344]
 transform = Transform3D(1, 0, 2.7939677e-09, 0, 1, 0, -2.7939677e-09, 0, 1, 0.012724459, -6.645212, -0.37042478)
-visible = true
 texture = ExtResource("3_88la2")
 
 [node name="InteractArea" parent="." index="2" unique_id=461385779]
