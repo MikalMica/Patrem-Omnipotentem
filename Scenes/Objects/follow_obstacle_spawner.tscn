@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dggu6qiims6fa"]
+
+[ext_resource type="Script" uid="uid://gfpx2s4phuu5" path="res://Scenes/Objects/follow_spawner.gd" id="1_jc5fj"]
+
+[node name="FollowAndTrace" type="Sprite2D" unique_id=1663664325]
+script = ExtResource("1_jc5fj")

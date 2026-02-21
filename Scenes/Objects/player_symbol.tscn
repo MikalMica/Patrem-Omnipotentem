@@ -96,7 +96,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_tn84p"]
 radius = 22.59
 
-[node name="PlayerSymbol" type="CharacterBody2D" unique_id=1723358663]
+[node name="PlayerSymbol" type="CharacterBody2D" unique_id=1723358663 groups=["Player2D"]]
 script = ExtResource("1_tn84p")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1740929361]
