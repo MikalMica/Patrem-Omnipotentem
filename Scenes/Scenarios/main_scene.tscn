@@ -2,9 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
-[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="3_w31q3"]
-[ext_resource type="Texture2D" uid="uid://c2v1cmyu7nu6h" path="res://Assets/Sprites/ComeCables/Comecables.png" id="4_h6kwc"]
 [ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
+[ext_resource type="PackedScene" uid="uid://cdnv38yqf5dxk" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
 [ext_resource type="Texture2D" uid="uid://dw2inoii52fcv" path="res://Assets/pexels-pixabay-159220.jpg" id="6_h6kwc"]
 [ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 
@@ -52,13 +51,6 @@ transform = Transform3D(18.818726, 0, 9.941453, 0, 33.001358, 0, -10.558416, 0, 
 [node name="Player" parent="." unique_id=1268550398 instance=ExtResource("2_ulksl")]
 transform = Transform3D(2.8840814, 0, 0, 0, 2.8840814, 0, 0, 0, 2.8840814, -1, 4.931196, -6.5552387)
 speed = 200.0
-
-[node name="come_cables" parent="." unique_id=1354543446 node_paths=PackedStringArray("player") instance=ExtResource("3_w31q3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2423525, 6.3030586, 13.308527)
-player = NodePath("../Player")
-
-[node name="body" parent="come_cables" index="1" unique_id=1387285422]
-texture = ExtResource("4_h6kwc")
 
 [node name="InteractUI" parent="." unique_id=1514035945 instance=ExtResource("4_jm5ki")]
 
@@ -272,5 +264,12 @@ spot_angle = 54.91202
 transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.6160954, -0.00095894805, 0, 3.2483966, 1.4792166)
 material_override = SubResource("StandardMaterial3D_h3cbu")
 mesh = SubResource("BoxMesh_jpnrk")
+
+[node name="come_cables" parent="." unique_id=840245654 node_paths=PackedStringArray("player") instance=ExtResource("6_h3cbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.96071, 7.825755, -3.7949386)
+player = NodePath("../Player")
+
+[node name="InteractArea" parent="come_cables" index="2" unique_id=461385779 node_paths=PackedStringArray("interact_canvas")]
+interact_canvas = NodePath("../../InteractUI")
 
 [editable path="come_cables"]
