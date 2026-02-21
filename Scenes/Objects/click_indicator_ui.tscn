@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cjfmlxijf5vw3"]
+[gd_scene format=3 uid="uid://cocy7s3ad6vg5"]
 
 [ext_resource type="Script" uid="uid://b4uh5b0nulk3d" path="res://Scripts/text_fade_in.gd" id="1_q7427"]
 [ext_resource type="FontFile" uid="uid://c77ctv1jc5aj7" path="res://Assets/fonts/ACID_REF.TTF" id="2_oosiq"]
@@ -59,8 +59,9 @@ anchor_left = 1.0
 anchor_top = 0.94000006
 anchor_right = 1.0
 anchor_bottom = 0.94000006
-offset_left = -363.0
+offset_left = -417.0
 offset_top = -34.120056
+offset_right = -54.0
 offset_bottom = -0.12005615
 grow_horizontal = 0
 grow_vertical = 0

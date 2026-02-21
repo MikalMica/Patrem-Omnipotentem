@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
-[ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
-[ext_resource type="PackedScene" uid="uid://cdnv38yqf5dxk" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
 [ext_resource type="Texture2D" uid="uid://dw2inoii52fcv" path="res://Assets/pexels-pixabay-159220.jpg" id="6_h6kwc"]
-[ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
+[ext_resource type="ArrayMesh" uid="uid://cek50iv2jqrjo" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
+[ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="7_jpnrk"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("6_h6kwc")
@@ -34,6 +35,31 @@ emission_energy_multiplier = 2.73
 
 [sub_resource type="BoxMesh" id="BoxMesh_jpnrk"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ite6"]
+shader = ExtResource("7_jpnrk")
+shader_parameter/brightness = 1.02
+shader_parameter/contrast = 1.08
+shader_parameter/saturation = 1.1
+shader_parameter/gamma = 1.05
+shader_parameter/curvature = 0.14
+shader_parameter/corner_soften = 0.06
+shader_parameter/vignette = 0.38
+shader_parameter/scanline_strength = 0.95
+shader_parameter/scanline_density = 1.15
+shader_parameter/interlace_strength = 0.2
+shader_parameter/mask_strength = 0.22
+shader_parameter/mask_scale = 1.0
+shader_parameter/chroma_offset_px = 1.6
+shader_parameter/luma_smear_px = 2.2
+shader_parameter/jitter_px = 1.8
+shader_parameter/wobble_px = 1.5
+shader_parameter/tape_noise = 0.22
+shader_parameter/tape_lines = 0.35
+shader_parameter/roll_speed = 0.1
+shader_parameter/roll_strength = 0.15
+shader_parameter/glow_strength = 0.25
+shader_parameter/glow_threshold = 0.65
+
 [node name="MainScene" type="Node3D" unique_id=1885870270]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1851391742]
@@ -51,6 +77,7 @@ transform = Transform3D(18.818726, 0, 9.941453, 0, 33.001358, 0, -10.558416, 0, 
 [node name="Player" parent="." unique_id=1268550398 instance=ExtResource("2_ulksl")]
 transform = Transform3D(2.8840814, 0, 0, 0, 2.8840814, 0, 0, 0, 2.8840814, -1, 4.931196, -6.5552387)
 speed = 200.0
+horizontal_sensitivity = 0.001
 
 [node name="InteractUI" parent="." unique_id=1514035945 instance=ExtResource("4_jm5ki")]
 
@@ -271,5 +298,15 @@ player = NodePath("../Player")
 
 [node name="InteractArea" parent="come_cables" index="2" unique_id=461385779 node_paths=PackedStringArray("interact_canvas")]
 interact_canvas = NodePath("../../InteractUI")
+
+[node name="shader" type="CanvasLayer" parent="." unique_id=291397412]
+
+[node name="ColorRect" type="ColorRect" parent="shader" unique_id=75673129]
+material = SubResource("ShaderMaterial_5ite6")
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.003
+offset_bottom = 0.05596924
+mouse_filter = 2
 
 [editable path="come_cables"]
