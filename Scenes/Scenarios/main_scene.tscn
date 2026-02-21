@@ -11,6 +11,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bydjen1ds54vo" path="res://Assets/Meshes/monitor.obj" id="8_jpnrk"]
 [ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="9_6vav5"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="11_mtft4"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="12_jcxkm"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("1_5ite6")
@@ -586,6 +587,25 @@ transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.61
 material_override = SubResource("StandardMaterial3D_h3cbu")
 mesh = SubResource("BoxMesh_jpnrk")
 
+[node name="Farolaobj7" type="MeshInstance3D" parent="mundo/farolas" unique_id=876562005]
+transform = Transform3D(5.1260457, 0, 3.1182775, 0, 6, 0, -3.1182775, 0, 5.1260457, -394.83203, -4.6024284, -148.07426)
+mesh = ExtResource("7_h3cbu")
+skeleton = NodePath("../../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="mundo/farolas/Farolaobj7" unique_id=959463926]
+transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
+light_color = Color(0.7372549, 1, 0, 1)
+light_energy = 8.128
+light_volumetric_fog_energy = 3.455
+light_specular = 0.885
+spot_range = 31.938562
+spot_angle = 54.91202
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/farolas/Farolaobj7" unique_id=727959081]
+transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.6160954, -0.00095894805, 0, 3.2483966, 1.4792166)
+material_override = SubResource("StandardMaterial3D_h3cbu")
+mesh = SubResource("BoxMesh_jpnrk")
+
 [node name="Farolaobj4" type="MeshInstance3D" parent="mundo/farolas" unique_id=1717815017]
 transform = Transform3D(-5.9537845, 0, 0.7432716, 0, 6, 0, -0.7432716, 0, -5.9537845, -194.49913, -4.6024284, 75.45425)
 mesh = ExtResource("7_h3cbu")
@@ -877,6 +897,15 @@ transform = Transform3D(3.2111487, 0, -0.040110946, 0, 3.4868, 0, 0.062554, 0, 2
 [node name="servidores12" parent="mundo/edificio4" unique_id=1596619027 instance=ExtResource("11_mtft4")]
 transform = Transform3D(3.2111487, 0, -0.040110946, 0, 3.4868, 0, 0.062554, 0, 2.0590591, -140.6412, 46.3349, -174.0514)
 
+[node name="SpotLight3D" type="SpotLight3D" parent="mundo" unique_id=1794298388]
+transform = Transform3D(0.5894841, -0.19538067, -0.78379506, 0.09437812, -0.9470037, 0.30704537, -0.8022477, -0.25497147, -0.539804, -580.4767, 33.178467, -83.64965)
+light_color = Color(0.7372549, 1, 0, 1)
+light_energy = 16.0
+light_volumetric_fog_energy = 3.455
+light_specular = 0.885
+spot_range = 205.1815
+spot_angle = 35.60774
+
 [node name="come_cables" parent="." unique_id=840245654 node_paths=PackedStringArray("player") instance=ExtResource("6_h3cbu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.96071, 7.825755, -3.7949386)
 player = NodePath("../Player")
@@ -937,6 +966,41 @@ transform = Transform3D(0.96962494, 0, -0.2445966, 0, 1, 0, 0.2445966, 0, 0.9696
 transform = Transform3D(0.7905401, 0, 0.6124104, 0, 1, 0, -0.6124104, 0, 0.7905401, 5.570114, 0, -6.974453)
 shape = SubResource("BoxShape3D_h3cbu")
 
+[node name="StaticBody3D14" type="StaticBody3D" parent="mundofisico" unique_id=2085857920]
+transform = Transform3D(-0.20680197, 0, 0.9783828, 0, 1, 0, -0.9783828, 0, -0.20680197, -136.0989, 17.406052, 91.36019)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D14" unique_id=1137757684]
+transform = Transform3D(0.7905401, 0, 0.6124104, 0, 1, 0, -0.6124104, 0, 0.7905401, 5.570114, 0, -6.974453)
+shape = SubResource("BoxShape3D_h3cbu")
+
+[node name="StaticBody3D15" type="StaticBody3D" parent="mundofisico" unique_id=872873840]
+transform = Transform3D(0.715522, 0, 0.6985903, 0, 1, 0, -0.6985903, 0, 0.715522, -259.21194, 17.406052, 116.70089)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D15" unique_id=1357402285]
+transform = Transform3D(0.7905401, 0, 0.6124104, 0, 1, 0, -0.6124104, 0, 0.7905401, 5.570114, 0, -6.974453)
+shape = SubResource("BoxShape3D_h3cbu")
+
+[node name="StaticBody3D16" type="StaticBody3D" parent="mundofisico" unique_id=1984516572]
+transform = Transform3D(0.7967936, 0, 0.6042517, 0, 1, 0, -0.6042517, 0, 0.7967936, -325.09308, 17.406052, 117.54595)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D16" unique_id=1085708724]
+transform = Transform3D(0.7905401, 0, 0.6124104, 0, 1, 0, -0.6124104, 0, 0.7905401, 5.570114, 0, -6.974453)
+shape = SubResource("BoxShape3D_h3cbu")
+
+[node name="StaticBody3D17" type="StaticBody3D" parent="mundofisico" unique_id=1574048894]
+transform = Transform3D(0.7967936, 0, 0.6042517, 0, 1, 0, -0.6042517, 0, 0.7967936, -424.72375, 17.406052, 92.90505)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D17" unique_id=1839556824]
+transform = Transform3D(0.7905401, 0, 0.6124104, 0, 1, 0, -0.6124104, 0, 0.7905401, 5.570114, 0, -6.974453)
+shape = SubResource("BoxShape3D_h3cbu")
+
+[node name="StaticBody3D18" type="StaticBody3D" parent="mundofisico" unique_id=282905859]
+transform = Transform3D(0.9835525, 0, 0.18062231, 0, 1, 0, -0.18062231, 0, 0.9835525, -523.16223, 17.406052, 34.38616)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D18" unique_id=1317562524]
+transform = Transform3D(0.7905401, 0, 0.6124104, 0, 1, 0, -0.6124104, 0, 0.7905401, 5.570114, 0, -6.974453)
+shape = SubResource("BoxShape3D_h3cbu")
+
 [node name="StaticBody3D2" type="StaticBody3D" parent="mundofisico" unique_id=1759837011]
 transform = Transform3D(0.6677417, 0, 0.7443931, 0, 1, 0, -0.7443931, 0, 0.6677417, -293.6847, 24.765213, -208.17548)
 
@@ -958,6 +1022,41 @@ transform = Transform3D(0.865816, 0, 0.50036263, 0, 1, 0, -0.50036263, 0, 0.8658
 transform = Transform3D(0.6977404, 0, 0.7163505, 0, 1, 0, -0.7163505, 0, 0.6977404, 42.907562, 0, -74.246216)
 shape = SubResource("BoxShape3D_h3cbu")
 
+[node name="StaticBody3D9" type="StaticBody3D" parent="mundofisico" unique_id=572315975]
+transform = Transform3D(0.8226008, 0, 0.5686193, 0, 1, 0, -0.5686193, 0, 0.8226008, -187.33919, 17.406052, -161.42445)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D9" unique_id=1698392285]
+transform = Transform3D(0.9781911, 0, 0.20770687, 0, 1, 0, -0.20770687, 0, 0.9781911, 10.685898, 0, -15.458893)
+shape = SubResource("BoxShape3D_h3cbu")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="mundofisico" unique_id=1292831665]
+transform = Transform3D(0.21720631, 0, 0.9761257, 0, 1, 0, -0.9761257, 0, 0.21720631, -33.236404, 17.406052, -28.041458)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D10" unique_id=333297882]
+transform = Transform3D(0.9781909, 0, 0.20770681, 0, 1, 0, -0.20770681, 0, 0.9781909, 3.940958, 0, 5.591278)
+shape = SubResource("BoxShape3D_h3cbu")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="mundofisico" unique_id=171052106]
+transform = Transform3D(0.6677417, 0, 0.7443931, 0, 1, 0, -0.7443931, 0, 0.6677417, -293.6847, 24.765213, -208.17548)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D11" unique_id=1476067017]
+transform = Transform3D(0.85773295, 0, 0.5140952, 0, 1, 0, -0.5140952, 0, 0.85773295, 6.0424805, 0, -5.420288)
+shape = SubResource("BoxShape3D_h3cbu")
+
+[node name="StaticBody3D12" type="StaticBody3D" parent="mundofisico" unique_id=1078815856]
+transform = Transform3D(-0.036382034, 0, 0.99933803, 0, 1, 0, -0.99933803, 0, -0.036382034, -417.61618, 24.765213, -157.8778)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D12" unique_id=1638192869]
+transform = Transform3D(0.87636536, 0, 0.48164648, 0, 1, 0, -0.48164648, 0, 0.87636536, 43.261032, 0, 12.883728)
+shape = SubResource("BoxShape3D_h3cbu")
+
+[node name="StaticBody3D13" type="StaticBody3D" parent="mundofisico" unique_id=312153138]
+transform = Transform3D(0.865816, 0, 0.50036263, 0, 1, 0, -0.50036263, 0, 0.865816, -514.7124, 24.765213, -88.84268)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D13" unique_id=707384207]
+transform = Transform3D(0.6977404, 0, 0.7163505, 0, 1, 0, -0.7163505, 0, 0.6977404, 42.907562, 0, -74.246216)
+shape = SubResource("BoxShape3D_h3cbu")
+
 [node name="servidores" parent="." unique_id=738924275 instance=ExtResource("11_mtft4")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -53.695633, 1.6617572, -26.303822)
 
@@ -966,5 +1065,10 @@ transform = Transform3D(2.8791513, 0, -0.8429047, 0, 3, 0, 0.8429047, 0, 2.87915
 
 [node name="servidores3" parent="." unique_id=954590454 instance=ExtResource("11_mtft4")]
 transform = Transform3D(-2.9962187, 0, -0.15057606, 0, 3, 0, 0.15057606, 0, -2.9962187, 22.665382, 1.6617572, 27.185265)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=369231520]
+stream = ExtResource("12_jcxkm")
+volume_db = -5.295
+autoplay = true
 
 [editable path="come_cables"]
