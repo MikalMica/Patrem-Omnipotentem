@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="2_nlsx6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://i3bhbpu375bs" path="res://Assets/fonts/Rota en mil Pedazos.otf" id="4_1337t"]
+[ext_resource type="FontFile" uid="uid://bnh6jfvpmd2yh" path="res://Assets/fonts/Halftone_Poster_demo.otf" id="4_r5ei8"]
 [ext_resource type="AudioStream" uid="uid://cbrpt107hqo2u" path="res://Assets/sounds/A-Single-Waluigi-Wah-Masky-Chain.wav" id="6_kmygl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -71,7 +71,7 @@ default_font = ExtResource("2_nlsx6")
 default_font_size = 40
 
 [sub_resource type="Theme" id="Theme_kmygl"]
-default_font = ExtResource("4_1337t")
+default_font = ExtResource("4_r5ei8")
 default_font_size = 40
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
@@ -111,11 +111,10 @@ _data = {
 }
 
 [sub_resource type="Theme" id="Theme_r5ei8"]
-default_font = ExtResource("4_1337t")
+default_font = ExtResource("4_r5ei8")
 default_font_size = 30
 
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=315637657]
-layer = 100
 script = ExtResource("1_36de5")
 
 [node name="Balloon" type="Control" parent="." unique_id=969504443]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
+[ext_resource type="PackedScene" uid="uid://cocy7s3ad6vg5" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
 [ext_resource type="Texture2D" uid="uid://dw2inoii52fcv" path="res://Assets/pexels-pixabay-159220.jpg" id="6_h6kwc"]
 [ext_resource type="ArrayMesh" uid="uid://cek50iv2jqrjo" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
@@ -41,7 +41,7 @@ shader_parameter/brightness = 1.02
 shader_parameter/contrast = 1.08
 shader_parameter/saturation = 1.1
 shader_parameter/gamma = 1.05
-shader_parameter/curvature = 0.14
+shader_parameter/curvature = 0.02400000114
 shader_parameter/corner_soften = 0.06
 shader_parameter/vignette = 0.38
 shader_parameter/scanline_strength = 0.95
@@ -300,6 +300,7 @@ player = NodePath("../Player")
 interact_canvas = NodePath("../../InteractUI")
 
 [node name="shader" type="CanvasLayer" parent="." unique_id=291397412]
+layer = 10
 
 [node name="ColorRect" type="ColorRect" parent="shader" unique_id=75673129]
 material = SubResource("ShaderMaterial_5ite6")
