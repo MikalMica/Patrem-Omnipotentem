@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_ppn0g"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_px3ck"]
+[ext_resource type="PackedScene" uid="uid://dggu6qiims6fa" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_px3ck"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_px3ck"]
 size = Vector2(1154, 20)
@@ -23,6 +24,7 @@ position = Vector2(521, 272)
 [node name="CombatHandler" type="Node2D" parent="." unique_id=1442692332]
 position = Vector2(585, 362)
 script = ExtResource("2_px3ck")
+attacks = Array[PackedScene]([ExtResource("3_px3ck")])
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
 

@@ -1,7 +1,7 @@
 extends Sprite2D
 class_name FollowObstacle
 
-@onready var player_position : Vector2 = get_tree().get_nodes_in_group("Player2D")[0].global_position
+@onready var player : CharacterBody2D = get_tree().get_nodes_in_group("Player2D")[0]
 var direction := Vector2.ZERO
 var rotation_time : float = 2.
 var speed : float = 100.
@@ -18,5 +18,6 @@ func _process(delta: float) -> void:
 	position += direction * speed * delta
 	
 func _look_towards_player() -> void:
-	look_at(player_position)
-	direction = (player_position - global_position).normalized()
+	look_at(player.global_position)
+	print("Looking at player")
+	direction = (player.global_position - global_position).normalized()

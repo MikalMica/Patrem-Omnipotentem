@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://besjfew4uyl7a"]
 
-[ext_resource type="Script" uid="uid://bj2s8tvr074e6" path="res://Scenes/Objects/follow_and_kill_player.gd" id="1_0cctl"]
+[ext_resource type="Script" uid="uid://bj2s8tvr074e6" path="res://Scripts/follow_and_kill_player.gd" id="1_0cctl"]
 [ext_resource type="Texture2D" uid="uid://dq0b4uuy4hd1o" path="res://Assets/Placeholders/MarioVaquerizo.jpg" id="1_f3mpj"]
 [ext_resource type="Script" uid="uid://dosmxk3i22yjh" path="res://Scripts/HurtPlayer.gd" id="2_f3mpj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1m4fr"]
-radius = 350.85898
+[sub_resource type="CircleShape2D" id="CircleShape2D_f3mpj"]
+radius = 633.7
 
 [node name="Proyectile" type="Sprite2D" unique_id=1101828014]
-scale = Vector2(0.175, 0.175)
+scale = Vector2(0.03604584, 0.056944445)
 texture = ExtResource("1_f3mpj")
 script = ExtResource("1_0cctl")
 
@@ -16,4 +16,5 @@ script = ExtResource("1_0cctl")
 script = ExtResource("2_f3mpj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=58528318]
-shape = SubResource("CircleShape2D_1m4fr")
+position = Vector2(0, 9.536743e-06)
+shape = SubResource("CircleShape2D_f3mpj")
