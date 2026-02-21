@@ -28,3 +28,4 @@ func _input(event: InputEvent) -> void:
 	if(player_is_near and event.is_action_pressed("Interact") and not in_dialogue):
 		in_dialogue = true
 		DialogueManager.show_dialogue_balloon(dialog, "start")
+		interact_canvas.visible = false
