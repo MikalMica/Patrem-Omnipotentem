@@ -2,11 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_ppn0g"]
 [ext_resource type="PackedScene" uid="uid://vk57mqgd0go0" path="res://Scenes/Objects/default_obstacle.tscn" id="2_evauv"]
+[ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_px3ck"]
 
 [node name="CombatScene" type="Node2D" unique_id=835763651]
 
 [node name="PlayerSymbol" parent="." unique_id=1723358663 instance=ExtResource("1_ppn0g")]
 position = Vector2(521, 272)
 
-[node name="Default_obstacle" parent="." unique_id=1289313684 instance=ExtResource("2_evauv")]
-position = Vector2(707, 211)
+[node name="CombatHandler" type="Node2D" parent="." unique_id=1442692332]
+position = Vector2(585, 362)
+script = ExtResource("2_px3ck")
+attacks = Array[PackedScene]([ExtResource("2_evauv")])

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dt3nlgm048cvk"]
+
+[ext_resource type="Script" uid="uid://btjnt0ccfkpy2" path="res://Scripts/MoveToDirection.gd" id="1_hawmy"]
+[ext_resource type="Script" uid="uid://dosmxk3i22yjh" path="res://Scripts/HurtPlayer.gd" id="1_vency"]
+[ext_resource type="Texture2D" uid="uid://bv5utx1o05rbt" path="res://Assets/Placeholders/linkedIn.png" id="2_hawmy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yeiyo"]
+size = Vector2(86, 80)
+
+[node name="attack_placeholder" type="Node2D" unique_id=466976736]
+script = ExtResource("1_hawmy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=907814243]
+script = ExtResource("1_vency")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=253943132]
+shape = SubResource("RectangleShape2D_yeiyo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=169696109]
+scale = Vector2(0.07017484, 0.06660914)
+texture = ExtResource("2_hawmy")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_playerCollided"]
