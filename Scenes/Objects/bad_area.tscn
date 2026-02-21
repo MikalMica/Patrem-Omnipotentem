@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://e8qkbmea47vv"]
+
+[ext_resource type="Script" uid="uid://dosmxk3i22yjh" path="res://Scripts/HurtPlayer.gd" id="1_u5gvh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rd7aj"]
+size = Vector2(970.9051, 1023.3425)
+
+[node name="Area2D" type="Area2D" unique_id=2053831646]
+script = ExtResource("1_u5gvh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1837829879]
+position = Vector2(19.418077, -33.22542)
+shape = SubResource("RectangleShape2D_rd7aj")

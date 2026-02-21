@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c0ug0vm2iuhhm"]
+
+[ext_resource type="Script" uid="uid://r0pvgnwwvaku" path="res://Scripts/ScreenAreaBehaviour.gd" id="1_cv6qt"]
+[ext_resource type="PackedScene" uid="uid://bkpw501wh7us1" path="res://Scenes/Objects/screen_area_module.tscn" id="2_njumy"]
+
+[node name="ScreenArea" type="Node2D" unique_id=66603339]
+script = ExtResource("1_cv6qt")
+modules = Array[PackedScene]([ExtResource("2_njumy")])

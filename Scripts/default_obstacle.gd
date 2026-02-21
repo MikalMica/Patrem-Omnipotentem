@@ -1,6 +1,5 @@
 extends IAttack
 
-@export var radius = 50
 @export var timeBetweenAttacks = 1.0
 var obstacle = preload("res://Scenes/Objects/attack_placeholder.tscn")
 

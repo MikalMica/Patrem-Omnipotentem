@@ -5,7 +5,7 @@
 
 Patrem Omnipoténtem es un juego para la ComJamOn 2026 desarrollado por el grupo "La Clase Media" compuesto por:
 
-- Mars Laguna Ruíz
+- Mars Laguna Ruiz
 - Eri Solórzano Gómez
 - Javier Valseca Parra
 - Micaela Rodríguez Castro

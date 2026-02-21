@@ -6,8 +6,13 @@ class_name IAttack
 @export var lifeTime = 15.0
 @export var radius = 250.0
 signal attack_finished
+var attackStop: bool = false
+
+func _stopAttack() -> void:
+	attackStop = true
 
 func _ready() -> void:
+	attack_finished.connect(_stopAttack)
 	_attack()
 	await get_tree().create_timer(lifeTime).timeout
 	attack_finished.emit()
