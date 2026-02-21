@@ -1,13 +1,22 @@
-extends Camera3D
+extends AnimationPlayer
 
-@onready var animPlayer: AnimationPlayer = $AnimationPlayer
+@export var player : CharacterBody3D
+var moving := false
+var non_zero_speed := 0.05
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_stopMoving()
+	play("Idle")
 
+func _physics_process(_delta: float) -> void:
+	if player.velocity.length() > non_zero_speed and not moving: 
+		play("Walk")
+	
+	elif moving and player.velocity.length() < non_zero_speed:
+		play("Idle")
+		
 func _startMoving():
-	animPlayer.play("Walk")
+	play("Walk")
 
 func _stopMoving():
-	animPlayer.play("Idle")
+	play("Idle")
