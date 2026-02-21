@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c2v1cmyu7nu6h" path="res://Assets/Sprites/ComeCables/Comecables.png" id="4_h6kwc"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
 [ext_resource type="Texture2D" uid="uid://dw2inoii52fcv" path="res://Assets/pexels-pixabay-159220.jpg" id="6_h6kwc"]
+[ext_resource type="ArrayMesh" uid="uid://cek50iv2jqrjo" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("6_h6kwc")
@@ -25,6 +26,14 @@ glow_enabled = true
 [sub_resource type="BoxMesh" id="BoxMesh_h6kwc"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_h3cbu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3cbu"]
+albedo_color = Color(0.83777726, 0.8377774, 0, 1)
+emission_enabled = true
+emission = Color(0.8444406, 1, 0.5931051, 1)
+emission_energy_multiplier = 2.73
+
+[sub_resource type="BoxMesh" id="BoxMesh_jpnrk"]
 
 [node name="MainScene" type="Node3D" unique_id=1885870270]
 
@@ -62,7 +71,7 @@ spot_angle = 65.1135
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=62621489]
 transform = Transform3D(1, 0, 0, 0, 0.037446085, 0.9992987, 0, -0.9992987, 0.037446085, -131.53732, 49.631668, 1.5541878)
 light_energy = 4.506
-spot_range = 87.646
+spot_range = 86.89827
 spot_angle = 65.1135
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=551508090]
@@ -240,10 +249,28 @@ mesh = SubResource("BoxMesh_h3cbu")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="mundo/servers" unique_id=967152249]
-transform = Transform3D(35.673855, 0, 0, 0, 83.8959, 0, 0, 0, 30.759867, -93.29346, 43.439583, -42.340866)
+transform = Transform3D(35.536125, 0, 0, 0, 83.57199, 0, 0, 0, 30.641108, -93.29346, 43.439583, -42.340866)
 mesh = SubResource("BoxMesh_h3cbu")
 skeleton = NodePath("../..")
 
 [node name="morewalls" type="Node3D" parent="mundo" unique_id=1672653250]
+
+[node name="Farolaobj" type="MeshInstance3D" parent="." unique_id=1994112214]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -131.2454, -4.6024284, -45.72216)
+mesh = ExtResource("7_h3cbu")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Farolaobj" unique_id=511488276]
+transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
+light_color = Color(0.7372549, 1, 0, 1)
+light_energy = 8.128
+light_volumetric_fog_energy = 3.455
+light_specular = 0.885
+spot_range = 31.938562
+spot_angle = 54.91202
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Farolaobj" unique_id=1634717747]
+transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.6160954, -0.00095894805, 0, 3.2483966, 1.4792166)
+material_override = SubResource("StandardMaterial3D_h3cbu")
+mesh = SubResource("BoxMesh_jpnrk")
 
 [editable path="come_cables"]

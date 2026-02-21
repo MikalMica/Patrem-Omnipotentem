@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="2_nlsx6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://c77ctv1jc5aj7" path="res://Assets/fonts/ACID_REF.TTF" id="4_1337t"]
+[ext_resource type="FontFile" uid="uid://i3bhbpu375bs" path="res://Assets/fonts/Rota en mil Pedazos.otf" id="4_1337t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -71,7 +71,7 @@ default_font_size = 40
 
 [sub_resource type="Theme" id="Theme_kmygl"]
 default_font = ExtResource("4_1337t")
-default_font_size = 30
+default_font_size = 40
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
