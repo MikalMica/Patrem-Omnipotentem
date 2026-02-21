@@ -7,16 +7,17 @@
 [ext_resource type="Texture2D" uid="uid://bsmt3qeenkd8a" path="res://Assets/Sprites/enchufe.png" id="4_ianbq"]
 [ext_resource type="Texture2D" uid="uid://dqox3ouvrxgsa" path="res://Assets/Sprites/cable.png" id="5_44wcw"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0rcf7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_px3ck"]
+size = Vector2(1154, 20)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_44wcw"]
-normal = Vector2(0, 1)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ianbq"]
+size = Vector2(1154, 20)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_srmwc"]
-normal = Vector2(1, 0)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jeusc"]
+size = Vector2(20, 669)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yx27u"]
-normal = Vector2(-1, 0)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rcf7"]
+size = Vector2(20, 670)
 
 [node name="CombatScene" type="Node2D" unique_id=835763651]
 
@@ -31,26 +32,26 @@ attacks = Array[PackedScene]([ExtResource("3_px3ck")])
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
 
 [node name="BottomWall" type="CollisionShape2D" parent="Walls" unique_id=1534140838]
-position = Vector2(577, 867)
-shape = SubResource("WorldBoundaryShape2D_0rcf7")
+position = Vector2(577, 651)
+shape = SubResource("RectangleShape2D_px3ck")
 
 [node name="TopWall" type="CollisionShape2D" parent="Walls" unique_id=252940894]
-position = Vector2(576, -213)
-shape = SubResource("WorldBoundaryShape2D_44wcw")
+position = Vector2(576, 0)
+shape = SubResource("RectangleShape2D_ianbq")
 
 [node name="LeftWall" type="CollisionShape2D" parent="Walls" unique_id=1565301508]
-position = Vector2(-377, 327)
-shape = SubResource("WorldBoundaryShape2D_srmwc")
+position = Vector2(0, 326.5)
+shape = SubResource("RectangleShape2D_jeusc")
 
 [node name="RightWall" type="CollisionShape2D" parent="Walls" unique_id=1159334862]
-position = Vector2(1544, 325)
-shape = SubResource("WorldBoundaryShape2D_yx27u")
+position = Vector2(1145, 325)
+shape = SubResource("RectangleShape2D_0rcf7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1280868185]
 position = Vector2(581, 328)
 
 [node name="SocketAttack" type="Node2D" parent="." unique_id=278291486]
-position = Vector2(-523, 325)
+position = Vector2(-6, 325)
 
 [node name="socket" type="Node2D" parent="SocketAttack" unique_id=1666859169 node_paths=PackedStringArray("wire", "head", "target")]
 position = Vector2(5, -4)
@@ -69,7 +70,7 @@ texture = ExtResource("5_44wcw")
 stretch_mode = 1
 
 [node name="head" type="Sprite2D" parent="SocketAttack/socket/wire" unique_id=205395189]
-position = Vector2(1675, 266.6669)
+position = Vector2(1675.0001, 250.00024)
 rotation = 1.5707964
 scale = Vector2(0.7946143, 0.7946145)
 texture = ExtResource("4_ianbq")

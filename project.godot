@@ -27,7 +27,10 @@ SignalBus="*uid://ctcedf6v4ah06"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/mode=3
+window/size/resizable=false
 
 [editor_plugins]
 
@@ -36,6 +39,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://add
 [global_group]
 
 Player2D=""
+CENTER=""
 
 [input]
 

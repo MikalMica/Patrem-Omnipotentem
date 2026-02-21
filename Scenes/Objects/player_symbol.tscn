@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cntlqdt274mri" path="res://Scripts/SymbolController.gd" id="1_tn84p"]
 [ext_resource type="Texture2D" uid="uid://c4j3tedm6mx2p" path="res://Assets/Sprites/logo.png" id="2_hunqd"]
 [ext_resource type="Script" uid="uid://doyli0ea21oib" path="res://Scripts/SymbolAnimation.gd" id="3_hunqd"]
-[ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="4_wyqhi"]
 
 [sub_resource type="Animation" id="Animation_tn84p"]
 resource_name = "Defeated"
@@ -114,7 +113,3 @@ script = ExtResource("3_hunqd")
 position = Vector2(-2.9802322e-08, 3.8131497)
 scale = Vector2(0.61538404, 0.61538404)
 shape = SubResource("CircleShape2D_tn84p")
-
-[node name="skibidi" type="Sprite2D" parent="." unique_id=2141649999]
-scale = Vector2(0.235, 0.235)
-texture = ExtResource("4_wyqhi")
