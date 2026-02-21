@@ -35,27 +35,30 @@ shader_parameter/seed = 42.0
 position = Vector2(5, -4)
 script = ExtResource("1_yvsqh")
 wire = NodePath("wire")
-head = NodePath("head")
+head = NodePath("head_parent")
 target = NodePath("../target")
 
 [node name="wire" type="TextureRect" parent="socket" unique_id=61301726]
+visible = false
 material = SubResource("ShaderMaterial_yx27u")
-offset_left = -7.0
-offset_top = -17.0
-offset_right = 1465.0
-offset_bottom = 317.0
+offset_left = -5.0
+offset_top = -22.0
+offset_right = 1467.0
+offset_bottom = 443.0
 scale = Vector2(0.20378906, 0.20378906)
 texture = ExtResource("3_2atyh")
 stretch_mode = 1
 
-[node name="head" type="Sprite2D" parent="socket" unique_id=1433323960]
+[node name="head_parent" type="Node2D" parent="socket" unique_id=1007027085]
+
+[node name="head" type="Sprite2D" parent="socket/head_parent" unique_id=1433323960]
 material = SubResource("ShaderMaterial_n8pu7")
-position = Vector2(274, 16)
+position = Vector2(-68.00001, -2.4158453e-13)
 rotation = 1.5707964
 scale = Vector2(0.16193369, 0.16193374)
 texture = ExtResource("4_irfp2")
 region_enabled = true
-region_rect = Rect2(1167, 125, 524, 1083)
+region_rect = Rect2(1257, 346, 524, 1083)
 
 [node name="target" type="Node2D" parent="." unique_id=1216616688]
 position = Vector2(250, 2)
@@ -63,9 +66,8 @@ position = Vector2(250, 2)
 [node name="sprite" type="Sprite2D" parent="target" unique_id=970633705]
 z_index = -1
 material = SubResource("ShaderMaterial_7kcub")
-position = Vector2(74, -0.99999905)
-rotation = 0.82111156
+rotation = 1.5707964
 scale = Vector2(0.16982423, 0.16982423)
 texture = ExtResource("4_irfp2")
 region_enabled = true
-region_rect = Rect2(98, 289, 886, 862)
+region_rect = Rect2(128, 447, 998, 968)
