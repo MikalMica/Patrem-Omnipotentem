@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b5w06mo84pgae"]
+
+[ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="1_nb1lj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3cbu"]
+albedo_color = Color(0.83777726, 0.8377774, 0, 1)
+emission_enabled = true
+emission = Color(0.8444406, 1, 0.5931051, 1)
+emission_energy_multiplier = 2.73
+
+[sub_resource type="BoxMesh" id="BoxMesh_jpnrk"]
+
+[node name="Farola" type="MeshInstance3D" unique_id=120955808]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+mesh = ExtResource("1_nb1lj")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1651394831]
+transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
+light_color = Color(0.7372549, 1, 0, 1)
+light_energy = 8.128
+light_volumetric_fog_energy = 3.455
+light_specular = 0.885
+spot_range = 31.938562
+spot_angle = 54.91202
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1861990810]
+transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.6160954, -0.00095894805, 0, 3.2483966, 1.4792166)
+material_override = SubResource("StandardMaterial3D_h3cbu")
+mesh = SubResource("BoxMesh_jpnrk")
