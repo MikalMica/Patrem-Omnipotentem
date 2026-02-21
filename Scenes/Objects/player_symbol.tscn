@@ -2,7 +2,16 @@
 
 [ext_resource type="Script" uid="uid://cntlqdt274mri" path="res://Scripts/SymbolController.gd" id="1_tn84p"]
 [ext_resource type="Texture2D" uid="uid://c4j3tedm6mx2p" path="res://Assets/Sprites/logo.png" id="2_hunqd"]
+[ext_resource type="Shader" uid="uid://bryy5eile5knj" path="res://Assets/Shaders/wobbly.gdshader" id="2_wyqhi"]
 [ext_resource type="Script" uid="uid://doyli0ea21oib" path="res://Scripts/SymbolAnimation.gd" id="3_hunqd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s5lr2"]
+shader = ExtResource("2_wyqhi")
+shader_parameter/interval = 0.5
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 20.0
+shader_parameter/intensityY = 20.0
+shader_parameter/seed = 42.0
 
 [sub_resource type="Animation" id="Animation_tn84p"]
 resource_name = "Defeated"
@@ -101,6 +110,7 @@ scale = Vector2(2.0980031, 2.0980031)
 script = ExtResource("1_tn84p")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1740929361]
+material = SubResource("ShaderMaterial_s5lr2")
 scale = Vector2(0.035068016, 0.035068016)
 texture = ExtResource("2_hunqd")
 

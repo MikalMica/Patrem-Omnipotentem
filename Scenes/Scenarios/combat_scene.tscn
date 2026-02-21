@@ -3,9 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_ppn0g"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_px3ck"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_px3ck"]
-[ext_resource type="Script" uid="uid://djns1x0r4obxk" path="res://Scripts/socket.gd" id="4_0rcf7"]
-[ext_resource type="Texture2D" uid="uid://bsmt3qeenkd8a" path="res://Assets/Sprites/enchufe.png" id="4_ianbq"]
-[ext_resource type="Texture2D" uid="uid://dqox3ouvrxgsa" path="res://Assets/Sprites/cable.png" id="5_44wcw"]
+[ext_resource type="PackedScene" uid="uid://bh0sc5e65g4l3" path="res://Scenes/Objects/socket_attack.tscn" id="4_jeusc"]
+[ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="9_n8pu7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0rcf7"]
 
@@ -49,44 +48,15 @@ shape = SubResource("WorldBoundaryShape2D_yx27u")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1280868185]
 position = Vector2(581, 328)
 
-[node name="SocketAttack" type="Node2D" parent="." unique_id=278291486]
+[node name="SocketAttack" parent="." unique_id=668047394 instance=ExtResource("4_jeusc")]
 position = Vector2(-523, 325)
-
-[node name="socket" type="Node2D" parent="SocketAttack" unique_id=1666859169 node_paths=PackedStringArray("wire", "head", "target")]
-position = Vector2(5, -4)
-script = ExtResource("4_0rcf7")
-wire = NodePath("wire")
-head = NodePath("wire/head")
-target = NodePath("../target")
-
-[node name="wire" type="TextureRect" parent="SocketAttack/socket" unique_id=1513010422]
-offset_left = -2.0
-offset_top = -27.00003
-offset_right = 1470.0
-offset_bottom = 451.99997
-scale = Vector2(0.11999999, 0.11999999)
-texture = ExtResource("5_44wcw")
-stretch_mode = 1
-
-[node name="head" type="Sprite2D" parent="SocketAttack/socket/wire" unique_id=205395189]
-position = Vector2(1675, 266.6669)
-rotation = 1.5707964
-scale = Vector2(0.7946143, 0.7946145)
-texture = ExtResource("4_ianbq")
-region_enabled = true
-region_rect = Rect2(1458, 297, 736, 1054)
-
-[node name="target" type="Node2D" parent="SocketAttack" unique_id=576780622]
-position = Vector2(204, 0)
-
-[node name="sprite" type="Sprite2D" parent="SocketAttack/target" unique_id=1220042861]
-z_index = -1
-position = Vector2(26, -9.2370556e-14)
-rotation = 1.5707964
-scale = Vector2(0.120000005, 0.120000005)
-texture = ExtResource("4_ianbq")
-region_enabled = true
-region_rect = Rect2(266, 285, 1010, 1079)
 
 [node name="CENTER" type="Node2D" parent="." unique_id=1924016792 groups=["CENTER"]]
 position = Vector2(583, 330)
+
+[node name="background" type="Sprite2D" parent="." unique_id=1317558563]
+modulate = Color(0, 0, 0, 1)
+z_index = -50
+position = Vector2(564.99994, 314)
+scale = Vector2(16.0625, 8.9375)
+texture = ExtResource("9_n8pu7")
