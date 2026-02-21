@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
-[ext_resource type="PackedScene" uid="uid://cocy7s3ad6vg5" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
+[ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
+[ext_resource type="PackedScene" uid="uid://cdnv38yqf5dxk" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
 [ext_resource type="Texture2D" uid="uid://dw2inoii52fcv" path="res://Assets/pexels-pixabay-159220.jpg" id="6_h6kwc"]
-[ext_resource type="ArrayMesh" uid="uid://cek50iv2jqrjo" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
+[ext_resource type="PackedScene" uid="uid://cwsxrt7opfa12" path="res://Scenes/Objects/hand_canvas.tscn" id="7_5ite6"]
+[ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="7_jpnrk"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
@@ -74,10 +75,11 @@ transform = Transform3D(4.53466, 0, 0, 0, 6.555977, 0, 0, 0, 4.2790504, -83.1470
 [node name="Floor_Placeholder3" parent="." unique_id=976699337 instance=ExtResource("1_vnmfx")]
 transform = Transform3D(18.818726, 0, 9.941453, 0, 33.001358, 0, -10.558416, 0, 17.719086, -308.52008, -6.5635986, -1)
 
-[node name="Player" parent="." unique_id=1268550398 instance=ExtResource("2_ulksl")]
+[node name="Player" parent="." unique_id=1268550398 node_paths=PackedStringArray("hand_canvas") instance=ExtResource("2_ulksl")]
 transform = Transform3D(2.8840814, 0, 0, 0, 2.8840814, 0, 0, 0, 2.8840814, -1, 4.931196, -6.5552387)
 speed = 200.0
 horizontal_sensitivity = 0.001
+hand_canvas = NodePath("../HandCanvas")
 
 [node name="InteractUI" parent="." unique_id=1514035945 instance=ExtResource("4_jm5ki")]
 
@@ -150,7 +152,7 @@ mesh = SubResource("BoxMesh_eelup")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="mundo/walls" unique_id=914246723]
-transform = Transform3D(15.103942, 0, 0, 0, 66.56161, 0, 0, 0, 56.67373, 47.34527, 21.733116, -7.7161484)
+transform = Transform3D(15.103942, 0, 0, 0, 66.56161, 0, 0, 0, 56.67373, 47.357204, 21.716795, -7.7362237)
 mesh = SubResource("BoxMesh_h6kwc")
 skeleton = NodePath("../..")
 
@@ -298,6 +300,8 @@ player = NodePath("../Player")
 
 [node name="InteractArea" parent="come_cables" index="2" unique_id=461385779 node_paths=PackedStringArray("interact_canvas")]
 interact_canvas = NodePath("../../InteractUI")
+
+[node name="HandCanvas" parent="." unique_id=174721428 instance=ExtResource("7_5ite6")]
 
 [node name="shader" type="CanvasLayer" parent="." unique_id=291397412]
 layer = 10

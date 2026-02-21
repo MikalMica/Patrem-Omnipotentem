@@ -10,6 +10,8 @@ signal stopMoving
 @export var min_rotation := -50
 @export var max_rotation := 50
 
+@export var hand_canvas : HandAnimator
+
 var is_enabled := true
 
 func _ready() -> void:
@@ -25,12 +27,12 @@ func _input(event: InputEvent) -> void:
 		event = event as InputEventMouseMotion
 		rotate_y(-event.relative.x * horizontal_sensitivity)
 		
-	elif event.is_action_pressed("Moving"):
-		startMoving.emit()
-	elif event.is_action_released("Moving"):
-		stopMoving.emit()
-	elif event.is_action_pressed("Escape"):
+	if event.is_action_pressed("Escape"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		
+	# Papear
+	if event.is_action_pressed("Papear"):
+		hand_canvas.papear()
 
 func _physics_process(delta: float) -> void:
 	if not is_enabled: return
