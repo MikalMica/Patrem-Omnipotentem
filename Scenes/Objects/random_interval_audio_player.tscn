@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://wgdmrgifa7y6"]
+
+[ext_resource type="Script" uid="uid://bibbkjw3xhvxq" path="res://Scripts/random_interval_audio_player.gd" id="1_miy2b"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_miy2b"]
+
+[node name="RandomIntervalAudioPlayer" type="AudioStreamPlayer3D" unique_id=1310960823]
+stream = SubResource("AudioStreamRandomizer_miy2b")
+script = ExtResource("1_miy2b")
