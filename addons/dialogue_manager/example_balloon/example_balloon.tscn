@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="2_nlsx6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="FontFile" uid="uid://bnh6jfvpmd2yh" path="res://Assets/fonts/Halftone_Poster_demo.otf" id="4_r5ei8"]
-[ext_resource type="AudioStream" uid="uid://cbrpt107hqo2u" path="res://Assets/sounds/A-Single-Waluigi-Wah-Masky-Chain.wav" id="6_kmygl"]
+[ext_resource type="AudioStream" uid="uid://sv515jnyhhvk" path="res://Assets/sounds/aaaa.wav" id="6_kmygl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
