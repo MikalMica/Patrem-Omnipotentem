@@ -5,6 +5,7 @@ class_name TextFadeIn
 
 func _ready() -> void:
 	visible = false
+	DialogueManager.dialogue_ended.connect(func(_diaalogue): visible = false)
 	
 func fade_in() -> void:
 	animation_player.play("fade_in")
