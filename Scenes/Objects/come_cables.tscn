@@ -2,10 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="1_jhnwq"]
 [ext_resource type="Texture2D" uid="uid://c2v1cmyu7nu6h" path="res://Assets/Sprites/ComeCables/Comecables.png" id="2_xrbs0"]
+[ext_resource type="Resource" uid="uid://dui1qfpokxlra" path="res://Assets/Dialogues/ComeCables.dialogue" id="3_fsmn8"]
 
 [node name="come_cables" unique_id=840245654 instance=ExtResource("1_jhnwq")]
 
 [node name="body" parent="." index="1" unique_id=1387285422]
 texture = ExtResource("2_xrbs0")
 
-[editable path="InteractArea"]
+[node name="InteractArea" parent="." index="2" unique_id=461385779]
+dialog = ExtResource("3_fsmn8")

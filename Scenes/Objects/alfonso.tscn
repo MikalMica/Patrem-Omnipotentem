@@ -2,11 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="1_rhcmo"]
 [ext_resource type="Texture2D" uid="uid://0whuoblqtb1n" path="res://Assets/Sprites/Alfonso/Alfonso.png" id="2_1y3lj"]
+[ext_resource type="Resource" uid="uid://bevjr0c6t8lgk" path="res://Assets/Dialogues/ALFONSO.dialogue" id="3_1y3lj"]
+[ext_resource type="Texture2D" uid="uid://iff1qce544vs" path="res://Assets/Sprites/Alfonso/AlfonsoOutline.png" id="3_lsvao"]
 
 [node name="alfonso" unique_id=840245654 instance=ExtResource("1_rhcmo")]
 
 [node name="body" parent="." index="1" unique_id=1387285422]
 texture = ExtResource("2_1y3lj")
 region_rect = Rect2(445, 100, 1458, 2199)
+
+[node name="outline" parent="body" index="0" unique_id=1805235344]
+texture = ExtResource("3_lsvao")
+
+[node name="InteractArea" parent="." index="2" unique_id=461385779]
+dialog = ExtResource("3_1y3lj")
 
 [editable path="InteractArea"]
