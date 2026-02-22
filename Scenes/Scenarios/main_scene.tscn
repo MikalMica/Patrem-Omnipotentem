@@ -127,7 +127,7 @@ transform = Transform3D(35.286045, 0, 1.6584921, 0, 35.325, 0, -1.6584921, 0, 35
 
 [node name="Player" parent="." unique_id=1268550398 node_paths=PackedStringArray("hand_canvas") instance=ExtResource("2_ulksl")]
 transform = Transform3D(-1.260672e-07, 0, -2.8840814, 0, 2.8840814, 0, 2.8840814, 0, -1.260672e-07, -1, 4.931196, -6.5552387)
-speed = 900.0
+speed = 200.0
 horizontal_sensitivity = 0.001
 hand_canvas = NodePath("../HandCanvas")
 
