@@ -8,13 +8,14 @@
 [node name="npc_base" unique_id=840245654 instance=ExtResource("1_rll3q")]
 
 [node name="body" parent="." index="1" unique_id=1387285422]
-transform = Transform3D(-0.99994, 0, -0.0109779, 0, 1, 0, 0.0109779, 0, -0.99994, -0.585, 0, 0)
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, -0.585, 0, 0)
 texture = ExtResource("2_h7icc")
 region_rect = Rect2(229, 138, 1271, 4015)
 
 [node name="outline" parent="body" index="0" unique_id=1805235344]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, -6.645, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, -6, -1)
 visible = true
+modulate = Color(1, 1, 1, 0)
 texture = ExtResource("3_88la2")
 
 [node name="InteractArea" parent="." index="2" unique_id=461385779]

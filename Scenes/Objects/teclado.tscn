@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://jdokfro46mej"]
 
 [ext_resource type="Script" uid="uid://bfo4gsietvbv7" path="res://Scripts/billboarding.gd" id="1_ob47d"]
-[ext_resource type="Texture2D" uid="uid://dq0b4uuy4hd1o" path="res://Assets/Placeholders/MarioVaquerizo.jpg" id="2_n70p1"]
-[ext_resource type="Texture2D" uid="uid://3o5h4jfshbyp" path="res://Assets/Sprites/ComeCables/ComecablesOutline.png" id="3_etjky"]
+[ext_resource type="Texture2D" uid="uid://c783km3wpyanq" path="res://Assets/Sprites/Teclado.png" id="2_ob47d"]
+[ext_resource type="Texture2D" uid="uid://cr832b67yfenf" path="res://Assets/Sprites/Teclado zoutline.png" id="3_n70p1"]
 [ext_resource type="PackedScene" uid="uid://cjbmxvjw7qqpp" path="res://Scenes/Objects/interact_area.tscn" id="4_v8urt"]
-[ext_resource type="Resource" uid="uid://dvgagihqd5wgv" path="res://Assets/Dialogues/lesbiana.dialogue" id="5_ay255"]
+[ext_resource type="Resource" uid="uid://bnxrthqhkd4xw" path="res://FINAL.dialogue" id="5_ob47d"]
 
 [node name="npc_base" type="Node3D" unique_id=840245654]
 script = ExtResource("1_ob47d")
@@ -14,15 +14,14 @@ autoplay = &"Idle"
 
 [node name="body" type="Sprite3D" parent="." unique_id=1387285422]
 transform = Transform3D(-0.99994, 0, -0.0109779, 0, 1, 0, 0.0109779, 0, -0.99994, -0.585292, 0, 0.235904)
-texture = ExtResource("2_n70p1")
-region_enabled = true
+texture = ExtResource("2_ob47d")
 region_rect = Rect2(281.373, 0, 1301.63, 1369)
 
 [node name="outline" type="Sprite3D" parent="body" unique_id=1805235344]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43301, 0, -0.386297)
+transform = Transform3D(1, 0, 9.313226e-10, 0, 1, 0, -9.313226e-10, 0, 1, -0.24181068, 0, -0.37321928)
 visible = false
-texture = ExtResource("3_etjky")
+texture = ExtResource("3_n70p1")
 
 [node name="InteractArea" parent="." unique_id=461385779 node_paths=PackedStringArray("outline") instance=ExtResource("4_v8urt")]
 outline = NodePath("../body/outline")
-dialog = ExtResource("5_ay255")
+dialog = ExtResource("5_ob47d")

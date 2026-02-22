@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cji3xowa18mv2"]
+[gd_scene format=3 uid="uid://dimur6d8btsog"]
 
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="1_xfja8"]
 [ext_resource type="PackedScene" uid="uid://ck3dnnn5jld3w" path="res://Scenes/Objects/alfonso.tscn" id="2_vg00v"]
@@ -7,12 +7,13 @@
 [ext_resource type="ArrayMesh" uid="uid://dgfwj762b7fpg" path="res://Assets/Meshes/untitled.obj" id="5_f6sj6"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="6_xft7t"]
 [ext_resource type="PackedScene" uid="uid://tl0ptpy208rh" path="res://Assets/Meshes/altarcross.glb" id="7_gubs2"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/monitor.tscn" id="8_h84p4"]
+[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="8_h84p4"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="9_wrym6"]
-[ext_resource type="Texture2D" uid="uid://dvd6lcwq1ji5r" path="res://Assets/Sprites/ANGELCROSS.png" id="10_qjiek"]
-[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/Sounds/soundtrack.wav" id="11_84c0n"]
+[ext_resource type="Texture2D" uid="uid://cj2nk63k7n1hx" path="res://Assets/Sprites/ANGELCROSS.png" id="10_qjiek"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="11_84c0n"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="12_db6tb"]
-[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="13_5t0be"]
+[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="13_5t0be"]
+[ext_resource type="PackedScene" uid="uid://jdokfro46mej" path="res://Scenes/Objects/teclado.tscn" id="14_5t0be"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4ofem"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -321,3 +322,7 @@ autoplay = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HandCanvas" unique_id=1547264402]
 stream = ExtResource("13_5t0be")
+
+[node name="npc_base" parent="." unique_id=1192359418 node_paths=PackedStringArray("player") instance=ExtResource("14_5t0be")]
+transform = Transform3D(-0.060119413, -0.06917159, 0.16801612, 0.0048923483, 0.17629397, 0.07433011, -0.18163204, 0.027644075, -0.053610474, -52.96264, 0.8430424, 5.5917625)
+player = NodePath("../Player")
