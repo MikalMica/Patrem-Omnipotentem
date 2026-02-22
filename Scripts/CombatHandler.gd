@@ -36,7 +36,7 @@ func _despawn_attack() -> void:
 		_spawn_random_attack()
 	else:
 		SaveSceneState.defeat(enemyName)
-		SceneHandler.returnToMain()
+		SaveSceneState.loadCurrScene()
 
 func _delete_everything() -> void:
 	for i in get_children():

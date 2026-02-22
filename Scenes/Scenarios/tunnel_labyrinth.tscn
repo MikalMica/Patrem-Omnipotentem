@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://d28vpanfpm5om"]
 
-[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="1_0th0n"]
-[ext_resource type="PackedScene" uid="uid://blygki8haclni" path="res://Scenes/Objects/tunel.tscn" id="1_t8hh8"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/Sounds/soundtrack.wav" id="1_0th0n"]
 [ext_resource type="Script" uid="uid://dnekf4leonu1m" path="res://Scripts/scene_register.gd" id="1_epapc"]
+[ext_resource type="PackedScene" uid="uid://wtmoqmqj2768" path="res://Scenes/Objects/tunel.tscn" id="1_t8hh8"]
 [ext_resource type="PackedScene" uid="uid://ctwffo4dc8s22" path="res://Scenes/Objects/tunel_t.tscn" id="2_u40kd"]
 [ext_resource type="PackedScene" uid="uid://c2ex3srnnimxc" path="res://Scenes/Objects/tunel_l.tscn" id="3_oaat8"]
 [ext_resource type="PackedScene" uid="uid://cwoss3xdc5fag" path="res://Scenes/Objects/wall.tscn" id="4_50h5r"]
-[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="5_o5uvm"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/monitor.tscn" id="5_o5uvm"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="6_0th0n"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="7_hbh1i"]
 [ext_resource type="PackedScene" uid="uid://dndal8stijogx" path="res://Assets/Meshes/game_ready_light.glb" id="9_368xc"]
-[ext_resource type="Script" path="res://Scripts/triggerScene.gd" id="11_epapc"]
+[ext_resource type="Script" uid="uid://ci2pbmlmk2odj" path="res://Scripts/triggerScene.gd" id="11_epapc"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="11_hbh1i"]
-[ext_resource type="PackedScene" uid="uid://celesr8piu3iu" path="res://Scenes/Objects/lesbiana.tscn" id="12_368xc"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/lesbiana.tscn" id="12_368xc"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="12_epapc"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="15_dkmr1"]
+[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="16_jx7c6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0th0n"]
 size = Vector3(660.1582, 52.140625, 428.64343)
@@ -260,8 +262,9 @@ shape = SubResource("BoxShape3D_hbh1i")
 transform = Transform3D(0.7793289, 0, 0, 0, 0.7793289, 0, 0, 0, 0.7793289, 346.4879, 11.314392, 103.57109)
 player = NodePath("../../Player")
 
-[node name="Player" parent="." unique_id=597419909 instance=ExtResource("11_hbh1i")]
+[node name="Player" parent="." unique_id=597419909 node_paths=PackedStringArray("hand_canvas") instance=ExtResource("11_hbh1i")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.1979866, 3.7025766, 1.5039272)
+hand_canvas = NodePath("../HandCanvas")
 
 [node name="shader" type="CanvasLayer" parent="." unique_id=962073725]
 layer = 10
@@ -279,3 +282,8 @@ transform = Transform3D(-9.505634e-15, -1.1924879e-08, -7.098906, 18.236122, -4.
 material_override = SubResource("StandardMaterial3D_epapc")
 mesh = SubResource("PlaneMesh_368xc")
 skeleton = NodePath("../../..")
+
+[node name="HandCanvas" parent="." unique_id=174721428 instance=ExtResource("15_dkmr1")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HandCanvas" unique_id=1516602370]
+stream = ExtResource("16_jx7c6")

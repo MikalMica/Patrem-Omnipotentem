@@ -12,6 +12,8 @@ ET HAERETICUS COGITAT...: v v v
 	ALFONSO: ¡Osas amenazar al Padre! ¡Osas insinuar que su enfado es injusto y sus métodos erroneos! ¡Sufre, hereje, blasfemo, [i]vitium[/i]!
 - <<La mano que le da de comer le está haciendo morir de hambre.>>
 	ALFONSO: ¡Te confundes de nuevo, hereje! Si el Padre me mata, solo me invita a sus brazos. Lo único que mancha tu voz es la envidia de saber mi fortuna, de saber que nunca vas a sentir el doloroso amor del Padre como yo.
+	if !SaveSceneState.is_defeated("Alfonso")
+		do SignalBus.toCombat.emit("res://Scenes/Scenarios/alfonso_combat_scene.tscn")
 => END
 ~ CombatEnd
 ALFONSO: ¿Te enorgulleces, acaso? ¿De llegar tan lejos en un mundo en decadencia? ¿No hacen extremecer tu corazón los cadáveres? ¿Te enorgulleces de tu templanza?

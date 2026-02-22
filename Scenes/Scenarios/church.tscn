@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c13ottos0mj1f"]
+[gd_scene format=3 uid="uid://cji3xowa18mv2"]
 
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="1_xfja8"]
 [ext_resource type="PackedScene" uid="uid://ck3dnnn5jld3w" path="res://Scenes/Objects/alfonso.tscn" id="2_vg00v"]
@@ -7,10 +7,12 @@
 [ext_resource type="ArrayMesh" uid="uid://dgfwj762b7fpg" path="res://Assets/Meshes/untitled.obj" id="5_f6sj6"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="6_xft7t"]
 [ext_resource type="PackedScene" uid="uid://tl0ptpy208rh" path="res://Assets/Meshes/altarcross.glb" id="7_gubs2"]
-[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="8_h84p4"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/monitor.tscn" id="8_h84p4"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="9_wrym6"]
-[ext_resource type="Texture2D" uid="uid://cj2nk63k7n1hx" path="res://Assets/Sprites/ANGELCROSS.png" id="10_qjiek"]
-[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="11_84c0n"]
+[ext_resource type="Texture2D" uid="uid://dvd6lcwq1ji5r" path="res://Assets/Sprites/ANGELCROSS.png" id="10_qjiek"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/Sounds/soundtrack.wav" id="11_84c0n"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="12_db6tb"]
+[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="13_5t0be"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4ofem"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -100,8 +102,9 @@ size = Vector3(14.011663, 1, 21.095722)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=799079513]
 environment = SubResource("Environment_h0a4c")
 
-[node name="Player" parent="." unique_id=597419909 instance=ExtResource("1_xfja8")]
+[node name="Player" parent="." unique_id=597419909 node_paths=PackedStringArray("hand_canvas") instance=ExtResource("1_xfja8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21.19331, 1.5881829, 5.7425537)
+hand_canvas = NodePath("../HandCanvas")
 
 [node name="alfonso" parent="." unique_id=840245654 node_paths=PackedStringArray("player") instance=ExtResource("2_vg00v")]
 transform = Transform3D(0.3354397, -0.038448893, 0, 0.043947082, 0.2934731, 0, 0, 0, 0.29598105, -11.635376, 3.1454806, -3.4071097)
@@ -313,3 +316,8 @@ texture = ExtResource("10_qjiek")
 stream = ExtResource("11_84c0n")
 volume_db = -5.295
 autoplay = true
+
+[node name="HandCanvas" parent="." unique_id=174721428 instance=ExtResource("12_db6tb")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HandCanvas" unique_id=1547264402]
+stream = ExtResource("13_5t0be")

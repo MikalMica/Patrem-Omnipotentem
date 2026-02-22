@@ -14,6 +14,7 @@ ET HAERETICUS COGITAT...: v v v
 - <<Tu corazón está completamente vacío.>>
 	LA INGENIERA: ¿Vacío? ¿Es tu tara, acaso, el agujero que hace que el Padre escape de tu corazón?
 LA INGENIERA: En este estado, no mereces sentir el amor del Padre. No mereces el cariño ni el castigo. No más que yo.
+do SignalBus.toCombat.emit("res://Scenes/Scenarios/lesbiana_combat_scene.tscn")
 => END
 ~ CombatEnd
 LA INGENIERA: ¿Padre? ¿Por qué no le matas, Padre? ¿Por qué no le destruyes y le entierras como hiciste en el pasado? ¿Por qué te rindes y retractas, Padre?

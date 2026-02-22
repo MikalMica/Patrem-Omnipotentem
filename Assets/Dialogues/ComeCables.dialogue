@@ -11,7 +11,7 @@ COMECABLES: Maldito sea mi cuerpo, Padre. Maldito sea este cuerpo que me condena
 COMECABLES: En el plástico hay vida. En el plástico que abraza el cobre de las venas del Padre hay más vida que en mi propia sangre. Si mi cerebro pudiera ser de plástico, si tan solo el carbono de mis tejidos se dejase convertir en el puro y limpio polietileno... 
 COMECABLES: La carne es sucia, la carne es débil, la carne tiembla y teme y duda y miente y peca. Lo único que perdona el Padre de mi patético cuerpo es el hierro que arrastran mis glóbulos rojos.
 if SaveSceneState.is_defeated("Comecables") == false
-	do SignalBus.toCombat.emit("res://Scenes/Scenarios/combat_scene.tscn")
+	do SignalBus.toCombat.emit("res://Scenes/Scenarios/comecables_combat_scene.tscn")
 => END
 ~ CombatEnd
 COMECABLES: ¡Hasta a ti te prefiere el Padre! ¡El Padre se abalanza sobre tus huesos, estando yo aquí presente! ¡Ni me mira!
