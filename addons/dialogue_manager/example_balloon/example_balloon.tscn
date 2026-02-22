@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="2_nlsx6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://bnh6jfvpmd2yh" path="res://Assets/fonts/Halftone_Poster_demo.otf" id="4_r5ei8"]
-[ext_resource type="AudioStream" uid="uid://sv515jnyhhvk" path="res://Assets/sounds/aaaa.wav" id="6_kmygl"]
+[ext_resource type="FontFile" uid="uid://de4ha2aygqgq5" path="res://Assets/fonts/Halftone_Poster_demo.otf" id="4_r5ei8"]
+[ext_resource type="AudioStream" uid="uid://sv515jnyhhvk" path="res://Assets/Sounds/aaaa.wav" id="6_kmygl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -209,7 +209,7 @@ layout_mode = 2
 theme = SubResource("Theme_r5ei8")
 text = "Response example"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=661979726]
+[node name="Audio" type="AudioStreamPlayer" parent="." unique_id=661979726]
 unique_name_in_owner = true
 stream = ExtResource("6_kmygl")
 volume_db = -4.333

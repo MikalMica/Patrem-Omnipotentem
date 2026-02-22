@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dvxqcaapgns65" path="res://Assets/Sprites/Alfonso/AlfonsoOutline.png" id="3_lsvao"]
 
 [node name="alfonso" unique_id=840245654 instance=ExtResource("1_rhcmo")]
+metadata/entity_name = "Alfonso"
 
 [node name="body" parent="." index="1" unique_id=1387285422]
 texture = ExtResource("2_1y3lj")

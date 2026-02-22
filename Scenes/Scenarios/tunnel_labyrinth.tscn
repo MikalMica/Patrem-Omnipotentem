@@ -12,13 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://dndal8stijogx" path="res://Assets/Meshes/game_ready_light.glb" id="9_368xc"]
 [ext_resource type="Script" uid="uid://ci2pbmlmk2odj" path="res://Scripts/triggerScene.gd" id="11_epapc"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="11_hbh1i"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/lesbiana.tscn" id="12_368xc"]
+[ext_resource type="PackedScene" uid="uid://b0p00p4gynsyh" path="res://Scenes/Objects/lesbiana.tscn" id="12_368xc"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="12_epapc"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="15_dkmr1"]
 [ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="16_jx7c6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0th0n"]
-size = Vector3(660.1582, 52.140625, 428.64343)
+size = Vector3(828.6587, 52.140625, 533.0558)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hbh1i"]
 size = Vector3(46.615234, 41.37256, 9.072388)
@@ -245,7 +245,7 @@ transform = Transform3D(-8.3226485e-07, 0, 19.04, 0, 19.04, 0, -19.04, 0, -8.322
 [node name="StaticBody3D" type="StaticBody3D" parent="Tunnels" unique_id=1147124210]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tunnels/StaticBody3D" unique_id=888225922]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 299.20703, -26.429688, -61.515686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 281.46606, -26.429688, -28.230225)
 shape = SubResource("BoxShape3D_0th0n")
 
 [node name="Area3D" type="Area3D" parent="Tunnels" unique_id=569427965]
@@ -263,7 +263,7 @@ transform = Transform3D(0.7793289, 0, 0, 0, 0.7793289, 0, 0, 0, 0.7793289, 346.4
 player = NodePath("../../Player")
 
 [node name="Player" parent="." unique_id=597419909 node_paths=PackedStringArray("hand_canvas") instance=ExtResource("11_hbh1i")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.1979866, 3.7025766, 1.5039272)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.1979866, 3.7025766, 0.7284694)
 hand_canvas = NodePath("../HandCanvas")
 
 [node name="shader" type="CanvasLayer" parent="." unique_id=962073725]

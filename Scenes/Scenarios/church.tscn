@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dimur6d8btsog"]
+[gd_scene format=3 uid="uid://cji3xowa18mv2"]
 
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="1_xfja8"]
 [ext_resource type="PackedScene" uid="uid://ck3dnnn5jld3w" path="res://Scenes/Objects/alfonso.tscn" id="2_vg00v"]
@@ -7,13 +7,13 @@
 [ext_resource type="ArrayMesh" uid="uid://dgfwj762b7fpg" path="res://Assets/Meshes/untitled.obj" id="5_f6sj6"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="6_xft7t"]
 [ext_resource type="PackedScene" uid="uid://tl0ptpy208rh" path="res://Assets/Meshes/altarcross.glb" id="7_gubs2"]
-[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="8_h84p4"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/monitor.tscn" id="8_h84p4"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="9_wrym6"]
-[ext_resource type="Texture2D" uid="uid://cj2nk63k7n1hx" path="res://Assets/Sprites/ANGELCROSS.png" id="10_qjiek"]
-[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="11_84c0n"]
+[ext_resource type="Texture2D" uid="uid://dvd6lcwq1ji5r" path="res://Assets/Sprites/ANGELCROSS.png" id="10_qjiek"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/Sounds/soundtrack.wav" id="11_84c0n"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="12_db6tb"]
-[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="13_5t0be"]
-[ext_resource type="PackedScene" uid="uid://jdokfro46mej" path="res://Scenes/Objects/teclado.tscn" id="14_5t0be"]
+[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="13_5t0be"]
+[ext_resource type="PackedScene" uid="uid://co01yticgpcg4" path="res://Scenes/Objects/teclado.tscn" id="14_5t0be"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4ofem"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -84,7 +84,7 @@ resource_local_to_scene = true
 albedo_color = Color(0.22928256, 3.5038464, 0.3953371, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ofem"]
-size = Vector3(100.602936, 1, 53.946327)
+size = Vector3(100.602936, 18.335938, 53.946327)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gw6bf"]
 size = Vector3(60.962486, 1, 21.095722)
@@ -193,7 +193,7 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="mundo" unique_id=1852228606]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mundo/StaticBody3D" unique_id=1736408746]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.828644, 0.2127409, 4.9988937)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.828644, -8.455228, 4.9988937)
 shape = SubResource("BoxShape3D_4ofem")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="mundo/StaticBody3D" unique_id=783554053]

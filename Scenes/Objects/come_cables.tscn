@@ -113,3 +113,4 @@ region_rect = Rect2(38, 936, 202, 319)
 [node name="InteractArea" parent="." index="2" unique_id=461385779]
 dialog = ExtResource("3_fsmn8")
 enemyName = "Comecables"
+metadata/entity_name = "Comecables"

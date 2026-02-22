@@ -22,5 +22,6 @@ texture = ExtResource("3_88la2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.325475, 0)
 dialog = ExtResource("3_d7lff")
 enemyName = "Bocabajo"
+metadata/entity_name = "Bocabajo"
 
 [editable path="InteractArea"]

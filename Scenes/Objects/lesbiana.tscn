@@ -26,3 +26,4 @@ texture = ExtResource("3_hmh61")
 outline = NodePath("../body/outline")
 dialog = ExtResource("5_xjnlr")
 enemyName = "Lesbiana"
+metadata/entity_name = "Lesbiana"

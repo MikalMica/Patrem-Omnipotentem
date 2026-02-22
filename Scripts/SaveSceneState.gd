@@ -14,7 +14,8 @@ func _ready() -> void:
 	defeated = {"Comecables": false,
 				"Lesbiana": false,
 				"Alfonso": false,
-				"Bocabajo": false}
+				"Bocabajo": false,
+				"Pater": false}
 	paths = [
 		"res://Scenes/Scenarios/main_scene.tscn",
 		"res://Scenes/Scenarios/tunnel_labyrinth.tscn",
