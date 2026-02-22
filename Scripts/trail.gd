@@ -23,7 +23,7 @@ func _ready() -> void:
 func _spawnTrail(area: Area2D) -> void:
 	if area == lastLink:
 		var mLink = link.instantiate() as Node2D
-		add_child(mLink)
+		add_child.call_deferred(mLink)
 		mLink.global_position = bulletArea.global_position
 		mLink.global_rotation = bulletArea.global_rotation + (PI/2)
 		links.push_back(mLink)

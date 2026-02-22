@@ -42,7 +42,8 @@ func loadNextDialogue() -> void:
 	savedDialogue = false
 	isInDialogue = true
 	DialogueManager.show_dialogue_balloon(nextDialogue, nextDialogueTag)
-	DialogueManager.dialogue_ended.connect(notInDialogue)
+	await DialogueManager.dialogue_ended
+	notInDialogue()
 
 func notInDialogue() -> void:
 	isInDialogue = false

@@ -9,9 +9,11 @@ func _ready() -> void:
 	retry.add_theme_stylebox_override("normal", stylebox)
 	exit.add_theme_stylebox_override("hover", stylebox)
 	retry.add_theme_stylebox_override("hover", stylebox)
+	Input.mouse_mode =Input.MOUSE_MODE_VISIBLE
 
 func _exit() -> void:
 	SceneManager.change_scene("res://Scenes/Scenarios/main_menu_scene.tscn")
 
 func _retry() -> void:
+	Input.mouse_mode =Input.MOUSE_MODE_CAPTURED
 	SceneHandler.returnToLastCombat()
