@@ -1,10 +1,6 @@
 extends Node
 
-var mainScene : Node
 var currCombatScene : String
-
-func registerMainScene(scene: Node3D) -> void:
-	mainScene = scene
 
 func changeTo(path: String) -> void:
 	await get_tree().create_timer(1.0).timeout

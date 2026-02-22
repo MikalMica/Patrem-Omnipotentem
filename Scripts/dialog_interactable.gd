@@ -6,6 +6,7 @@ extends Area3D
 
 var player_is_near : bool
 var in_dialogue : bool = false
+var player : CharacterBody3D
 	
 func _ready() -> void:
 	body_entered.connect(func(body : Node3D): on_body_change(body, true))
@@ -19,6 +20,7 @@ func on_body_change(body : Node3D, entered : bool) -> void:
 		
 	player_is_near = entered
 	outline.visible = entered
+	player = body
 	
 	if (interact_canvas != null):
 		interact_canvas.visible = entered
@@ -26,8 +28,10 @@ func on_body_change(body : Node3D, entered : bool) -> void:
 			interact_canvas.fade_in()
 
 func _input(event: InputEvent) -> void:
-	if(player_is_near and event.is_action_pressed("Interact") and not in_dialogue):
+	if(player_is_near and event.is_action_pressed("Interact") and not in_dialogue and not SaveSceneState.inDialogue()):
 		in_dialogue = true
+		SaveSceneState.savePlayerTrans(player)
+		SaveSceneState.saveNextDialogue(dialog, "CombatEnd")
 		DialogueManager.show_dialogue_balloon(dialog, "start")
 		if(interact_canvas != null):
 			interact_canvas.visible = false

@@ -90,6 +90,7 @@ script = ExtResource("2_px3ck")
 attacks = Array[PackedScene]([ExtResource("3_jeusc")])
 nAttacks = 2
 dialogue = ExtResource("5_0rcf7")
+enemyName = "Comecables"
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
 

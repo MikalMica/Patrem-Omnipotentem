@@ -4,6 +4,7 @@ extends Node2D
 @export var waitTime = 2.0
 @export var nAttacks = 1
 @export var dialogue: DialogueResource
+@export var enemyName: String
 var attacksSpawned = 0
 var currIndex
 var currAttack : IAttack
@@ -34,6 +35,7 @@ func _despawn_attack() -> void:
 	if attacksSpawned < nAttacks:
 		_spawn_random_attack()
 	else:
+		SaveSceneState.defeat(enemyName)
 		SceneHandler.returnToMain()
 
 func _delete_everything() -> void:
