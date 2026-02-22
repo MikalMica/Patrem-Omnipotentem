@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://crogy6uhejr0a"]
+
+[ext_resource type="ArrayMesh" uid="uid://bydjen1ds54vo" path="res://Assets/Meshes/monitor.obj" id="1_rl822"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6vav5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mtft4"]
+albedo_color = Color(0, 3.3975437, 0.17600724, 1)
+emission_enabled = true
+emission = Color(0, 0.45490196, 0, 1)
+emission_energy_multiplier = 4.27
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jcxkm"]
+
+[node name="Monitor" type="MeshInstance3D" unique_id=1896698177]
+transform = Transform3D(14.350337, -11.050584, 37.22265, 3.975116, 39.893078, 10.310862, -38.624336, 0, 14.890726, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_6vav5")
+mesh = ExtResource("1_rl822")
+skeleton = NodePath("../../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1814690716]
+transform = Transform3D(1.041213, -0.026884183, -0.014737113, -0.022562861, -0.043160737, -0.75415224, 0.037023187, 0.72974265, -0.04514766, -0.09635019, -0.19036293, 0.78396034)
+material_override = SubResource("StandardMaterial3D_mtft4")
+mesh = SubResource("PlaneMesh_jcxkm")

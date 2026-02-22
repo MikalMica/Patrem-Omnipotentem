@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="7_5ite6"]
 [ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="7_jpnrk"]
+[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
 [ext_resource type="ArrayMesh" uid="uid://bydjen1ds54vo" path="res://Assets/Meshes/monitor.obj" id="8_jpnrk"]
 [ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="9_6vav5"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="11_mtft4"]
@@ -429,16 +430,8 @@ skeleton = NodePath("../..")
 
 [node name="montaña" type="Node3D" parent="mundo" unique_id=1558762411]
 
-[node name="Monitor" type="MeshInstance3D" parent="mundo/montaña" unique_id=1590442143]
-transform = Transform3D(14.350337, -11.050584, 37.22265, 3.975116, 39.893078, 10.310862, -38.624336, 0, 14.890726, -703.97644, 348.10123, -402.416)
-material_override = SubResource("StandardMaterial3D_6vav5")
-mesh = ExtResource("8_jpnrk")
-skeleton = NodePath("../../..")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/montaña/Monitor" unique_id=118025350]
-transform = Transform3D(1.041213, -0.026884183, -0.014737113, -0.022562861, -0.043160737, -0.75415224, 0.037023187, 0.72974265, -0.04514766, -0.09635019, -0.19036293, 0.78396034)
-material_override = SubResource("StandardMaterial3D_mtft4")
-mesh = SubResource("PlaneMesh_jcxkm")
+[node name="Monitor" parent="mundo/montaña" unique_id=1896698177 instance=ExtResource("7_kwead")]
+transform = Transform3D(14.350339, -11.050582, 37.22265, 3.9751158, 39.893078, 10.310861, -38.624336, 3.084192e-07, 14.890726, -703.97644, 348.10123, -402.416)
 
 [node name="Monitor3" type="MeshInstance3D" parent="mundo/montaña" unique_id=1872289753]
 transform = Transform3D(36.27521, -16.792362, 50.985165, 6.221379, 62.435905, 16.137335, -53.317593, -4.1395206, 36.57132, -1177.2441, 403.2327, -102.04147)
