@@ -2,6 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="1_0th0n"]
 [ext_resource type="PackedScene" uid="uid://blygki8haclni" path="res://Scenes/Objects/tunel.tscn" id="1_t8hh8"]
+[ext_resource type="Script" uid="uid://dnekf4leonu1m" path="res://Scripts/scene_register.gd" id="1_epapc"]
 [ext_resource type="PackedScene" uid="uid://ctwffo4dc8s22" path="res://Scenes/Objects/tunel_t.tscn" id="2_u40kd"]
 [ext_resource type="PackedScene" uid="uid://c2ex3srnnimxc" path="res://Scenes/Objects/tunel_l.tscn" id="3_oaat8"]
 [ext_resource type="PackedScene" uid="uid://cwoss3xdc5fag" path="res://Scenes/Objects/wall.tscn" id="4_50h5r"]
@@ -52,6 +53,7 @@ albedo_color = Color(0.47787654, 6.4927216, 0.7731245, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_368xc"]
 
 [node name="Tunnel_Labyrinth" type="Node3D" unique_id=1588487949]
+script = ExtResource("1_epapc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806064961]
 stream = ExtResource("1_0th0n")
@@ -248,6 +250,7 @@ shape = SubResource("BoxShape3D_0th0n")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 485.7143, 0, 28.571428)
 script = ExtResource("11_epapc")
 ScenePath = "res://Scenes/Scenarios/CableRoom.tscn"
+SceneIndex = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tunnels/Area3D" unique_id=1261076507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7519226, 20.18628, 4.0361958)

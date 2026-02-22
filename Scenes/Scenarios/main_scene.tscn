@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="7_5ite6"]
 [ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="7_jpnrk"]
-[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
 [ext_resource type="ArrayMesh" uid="uid://bydjen1ds54vo" path="res://Assets/Meshes/monitor.obj" id="8_jpnrk"]
 [ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="9_6vav5"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="11_mtft4"]
@@ -1114,6 +1114,7 @@ player = NodePath("../Player")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -606.2461, 0, -63.88626)
 script = ExtResource("20_ywgaw")
 ScenePath = "res://Scenes/Scenarios/tunnel_labyrinth.tscn"
+SceneIndex = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=839549160]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.619324, 13.75592, 1.4894104)

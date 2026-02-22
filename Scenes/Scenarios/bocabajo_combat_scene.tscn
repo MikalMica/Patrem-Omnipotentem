@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_grpqj"]
 [ext_resource type="PackedScene" uid="uid://dggu6qiims6fa" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_eb761"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_a010b"]
-[ext_resource type="Resource" uid="uid://dc3caik8sdgvi" path="res://Assets/Placeholders/CombatDialogue.dialogue" id="5_sdnvd"]
+[ext_resource type="Resource" uid="uid://ch6cge1oxnqun" path="res://BOCAABAJO_COMBATE.dialogue" id="5_mhmbe"]
 [ext_resource type="Script" uid="uid://7gqdoajhxq6h" path="res://Scripts/combatTransition.gd" id="6_o1ghi"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="7_4tf3u"]
 [ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/Sounds/pelea.wav" id="8_tbihr"]
@@ -90,8 +90,9 @@ position = Vector2(643, 352)
 position = Vector2(-449, -248)
 script = ExtResource("2_grpqj")
 attacks = Array[PackedScene]([ExtResource("3_eb761"), ExtResource("4_a010b")])
-dialogue = ExtResource("5_sdnvd")
-enemyName = "Comecables"
+nAttacks = 3
+dialogue = ExtResource("5_mhmbe")
+enemyName = "Bocabajo"
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
 
