@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
 [ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
-[ext_resource type="PackedScene" uid="uid://cryaj723lq0ib" path="res://Scenes/Objects/floor_corridor.tscn" id="4_kwead"]
 [ext_resource type="PackedScene" uid="uid://cdnv38yqf5dxk" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
 [ext_resource type="PackedScene" uid="uid://cwsxrt7opfa12" path="res://Scenes/Objects/hand_canvas.tscn" id="7_5ite6"]
 [ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
@@ -19,7 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="14_mkx05"]
 [ext_resource type="PackedScene" uid="uid://wtmoqmqj2768" path="res://Scenes/Objects/tunel.tscn" id="15_7bomk"]
 [ext_resource type="PackedScene" uid="uid://dimpa466oc8rm" path="res://Scenes/Objects/Shrek.tscn" id="16_c4du3"]
-[ext_resource type="Script" path="res://Scripts/triggerScene.gd" id="20_ywgaw"]
+[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="20_7sv6l"]
+[ext_resource type="Script" uid="uid://ci2pbmlmk2odj" path="res://Scripts/triggerScene.gd" id="20_ywgaw"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("1_5ite6")
@@ -100,7 +100,7 @@ size = Vector3(16.299927, 49.82166, 141.24432)
 size = Vector3(16.299927, 49.82166, 170.09677)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ite6"]
-size = Vector3(46.415375, 67.20068, 15.2734375)
+size = Vector3(46.415375, 67.20068, 24.458984)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oy23i"]
 size = Vector3(16.299927, 49.82166, 221.36826)
@@ -119,11 +119,11 @@ autoplay = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1851391742]
 environment = SubResource("Environment_jpnrk")
 
-[node name="Floor_corridor" parent="." unique_id=1513593116 instance=ExtResource("4_kwead")]
-transform = Transform3D(7.445, 0, 0, 0, 7.445, 0, 0, 0, 7.445, -27.094803, 1.9956036, 0.052858353)
-
 [node name="Floor_Placeholder4" parent="." unique_id=1074245067 instance=ExtResource("1_vnmfx")]
 transform = Transform3D(35.286045, 0, 1.6584921, 0, 35.325, 0, -1.6584921, 0, 35.286045, -296.2859, -0.3189926, -63.821846)
+
+[node name="CollisionShape3D" parent="Floor_Placeholder4" index="0" unique_id=564368285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5253639, 0, 0)
 
 [node name="Player" parent="." unique_id=1268550398 node_paths=PackedStringArray("hand_canvas") instance=ExtResource("2_ulksl")]
 transform = Transform3D(-1.260672e-07, 0, -2.8840814, 0, 2.8840814, 0, 2.8840814, 0, -1.260672e-07, -1, 4.931196, -6.5552387)
@@ -1002,7 +1002,7 @@ shape = SubResource("BoxShape3D_6vav5")
 transform = Transform3D(0.012356609, 0, 0.9999236, 0, 1, 0, -0.9999236, 0, 0.012356609, 47.24222, 23.257519, -12.663132)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D6" unique_id=658423703]
-transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -4.133588, 0, -7.6293945e-06)
+transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -4.133588, 0, -4.5927773)
 shape = SubResource("BoxShape3D_5ite6")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="mundofisico" unique_id=1201731297]
@@ -1123,5 +1123,11 @@ SceneIndex = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.619324, 13.75592, 1.4894104)
 shape = SubResource("BoxShape3D_ywgaw")
 
+[node name="MarioVaquerizo" parent="." unique_id=842083126 node_paths=PackedStringArray("player") instance=ExtResource("20_7sv6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.215736, -64.14639, 0)
+player = NodePath("../Player")
+y_billboard = true
+
+[editable path="Floor_Placeholder4"]
 [editable path="come_cables"]
 [editable path="shrek"]
