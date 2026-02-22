@@ -6,3 +6,4 @@
 [node name="ScreenArea" type="Node2D" unique_id=66603339]
 script = ExtResource("1_cv6qt")
 modules = Array[PackedScene]([ExtResource("2_njumy")])
+areaSize = 200.0

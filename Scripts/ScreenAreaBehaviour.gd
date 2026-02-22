@@ -2,8 +2,8 @@ extends Node2D
 class_name ScreenArea
 
 @export var modules: Array[PackedScene]
-@export var fadeInTime: float = 1.0
-@export var areaLifeTime: float = 3.0
+@export var fadeInTime: float = 1
+@export var areaLifeTime: float = 5.0
 @export var areaModulesExt: int = 4
 @export var areaSize: float = 300.
 

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dqaeql34255gn"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1677008460]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=297890084]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(47.967285, 26.874363)
+color = Color(0.36862746, 0.36862746, 0.36862746, 0.27450982)
+
+[node name="Label" type="Label" parent="." unique_id=587523905]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Pausa"

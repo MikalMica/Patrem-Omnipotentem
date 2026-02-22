@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_ppn0g"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_px3ck"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="3_jeusc"]
-[ext_resource type="PackedScene" uid="uid://dggu6qiims6fa" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_px3ck"]
 [ext_resource type="Resource" uid="uid://dc3caik8sdgvi" path="res://Assets/Placeholders/CombatDialogue.dialogue" id="5_0rcf7"]
 [ext_resource type="Script" uid="uid://7gqdoajhxq6h" path="res://Scripts/combatTransition.gd" id="6_44wcw"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="9_n8pu7"]
@@ -86,9 +85,9 @@ _data = {
 position = Vector2(643, 352)
 
 [node name="CombatHandler" type="Node2D" parent="." unique_id=1442692332]
-position = Vector2(-120, -78)
+position = Vector2(-449, -248)
 script = ExtResource("2_px3ck")
-attacks = Array[PackedScene]([ExtResource("3_px3ck"), ExtResource("3_jeusc")])
+attacks = Array[PackedScene]([ExtResource("3_jeusc")])
 nAttacks = 2
 dialogue = ExtResource("5_0rcf7")
 

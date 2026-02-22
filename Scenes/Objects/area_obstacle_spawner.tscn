@@ -6,4 +6,4 @@
 [node name="FollowAndTrace" type="Sprite2D" unique_id=1663664325]
 script = ExtResource("1_hnooy")
 obstacle = ExtResource("2_hnooy")
-radius = 1500.0
+radius = 1700.0

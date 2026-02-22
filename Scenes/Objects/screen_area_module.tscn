@@ -1,21 +1,38 @@
 [gd_scene format=3 uid="uid://bkpw501wh7us1"]
 
-[ext_resource type="Texture2D" uid="uid://bv5utx1o05rbt" path="res://Assets/Placeholders/linkedIn.png" id="1_gmrv2"]
+[ext_resource type="Shader" uid="uid://cypj5w8v7rjsn" path="res://Assets/Shaders/glitch.gdshader" id="1_pnx05"]
 [ext_resource type="Script" uid="uid://v663jhgx540k" path="res://Scripts/FadeIn.gd" id="2_6dpla"]
+[ext_resource type="Texture2D" uid="uid://c28pv53esso8r" path="res://Assets/Placeholders/glitchPlaceholder.png" id="2_glqj3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j0c53"]
+resource_local_to_scene = true
+shader = ExtResource("1_pnx05")
+shader_parameter/glitch_chance = 1.0
+shader_parameter/glitch_speed = 7.0
+shader_parameter/slice_density = 14.0
+shader_parameter/alpha = 0.0
+shader_parameter/slice_strength = 0.38
+shader_parameter/shake_strength = 0.02
+shader_parameter/chroma_offset = 0.016
+shader_parameter/noise_strength = 0.2
+shader_parameter/color_flash_strength = 0.4
+shader_parameter/scanline_strength = 0.18
+shader_parameter/local_warp_strength = 0.14
+shader_parameter/flip_chance = 0.15
 
 [sub_resource type="Animation" id="Animation_gmrv2"]
 resource_name = "FadeIn"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath(".:material:shader_parameter/alpha")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.001, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_6dpla"]
@@ -23,14 +40,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath(".:material:shader_parameter/alpha")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pnx05"]
@@ -40,8 +57,9 @@ _data = {
 }
 
 [node name="screen_area_module" type="Sprite2D" unique_id=1492168123 node_paths=PackedStringArray("animator")]
+material = SubResource("ShaderMaterial_j0c53")
 scale = Vector2(0.07724751, 0.07524362)
-texture = ExtResource("1_gmrv2")
+texture = ExtResource("2_glqj3")
 script = ExtResource("2_6dpla")
 animator = NodePath("AnimationPlayer")
 
