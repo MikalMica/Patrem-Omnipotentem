@@ -19,8 +19,3 @@ func _ready() -> void:
 	tween.set_ease(Tween.EASE_IN)
 	tween.set_trans(Tween.TRANS_EXPO)
 	tween.tween_property(head, "global_position", target.global_position, 0.5)
-	
-	var o_tween:Tween = get_tree().create_tween()
-	o_tween.set_ease(Tween.EASE_IN)
-	o_tween.set_trans(Tween.TRANS_EXPO)
-	o_tween.tween_property(wire, "size:x", distance, 0.5)

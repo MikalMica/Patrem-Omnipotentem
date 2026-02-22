@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bh0sc5e65g4l3"]
 
-[ext_resource type="Script" path="res://Scripts/socket.gd" id="1_yvsqh"]
+[ext_resource type="Script" uid="uid://djns1x0r4obxk" path="res://Scripts/socket.gd" id="1_yvsqh"]
 [ext_resource type="Shader" uid="uid://bryy5eile5knj" path="res://Assets/Shaders/wobbly.gdshader" id="2_mevx6"]
-[ext_resource type="Texture2D" uid="uid://cqammjsa3v7lw" path="res://Assets/Sprites/cable.png" id="3_2atyh"]
-[ext_resource type="Texture2D" uid="uid://cx7oa826oxd23" path="res://Assets/Sprites/enchufe.png" id="4_irfp2"]
+[ext_resource type="Texture2D" uid="uid://dqox3ouvrxgsa" path="res://Assets/Sprites/cable.png" id="3_2atyh"]
+[ext_resource type="Texture2D" uid="uid://bsmt3qeenkd8a" path="res://Assets/Sprites/enchufe.png" id="4_irfp2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yx27u"]
 shader = ExtResource("2_mevx6")
@@ -34,21 +34,21 @@ shader_parameter/seed = 42.0
 [node name="socket" type="Node2D" parent="." unique_id=1343520258 node_paths=PackedStringArray("wire", "head", "target")]
 position = Vector2(5, -4)
 script = ExtResource("1_yvsqh")
-wire = NodePath("wire")
+wire = NodePath("head_parent/wire")
 head = NodePath("head_parent")
 target = NodePath("../target")
 
-[node name="wire" type="TextureRect" parent="socket" unique_id=61301726]
+[node name="head_parent" type="Node2D" parent="socket" unique_id=1007027085]
+
+[node name="wire" type="TextureRect" parent="socket/head_parent" unique_id=61301726]
 material = SubResource("ShaderMaterial_yx27u")
-offset_left = -5.0
-offset_top = -22.0
-offset_right = 1467.0
-offset_bottom = 443.0
+offset_left = -2219.0
+offset_top = -52.0
+offset_right = 7987.5225
+offset_bottom = 413.0
 scale = Vector2(0.20378906, 0.20378906)
 texture = ExtResource("3_2atyh")
 stretch_mode = 1
-
-[node name="head_parent" type="Node2D" parent="socket" unique_id=1007027085]
 
 [node name="head" type="Sprite2D" parent="socket/head_parent" unique_id=1433323960]
 material = SubResource("ShaderMaterial_n8pu7")
