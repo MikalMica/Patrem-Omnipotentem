@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bevjr0c6t8lgk"
+path="res://.godot/imported/ALFONSO.dialogue-3e24887efd171752fccca8874bb2d204.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/ALFONSO.dialogue"
+dest_files=["res://.godot/imported/ALFONSO.dialogue-3e24887efd171752fccca8874bb2d204.tres"]
+
+[params]
+
+defaults=true

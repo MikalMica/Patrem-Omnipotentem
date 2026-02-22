@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://iafk4vhro8s"
+path="res://.godot/imported/COMECABLES_COMBATE.dialogue-b30d595319fa30375697baf4aabb60d1.tres"
+
+[deps]
+
+source_file="res://COMECABLES_COMBATE.dialogue"
+dest_files=["res://.godot/imported/COMECABLES_COMBATE.dialogue-b30d595319fa30375697baf4aabb60d1.tres"]
+
+[params]
+
+defaults=true

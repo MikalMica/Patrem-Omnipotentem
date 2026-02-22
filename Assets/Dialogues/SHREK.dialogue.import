@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b1yf334mw0e1o"
+path="res://.godot/imported/SHREK.dialogue-30bbac5777cf7c798452052704cc2457.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/SHREK.dialogue"
+dest_files=["res://.godot/imported/SHREK.dialogue-30bbac5777cf7c798452052704cc2457.tres"]
+
+[params]
+
+defaults=true

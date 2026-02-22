@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dui1qfpokxlra"
+path="res://.godot/imported/ComeCables.dialogue-e37203c5288489524831d8131d52d348.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/ComeCables.dialogue"
+dest_files=["res://.godot/imported/ComeCables.dialogue-e37203c5288489524831d8131d52d348.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://673ga3xvtyfk"
+path="res://.godot/imported/BOCABAJO.dialogue-1a91952d9692b7027fdde6c4459409dd.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/BOCABAJO.dialogue"
+dest_files=["res://.godot/imported/BOCABAJO.dialogue-1a91952d9692b7027fdde6c4459409dd.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cfop5tsntu84p"
+path="res://.godot/imported/CombatDialogue.dialogue-2d517b7743000a4d9a9b1ae4bdfb94a9.tres"
+
+[deps]
+
+source_file="res://Assets/Placeholders/CombatDialogue.dialogue"
+dest_files=["res://.godot/imported/CombatDialogue.dialogue-2d517b7743000a4d9a9b1ae4bdfb94a9.tres"]
+
+[params]
+
+defaults=true
