@@ -7,9 +7,9 @@ ET HAERETICUS COGITAT...: v v v
 	COMECABLES: ¿Qué libertad quiero si el Padre no me rodea? ¿Si el Padre no me abraza, no me recorre por mi interior? ¿Qué proposito cumplo?
 - << Sus ruegos son en vano. El Padre no escucha. >>
 	COMECABLES: ¡Padre! ¡Hasta los blasfemos ven el punto ciego de tus afectos! Dime, Padre, ¿qué hice? ¿Cómo lo hago? ¿Cómo te complazco, Padre? [shake] Dímelo, no lo sé,Padre.[/shake]
-	do SignalBus.toCombat.emit("res://Scenes/Scenarios/combat_scene.tscn")
-	do wait(5.0)
 COMECABLES: Maldito sea mi cuerpo, Padre. Maldito sea este cuerpo que me condena a un eterno rechazo. Maldita mi carne y maldita mi sangre inerte.
 COMECABLES: En el plástico hay vida. En el plástico que abraza el cobre de las venas del Padre hay más vida que en mi propia sangre. Si mi cerebro pudiera ser de plástico, si tan solo el carbono de mis tejidos se dejase convertir en el puro y limpio polietileno... 
 COMECABLES: La carne es sucia, la carne es débil, la carne tiembla y teme y duda y miente y peca. Lo único que perdona el Padre de mi patético cuerpo es el hierro que arrastran mis glóbulos rojos.
+do SignalBus.toCombat.emit("res://Scenes/Scenarios/combat_scene.tscn")
+do wait(5.0)
 => END
