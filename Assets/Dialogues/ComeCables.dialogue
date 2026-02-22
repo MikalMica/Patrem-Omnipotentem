@@ -14,5 +14,6 @@ if SaveSceneState.is_defeated("Comecables") == false
 	do SignalBus.toCombat.emit("res://Scenes/Scenarios/combat_scene.tscn")
 => END
 ~ CombatEnd
-COMECABLES: punyeta
+COMECABLES: ¡Hasta a ti te prefiere el Padre! ¡El Padre se abalanza sobre tus huesos, estando yo aquí presente! ¡Ni me mira!
+COMECABLES: ¡Lloro, hereje, lloro! ¡Oye mi llanto y hazle saber al Padre que es por su culpa, que me abandonó marcándome como vitium, y me abandonó por segunda vez cuando se abalanzó sobre otro de mi propia fosa común!
 => END

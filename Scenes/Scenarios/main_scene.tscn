@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cwsxrt7opfa12" path="res://Scenes/Objects/hand_canvas.tscn" id="7_5ite6"]
 [ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="7_jpnrk"]
-[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
 [ext_resource type="ArrayMesh" uid="uid://bydjen1ds54vo" path="res://Assets/Meshes/monitor.obj" id="8_jpnrk"]
 [ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="9_6vav5"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="11_mtft4"]
@@ -100,6 +100,9 @@ size = Vector3(16.299927, 49.82166, 170.09677)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ite6"]
 size = Vector3(46.415375, 67.20068, 15.2734375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oy23i"]
+size = Vector3(16.299927, 49.82166, 221.36826)
 
 [node name="MainScene" type="Node3D" unique_id=1885870270]
 script = ExtResource("1_lxapd")
@@ -1016,8 +1019,8 @@ shape = SubResource("BoxShape3D_h3cbu")
 transform = Transform3D(0.715522, 0, 0.6985903, 0, 1, 0, -0.6985903, 0, 0.715522, -259.21194, 17.406052, 116.70089)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mundofisico/StaticBody3D15" unique_id=1357402285]
-transform = Transform3D(0.7905401, 0, 0.6124104, 0, 1, 0, -0.6124104, 0, 0.7905401, 5.570114, 0, -6.974453)
-shape = SubResource("BoxShape3D_h3cbu")
+transform = Transform3D(0.79054016, 0, 0.61241037, 0, 1, 0, -0.61241037, 0, 0.79054016, 30.104462, 0, 24.69616)
+shape = SubResource("BoxShape3D_oy23i")
 
 [node name="StaticBody3D16" type="StaticBody3D" parent="mundofisico" unique_id=1984516572]
 transform = Transform3D(0.7967936, 0, 0.6042517, 0, 1, 0, -0.6042517, 0, 0.7967936, -325.09308, 17.406052, 117.54595)
