@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
 [ext_resource type="ArrayMesh" uid="uid://bydjen1ds54vo" path="res://Assets/Meshes/monitor.obj" id="8_jpnrk"]
 [ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="9_6vav5"]
+[ext_resource type="Script" uid="uid://bfo4gsietvbv7" path="res://Scripts/billboarding.gd" id="10_7sv6l"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="11_mtft4"]
 [ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="12_jcxkm"]
 [ext_resource type="PackedScene" uid="uid://ju46qobc5e5w" path="res://Assets/Meshes/wires/pared cable color.glb" id="13_eigvp"]
@@ -546,10 +547,13 @@ mesh = SubResource("PrismMesh_h3cbu")
 
 [node name="farolas" type="Node3D" parent="mundo" unique_id=27885787]
 
-[node name="Farolaobj" type="MeshInstance3D" parent="mundo/farolas" unique_id=1994112214]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -131.2454, -4.6024284, -45.72216)
+[node name="Farolaobj" type="MeshInstance3D" parent="mundo/farolas" unique_id=1994112214 node_paths=PackedStringArray("player")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -131.2454, -4.6024284, -45.72216)
 mesh = ExtResource("7_h3cbu")
 skeleton = NodePath("../../..")
+script = ExtResource("10_7sv6l")
+player = NodePath("../../../Player")
+inverse = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="mundo/farolas/Farolaobj" unique_id=511488276]
 transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
@@ -557,7 +561,7 @@ light_color = Color(0.7372549, 1, 0, 1)
 light_energy = 8.128
 light_volumetric_fog_energy = 3.455
 light_specular = 0.885
-spot_range = 31.938562
+spot_range = 59.02
 spot_angle = 54.91202
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/farolas/Farolaobj" unique_id=1634717747]
@@ -565,10 +569,13 @@ transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.61
 material_override = SubResource("StandardMaterial3D_h3cbu")
 mesh = SubResource("BoxMesh_jpnrk")
 
-[node name="Farolaobj2" type="MeshInstance3D" parent="mundo/farolas" unique_id=1730437809]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -166.68277, -4.6024284, -110.23856)
+[node name="Farolaobj2" type="MeshInstance3D" parent="mundo/farolas" unique_id=1730437809 node_paths=PackedStringArray("player")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -166.68277, -4.6024284, -110.23856)
 mesh = ExtResource("7_h3cbu")
 skeleton = NodePath("../../..")
+script = ExtResource("10_7sv6l")
+player = NodePath("../../../Player")
+inverse = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="mundo/farolas/Farolaobj2" unique_id=742216204]
 transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
@@ -576,7 +583,7 @@ light_color = Color(0.7372549, 1, 0, 1)
 light_energy = 8.128
 light_volumetric_fog_energy = 3.455
 light_specular = 0.885
-spot_range = 31.938562
+spot_range = 59.02
 spot_angle = 54.91202
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/farolas/Farolaobj2" unique_id=1217667550]
@@ -584,10 +591,13 @@ transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.61
 material_override = SubResource("StandardMaterial3D_h3cbu")
 mesh = SubResource("BoxMesh_jpnrk")
 
-[node name="Farolaobj3" type="MeshInstance3D" parent="mundo/farolas" unique_id=1860612541]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -233.58275, -4.6024284, -131.24959)
+[node name="Farolaobj3" type="MeshInstance3D" parent="mundo/farolas" unique_id=1860612541 node_paths=PackedStringArray("player")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -233.58275, -4.6024284, -131.24959)
 mesh = ExtResource("7_h3cbu")
 skeleton = NodePath("../../..")
+script = ExtResource("10_7sv6l")
+player = NodePath("../../../Player")
+inverse = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="mundo/farolas/Farolaobj3" unique_id=1263455718]
 transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
@@ -595,7 +605,7 @@ light_color = Color(0.7372549, 1, 0, 1)
 light_energy = 8.128
 light_volumetric_fog_energy = 3.455
 light_specular = 0.885
-spot_range = 31.938562
+spot_range = 59.02
 spot_angle = 54.91202
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/farolas/Farolaobj3" unique_id=1480244683]
@@ -603,10 +613,13 @@ transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.61
 material_override = SubResource("StandardMaterial3D_h3cbu")
 mesh = SubResource("BoxMesh_jpnrk")
 
-[node name="Farolaobj7" type="MeshInstance3D" parent="mundo/farolas" unique_id=876562005]
-transform = Transform3D(5.1260457, 0, 3.1182775, 0, 6, 0, -3.1182775, 0, 5.1260457, -394.83203, -4.6024284, -148.07426)
+[node name="Farolaobj7" type="MeshInstance3D" parent="mundo/farolas" unique_id=876562005 node_paths=PackedStringArray("player")]
+transform = Transform3D(10.252091, 0, 6.236555, 0, 12, 0, -6.236555, 0, 10.252091, -394.83203, -4.6024284, -148.07426)
 mesh = ExtResource("7_h3cbu")
 skeleton = NodePath("../../..")
+script = ExtResource("10_7sv6l")
+player = NodePath("../../../Player")
+inverse = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="mundo/farolas/Farolaobj7" unique_id=959463926]
 transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
@@ -614,7 +627,7 @@ light_color = Color(0.7372549, 1, 0, 1)
 light_energy = 8.128
 light_volumetric_fog_energy = 3.455
 light_specular = 0.885
-spot_range = 31.938562
+spot_range = 59.02
 spot_angle = 54.91202
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/farolas/Farolaobj7" unique_id=727959081]
@@ -622,10 +635,13 @@ transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.61
 material_override = SubResource("StandardMaterial3D_h3cbu")
 mesh = SubResource("BoxMesh_jpnrk")
 
-[node name="Farolaobj4" type="MeshInstance3D" parent="mundo/farolas" unique_id=1717815017]
-transform = Transform3D(-5.9537845, 0, 0.7432716, 0, 6, 0, -0.7432716, 0, -5.9537845, -194.49913, -4.6024284, 75.45425)
+[node name="Farolaobj4" type="MeshInstance3D" parent="mundo/farolas" unique_id=1717815017 node_paths=PackedStringArray("player")]
+transform = Transform3D(-11.907569, 0, 1.486543, 0, 12, 0, -1.486543, 0, -11.907569, -194.49913, -4.6024284, 75.45425)
 mesh = ExtResource("7_h3cbu")
 skeleton = NodePath("../../..")
+script = ExtResource("10_7sv6l")
+player = NodePath("../../../Player")
+inverse = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="mundo/farolas/Farolaobj4" unique_id=715854939]
 transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
@@ -633,7 +649,7 @@ light_color = Color(0.7372549, 1, 0, 1)
 light_energy = 8.128
 light_volumetric_fog_energy = 3.455
 light_specular = 0.885
-spot_range = 31.938562
+spot_range = 59.02
 spot_angle = 54.91202
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/farolas/Farolaobj4" unique_id=574717081]
@@ -641,10 +657,13 @@ transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.61
 material_override = SubResource("StandardMaterial3D_h3cbu")
 mesh = SubResource("BoxMesh_jpnrk")
 
-[node name="Farolaobj5" type="MeshInstance3D" parent="mundo/farolas" unique_id=193114367]
-transform = Transform3D(-5.9537845, 0, 0.7432716, 0, 6, 0, -0.7432716, 0, -5.9537845, -276.88184, -4.6024284, 93.47579)
+[node name="Farolaobj5" type="MeshInstance3D" parent="mundo/farolas" unique_id=193114367 node_paths=PackedStringArray("player")]
+transform = Transform3D(-11.907569, 0, 1.486543, 0, 12, 0, -1.486543, 0, -11.907569, -276.88184, -4.6024284, 93.47579)
 mesh = ExtResource("7_h3cbu")
 skeleton = NodePath("../../..")
+script = ExtResource("10_7sv6l")
+player = NodePath("../../../Player")
+inverse = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="mundo/farolas/Farolaobj5" unique_id=582246342]
 transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
@@ -652,7 +671,7 @@ light_color = Color(0.7372549, 1, 0, 1)
 light_energy = 8.128
 light_volumetric_fog_energy = 3.455
 light_specular = 0.885
-spot_range = 31.938562
+spot_range = 59.02
 spot_angle = 54.91202
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/farolas/Farolaobj5" unique_id=1525707788]
@@ -660,10 +679,13 @@ transform = Transform3D(0.12767613, 0, 0, 0, -0.006441256, 0.091721825, 0, -0.61
 material_override = SubResource("StandardMaterial3D_h3cbu")
 mesh = SubResource("BoxMesh_jpnrk")
 
-[node name="Farolaobj6" type="MeshInstance3D" parent="mundo/farolas" unique_id=506947223]
-transform = Transform3D(-4.127544, 0, 4.3546963, 0, 6, 0, -4.3546963, 0, -4.127544, -364.87094, -4.6024284, 71.87853)
+[node name="Farolaobj6" type="MeshInstance3D" parent="mundo/farolas" unique_id=506947223 node_paths=PackedStringArray("player")]
+transform = Transform3D(-8.255088, 0, 8.7093935, 0, 12, 0, -8.7093935, 0, -8.255088, -364.87094, -4.6024284, 71.87853)
 mesh = ExtResource("7_h3cbu")
 skeleton = NodePath("../../..")
+script = ExtResource("10_7sv6l")
+player = NodePath("../../../Player")
+inverse = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="mundo/farolas/Farolaobj6" unique_id=1066424002]
 transform = Transform3D(1, 0, 0, 0, -0.061414357, 0.9981124, 0, -0.9981124, -0.061414357, 0, 3.2410443, 1.5200367)
@@ -671,7 +693,7 @@ light_color = Color(0.7372549, 1, 0, 1)
 light_energy = 8.128
 light_volumetric_fog_energy = 3.455
 light_specular = 0.885
-spot_range = 31.938562
+spot_range = 59.02
 spot_angle = 54.91202
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/farolas/Farolaobj6" unique_id=347514525]
