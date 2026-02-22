@@ -9,6 +9,7 @@ var currIndex
 var currAttack : IAttack
 
 func _ready() -> void:
+	await SignalBus.combatAnimationFinished
 	_spawn_random_attack()
 	SignalBus.defeated.connect(_delete_everything)
 
@@ -32,6 +33,8 @@ func _despawn_attack() -> void:
 	else: await get_tree().create_timer(waitTime).timeout
 	if attacksSpawned < nAttacks:
 		_spawn_random_attack()
+	else:
+		SceneHandler.returnToMain()
 
 func _delete_everything() -> void:
 	for i in get_children():

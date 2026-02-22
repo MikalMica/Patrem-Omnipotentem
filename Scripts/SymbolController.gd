@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
 @export var speed = 200.0
-var canControl = true
+var canControl = false
 
 func _ready() -> void:
+	await SignalBus.combatAnimationFinished
+	canControl = true
 	SignalBus.defeated.connect(changeControl)
 
 func _input(event: InputEvent) -> void:

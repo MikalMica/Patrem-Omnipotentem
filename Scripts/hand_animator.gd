@@ -6,10 +6,13 @@ class_name HandAnimator
 
 func _ready() -> void:
 	self.visible = false
+	SignalBus.toCombat.connect(transition_hand)
 	
-func transition_hand() -> void:
+func transition_hand(path: String) -> void:
 	self.visible = true
 	anim_player.play("show")
+	await anim_player.animation_finished
+	SceneHandler.changeTo(path)
 	
 func papear() -> void:
 	self.visible = true
