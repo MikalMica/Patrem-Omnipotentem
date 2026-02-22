@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cwoss3xdc5fag"]
+
+[ext_resource type="Texture2D" uid="uid://d3km0c10ibj6p" path="res://Assets/rustymetal.jpg" id="1_qb6u8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mb6vt"]
+albedo_texture = ExtResource("1_qb6u8")
+
+[sub_resource type="BoxMesh" id="BoxMesh_skt3d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dt7vx"]
+size = Vector3(54, 39, 3)
+
+[node name="Wall" type="Node3D" unique_id=78040145]
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=389395683]
+transform = Transform3D(53.043102, 0, 0, 0, -1.5665299e-07, -39.187298, 0, 3.5838025, -1.7129312e-06, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_mb6vt")
+mesh = SubResource("BoxMesh_skt3d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1850337703]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=758636910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+shape = SubResource("BoxShape3D_dt7vx")
