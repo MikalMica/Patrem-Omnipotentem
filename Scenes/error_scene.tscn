@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://c4hvs1nku46ej"]
+
+[ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="1_e0ic8"]
+[ext_resource type="Texture2D" uid="uid://cpmusf2ttybuc" path="res://Assets/Sprites/Vaquerizo.png" id="2_s0pb0"]
+[ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="3_vuuxd"]
+
+[sub_resource type="Gradient" id="Gradient_w33c3"]
+colors = PackedColorArray(0, 0, 1, 1, 0, 0, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e0ic8"]
+gradient = SubResource("Gradient_w33c3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s0pb0"]
+shader = ExtResource("1_e0ic8")
+shader_parameter/brightness = 1.02
+shader_parameter/contrast = 1.08
+shader_parameter/saturation = 1.1
+shader_parameter/gamma = 1.05
+shader_parameter/curvature = 0.02400000114
+shader_parameter/corner_soften = 0.06
+shader_parameter/vignette = 0.38
+shader_parameter/scanline_strength = 0.95
+shader_parameter/scanline_density = 1.15
+shader_parameter/interlace_strength = 0.2
+shader_parameter/mask_strength = 0.22
+shader_parameter/mask_scale = 1.0
+shader_parameter/chroma_offset_px = 1.6
+shader_parameter/luma_smear_px = 2.2
+shader_parameter/jitter_px = 1.8
+shader_parameter/wobble_px = 1.5
+shader_parameter/tape_noise = 0.22
+shader_parameter/tape_lines = 0.35
+shader_parameter/roll_speed = 0.1
+shader_parameter/roll_strength = 0.15
+shader_parameter/glow_strength = 0.25
+shader_parameter/glow_threshold = 0.65
+
+[sub_resource type="LabelSettings" id="LabelSettings_vuuxd"]
+font = ExtResource("3_vuuxd")
+font_size = 84
+
+[node name="ERROR_SCENE" type="CanvasLayer" unique_id=1209265518]
+
+[node name="Canvas" type="Control" parent="." unique_id=48972003]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Canvas" unique_id=309266421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_e0ic8")
+
+[node name="shader" type="CanvasLayer" parent="Canvas" unique_id=53712398]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="Canvas/shader" unique_id=1243869926]
+material = SubResource("ShaderMaterial_s0pb0")
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.003
+offset_bottom = 0.05596924
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Canvas" unique_id=732634882]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -364.0
+offset_right = 322.0
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s0pb0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Canvas" unique_id=374326092]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -271.0
+offset_top = -207.0
+offset_right = 599.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "MISSING
+"
+label_settings = SubResource("LabelSettings_vuuxd")

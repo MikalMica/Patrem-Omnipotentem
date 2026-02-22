@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnklvawlvsqr"]
 
 [ext_resource type="Script" uid="uid://bfo4gsietvbv7" path="res://Scripts/billboarding.gd" id="1_fsmn8"]
-[ext_resource type="Texture2D" uid="uid://dq0b4uuy4hd1o" path="res://Assets/Placeholders/MarioVaquerizo.jpg" id="2_j2qgg"]
+[ext_resource type="Texture2D" uid="uid://dq0b4uuy4hd1o" path="res://MarioVaquerizo.jpg" id="2_j2qgg"]
 [ext_resource type="Texture2D" uid="uid://3o5h4jfshbyp" path="res://Assets/Sprites/ComeCables/ComecablesOutline.png" id="2_wnia6"]
 [ext_resource type="PackedScene" uid="uid://cjbmxvjw7qqpp" path="res://Scenes/Objects/interact_area.tscn" id="4_7udd7"]
 [ext_resource type="Resource" uid="uid://dvgagihqd5wgv" path="res://Assets/Dialogues/lesbiana.dialogue" id="5_ijfwa"]

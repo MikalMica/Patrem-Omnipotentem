@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://c77ctv1jc5aj7" path="res://Assets/fonts/ACID_REF.TTF" id="4_lyt50"]
 [ext_resource type="Script" uid="uid://lksewwcbgy0f" path="res://Scripts/image_fade.gd" id="4_wnqfs"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="5_424te"]
+[ext_resource type="Script" uid="uid://untp6wkxldh3" path="res://Scripts/vaquerizo_checker.gd" id="8_wnqfs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ggu5f"]
 font = ExtResource("3_jrvk8")
@@ -141,6 +142,9 @@ anchor_right = 1.0
 anchor_bottom = 1.003
 offset_bottom = 0.05596924
 mouse_filter = 2
+
+[node name="VaquerizoChecker" type="Node" parent="." unique_id=1062951914]
+script = ExtResource("8_wnqfs")
 
 [connection signal="pressed" from="Exit" to="." method="_exit"]
 [connection signal="pressed" from="Start" to="." method="_start"]
