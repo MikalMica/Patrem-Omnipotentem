@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dimur6d8btsog"]
+[gd_scene format=3 uid="uid://bsn4hvt0nisf2"]
 
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="1_38qbd"]
 [ext_resource type="Texture2D" uid="uid://dn7vlislnlitl" path="res://Assets/metal.jpg" id="2_4ofem"]

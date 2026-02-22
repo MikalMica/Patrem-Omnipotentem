@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://celesr8piu3iu"]
+
+[ext_resource type="Script" uid="uid://bfo4gsietvbv7" path="res://Scripts/billboarding.gd" id="1_kk4bi"]
+[ext_resource type="Texture2D" uid="uid://cot6pxsdwbn35" path="res://Assets/Sprites/Mecanica.png" id="2_kk4bi"]
+[ext_resource type="Texture2D" uid="uid://caal5aoomlpdb" path="res://Assets/Sprites/mecanica_lesbiana_sexy_outline.png" id="3_hmh61"]
+[ext_resource type="PackedScene" uid="uid://cjbmxvjw7qqpp" path="res://Scenes/Objects/interact_area.tscn" id="4_13p3m"]
+[ext_resource type="Resource" uid="uid://dvgagihqd5wgv" path="res://Assets/Dialogues/lesbiana.dialogue" id="5_xjnlr"]
+
+[node name="npc_base" type="Node3D" unique_id=840245654]
+script = ExtResource("1_kk4bi")
+
+[node name="animation" type="AnimationPlayer" parent="." unique_id=1673236900]
+autoplay = &"Idle"
+
+[node name="body" type="Sprite3D" parent="." unique_id=1387285422]
+transform = Transform3D(-0.74812967, 0, -0.008213385, 0, 0.74817455, 0, 0.008213385, 0, -0.74812967, -0.585292, 0, 0.235904)
+texture = ExtResource("2_kk4bi")
+region_rect = Rect2(281.373, 0, 1301.63, 1369)
+
+[node name="outline" type="Sprite3D" parent="body" unique_id=1805235344]
+transform = Transform3D(1, 0, 9.313226e-10, 0, 1, 0, -9.313226e-10, 0, 1, -0.20091885, 0, -0.37277043)
+texture = ExtResource("3_hmh61")
+
+[node name="InteractArea" parent="." unique_id=461385779 node_paths=PackedStringArray("outline") instance=ExtResource("4_13p3m")]
+outline = NodePath("../body/outline")
+dialog = ExtResource("5_xjnlr")

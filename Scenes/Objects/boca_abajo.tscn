@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://bbjuyha5enxtl"]
 
 [ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="1_rll3q"]
-[ext_resource type="Texture2D" uid="uid://1or5c3vmetgk" path="res://Assets/Sprites/TheHanged/TheHanged.png" id="2_h7icc"]
-[ext_resource type="Texture2D" uid="uid://dm8vgc8wxid8s" path="res://Assets/Sprites/TheHanged/The_Hanged_OUTLINE.png" id="3_88la2"]
-[ext_resource type="Resource" uid="uid://673ga3xvtyfk" path="res://Assets/Dialogues/BOCABAJO.dialogue" id="3_d7lff"]
+[ext_resource type="Texture2D" uid="uid://d31ed7ln1wdam" path="res://Assets/Sprites/TheHanged/TheHanged.png" id="2_h7icc"]
+[ext_resource type="Texture2D" uid="uid://i8i5vvb3l8np" path="res://Assets/Sprites/TheHanged/The_Hanged_OUTLINE.png" id="3_88la2"]
+[ext_resource type="Resource" uid="uid://bffn72hort36a" path="res://Assets/Dialogues/BOCABAJO.dialogue" id="3_d7lff"]
 
 [node name="npc_base" unique_id=840245654 instance=ExtResource("1_rll3q")]
 
 [node name="body" parent="." index="1" unique_id=1387285422]
+transform = Transform3D(-0.99994, 0, -0.0109779, 0, 1, 0, 0.0109779, 0, -0.99994, -0.585, 0, 0)
 texture = ExtResource("2_h7icc")
 region_rect = Rect2(229, 138, 1271, 4015)
 
 [node name="outline" parent="body" index="0" unique_id=1805235344]
-transform = Transform3D(1, 0, 2.7939677e-09, 0, 1, 0, -2.7939677e-09, 0, 1, 0.012724459, -6.645212, -0.37042478)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, -6.645, 1)
+visible = true
 texture = ExtResource("3_88la2")
 
 [node name="InteractArea" parent="." index="2" unique_id=461385779]

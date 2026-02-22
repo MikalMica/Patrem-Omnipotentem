@@ -1,13 +1,14 @@
-[gd_scene format=3 uid="uid://dkppqj72e075p"]
+[gd_scene format=3 uid="uid://cjx3sputvcrey"]
 
 [ext_resource type="Texture2D" uid="uid://blpcgm5c837u8" path="res://Assets/pcb.jpg" id="1_fgip3"]
-[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/Sounds/soundtrack.wav" id="2_6aek8"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="2_6aek8"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="3_4uhry"]
 [ext_resource type="Texture2D" uid="uid://dn7vlislnlitl" path="res://Assets/metal.jpg" id="4_4uhry"]
 [ext_resource type="ArrayMesh" uid="uid://dgfwj762b7fpg" path="res://Assets/Meshes/untitled.obj" id="4_6aek8"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="6_h82in"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="7_wfjfb"]
-[ext_resource type="Script" uid="uid://ci2pbmlmk2odj" path="res://Scripts/triggerScene.gd" id="8_e1o3v"]
+[ext_resource type="Script" path="res://Scripts/triggerScene.gd" id="8_e1o3v"]
+[ext_resource type="PackedScene" uid="uid://bbjuyha5enxtl" path="res://Scenes/Objects/boca_abajo.tscn" id="9_h5m8c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4uhry"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -235,3 +236,7 @@ ScenePath = "res://Scenes/Scenarios/church.tscn"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=209244824]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 4.5, -17.5)
 shape = SubResource("BoxShape3D_wfjfb")
+
+[node name="npc_base" parent="." unique_id=840245654 node_paths=PackedStringArray("player") instance=ExtResource("9_h5m8c")]
+transform = Transform3D(0.45828974, 0, 0.45832175, 0, 0.6481422, 0, -0.45832175, 0, 0.45828974, -12.187125, 12.305889, 16.062824)
+player = NodePath("../Player")
