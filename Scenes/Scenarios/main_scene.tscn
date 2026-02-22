@@ -12,6 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="9_6vav5"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="11_mtft4"]
 [ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="12_jcxkm"]
+[ext_resource type="PackedScene" uid="uid://ju46qobc5e5w" path="res://Assets/Meshes/wires/pared cable color.glb" id="13_eigvp"]
+[ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="14_mkx05"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("1_5ite6")
@@ -40,8 +42,8 @@ albedo_color = Color(0.21518216, 0.21518219, 0.21518219, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mtft4"]
 emission_enabled = true
-emission = Color(8.1822276e-07, 0.6361109, 2.117753e-06, 1)
-emission_energy_multiplier = 4.18
+emission = Color(0, 0.45490196, 0, 1)
+emission_energy_multiplier = 4.27
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jcxkm"]
 
@@ -95,6 +97,11 @@ size = Vector3(16.299927, 49.82166, 170.09677)
 size = Vector3(46.415375, 67.20068, 15.2734375)
 
 [node name="MainScene" type="Node3D" unique_id=1885870270]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=369231520]
+stream = ExtResource("12_jcxkm")
+volume_db = -5.295
+autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1851391742]
 environment = SubResource("Environment_jpnrk")
@@ -907,7 +914,7 @@ spot_range = 205.1815
 spot_angle = 35.60774
 
 [node name="come_cables" parent="." unique_id=840245654 node_paths=PackedStringArray("player") instance=ExtResource("6_h3cbu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.96071, 7.825755, -3.7949386)
+transform = Transform3D(0.5194147, 0, -0.8545223, 0, 1, 0, 0.8545223, 0, 0.5194147, -70.807465, 7.825755, -19.459816)
 player = NodePath("../Player")
 
 [node name="InteractArea" parent="come_cables" index="2" unique_id=461385779 node_paths=PackedStringArray("interact_canvas")]
@@ -1066,9 +1073,25 @@ transform = Transform3D(2.8791513, 0, -0.8429047, 0, 3, 0, 0.8429047, 0, 2.87915
 [node name="servidores3" parent="." unique_id=954590454 instance=ExtResource("11_mtft4")]
 transform = Transform3D(-2.9962187, 0, -0.15057606, 0, 3, 0, 0.15057606, 0, -2.9962187, 22.665382, 1.6617572, 27.185265)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=369231520]
-stream = ExtResource("12_jcxkm")
-volume_db = -5.295
-autoplay = true
+[node name="pared cable color" parent="." unique_id=436592569 instance=ExtResource("13_eigvp")]
+transform = Transform3D(1.3598965, 0, 0, 0, 1.3076785, 0.8870616, 0, -0.8453926, 1.3721334, 32.253464, -1.7141571, -10.4356575)
+
+[node name="pared cable color2" parent="." unique_id=974751526 instance=ExtResource("13_eigvp")]
+transform = Transform3D(1.3598965, 0, 0, 0, 1.3076785, 0.8870616, 0, -0.8453926, 1.3721334, -106.36661, -1.7141571, -8.183994)
+
+[node name="pared de cables3" parent="." unique_id=737377418 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-0.044897832, 0.053278722, -1.0622696, -0.10869876, 1.8245417, 0.033827618, 1.3131675, 0.15284969, -0.03351936, 22.841797, -61.190674, 86.81056)
+
+[node name="pared de cables4" parent="." unique_id=1206686219 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -74.93933, -61.190674, 14.368923)
+
+[node name="pared de cables5" parent="." unique_id=1627328250 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -125.91399, -61.190674, 21.038502)
+
+[node name="pared de cables7" parent="." unique_id=262527592 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-1.3131863, -0.14888084, -0.0386605, -0.108698756, 1.8245412, 0.033827614, 0.0443382, 0.06353067, -1.0620947, -92.27266, -61.190674, -22.052633)
+
+[node name="pared de cables6" parent="." unique_id=2125516708 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -151.92921, -61.190674, -28.268757)
 
 [editable path="come_cables"]
