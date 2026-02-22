@@ -10,11 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="7_hbh1i"]
 [ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="8_epapc"]
 [ext_resource type="PackedScene" uid="uid://dndal8stijogx" path="res://Assets/Meshes/game_ready_light.glb" id="9_368xc"]
+[ext_resource type="Script" uid="uid://ci2pbmlmk2odj" path="res://Scripts/triggerScene.gd" id="11_epapc"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="11_hbh1i"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="12_epapc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0th0n"]
 size = Vector3(660.1582, 52.140625, 428.64343)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbh1i"]
+size = Vector3(46.615234, 41.37256, 9.072388)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_368xc"]
 shader = ExtResource("12_epapc")
@@ -40,6 +44,12 @@ shader_parameter/roll_speed = 0.1
 shader_parameter/roll_strength = 0.15
 shader_parameter/glow_strength = 0.25
 shader_parameter/glow_threshold = 0.65
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_epapc"]
+resource_local_to_scene = true
+albedo_color = Color(0.47787654, 6.4927216, 0.7731245, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_368xc"]
 
 [node name="Tunnel_Labyrinth" type="Node3D" unique_id=1588487949]
 
@@ -107,9 +117,6 @@ transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 533.
 
 [node name="tunel16" parent="Tunnels" unique_id=811165759 instance=ExtResource("3_oaat8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 584.244, 20, -50.194)
-
-[node name="Wall" parent="Tunnels" unique_id=78040145 instance=ExtResource("4_50h5r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 486, 20, 42)
 
 [node name="Wall2" parent="Tunnels" unique_id=116353661 instance=ExtResource("4_50h5r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 312.82883, 20, 135.33078)
@@ -241,8 +248,17 @@ transform = Transform3D(-8.3226485e-07, 0, 19.04, 0, 19.04, 0, -19.04, 0, -8.322
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 299.20703, -26.429688, -61.515686)
 shape = SubResource("BoxShape3D_0th0n")
 
+[node name="Area3D" type="Area3D" parent="Tunnels" unique_id=569427965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 485.7143, 0, 28.571428)
+script = ExtResource("11_epapc")
+ScenePath = "res://Scenes/Scenarios/CableRoom.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tunnels/Area3D" unique_id=1261076507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7519226, 20.18628, 4.0361958)
+shape = SubResource("BoxShape3D_hbh1i")
+
 [node name="Player" parent="." unique_id=597419909 instance=ExtResource("11_hbh1i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1979866, 3.7025766, 1.5039272)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.1979866, 3.7025766, 1.5039272)
 
 [node name="shader" type="CanvasLayer" parent="." unique_id=962073725]
 layer = 10
@@ -254,3 +270,9 @@ anchor_right = 1.0
 anchor_bottom = 1.003
 offset_bottom = 0.05596924
 mouse_filter = 2
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=427055087]
+transform = Transform3D(-9.505634e-15, -1.1924879e-08, -7.098906, 18.236122, -4.371138e-08, 0, -7.9712623e-07, -0.9999998, 8.465361e-08, 66.377945, 17.07741, 5.6856537)
+material_override = SubResource("StandardMaterial3D_epapc")
+mesh = SubResource("PlaneMesh_368xc")
+skeleton = NodePath("../../..")
