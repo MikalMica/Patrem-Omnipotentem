@@ -5,7 +5,6 @@ extends IAttack
 @onready var player : CharacterBody2D = get_tree().get_first_node_in_group("Player2D")
 
 func _attack() -> void:
-	density = 5
 	while !attackStop:
 		for i in range(0, density):
 			_spawn_obstacle()

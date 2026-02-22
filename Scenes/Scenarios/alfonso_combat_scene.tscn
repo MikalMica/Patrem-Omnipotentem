@@ -81,7 +81,7 @@ _data = {
 &"RESET": SubResource("Animation_44wcw")
 }
 
-[node name="CombatScene" type="Node2D" unique_id=835763651]
+[node name="CombatScene3" type="Node2D" unique_id=835763651]
 
 [node name="PlayerSymbol" parent="." unique_id=1723358663 instance=ExtResource("1_p7s1m")]
 position = Vector2(643, 352)
