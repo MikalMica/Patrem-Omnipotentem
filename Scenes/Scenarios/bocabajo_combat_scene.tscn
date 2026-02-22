@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://cy7wytpfrx4dv"]
+[gd_scene format=3 uid="uid://crwacyaarvjea"]
 
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_mhmbe"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_grpqj"]
-[ext_resource type="PackedScene" uid="uid://dggu6qiims6fa" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_eb761"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_eb761"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_a010b"]
-[ext_resource type="Resource" uid="uid://ch6cge1oxnqun" path="res://BOCAABAJO_COMBATE.dialogue" id="5_mhmbe"]
-[ext_resource type="Script" uid="uid://7gqdoajhxq6h" path="res://Scripts/combatTransition.gd" id="6_o1ghi"]
+[ext_resource type="Resource" uid="uid://bx43nh8w6f2x0" path="res://BOCAABAJO_COMBATE.dialogue" id="5_mhmbe"]
+[ext_resource type="Script" path="res://Scripts/combatTransition.gd" id="6_o1ghi"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="7_4tf3u"]
-[ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/Sounds/pelea.wav" id="8_tbihr"]
+[ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/sounds/pelea.wav" id="8_tbihr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0rcf7"]
 
@@ -126,8 +126,8 @@ position = Vector2(583, 330)
 [node name="background" type="Sprite2D" parent="." unique_id=1317558563]
 modulate = Color(0, 0, 0, 1)
 z_index = -50
-position = Vector2(564.99994, 314)
-scale = Vector2(16.0625, 8.9375)
+position = Vector2(545.00006, 308.5)
+scale = Vector2(27.515625, 18.414063)
 texture = ExtResource("7_4tf3u")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=219638632]

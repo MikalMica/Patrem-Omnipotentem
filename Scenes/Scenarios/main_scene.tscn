@@ -4,22 +4,22 @@
 [ext_resource type="Script" uid="uid://dnekf4leonu1m" path="res://Scripts/scene_register.gd" id="1_lxapd"]
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
-[ext_resource type="PackedScene" uid="uid://cocy7s3ad6vg5" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
+[ext_resource type="PackedScene" uid="uid://cjfmlxijf5vw3" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
 [ext_resource type="PackedScene" uid="uid://cryaj723lq0ib" path="res://Scenes/Objects/floor_corridor.tscn" id="4_kwead"]
 [ext_resource type="PackedScene" uid="uid://cdnv38yqf5dxk" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="7_5ite6"]
+[ext_resource type="PackedScene" uid="uid://cwsxrt7opfa12" path="res://Scenes/Objects/hand_canvas.tscn" id="7_5ite6"]
 [ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="7_jpnrk"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
+[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
 [ext_resource type="ArrayMesh" uid="uid://bydjen1ds54vo" path="res://Assets/Meshes/monitor.obj" id="8_jpnrk"]
-[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="9_6vav5"]
+[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="9_6vav5"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="11_mtft4"]
-[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/Sounds/soundtrack.wav" id="12_jcxkm"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="12_jcxkm"]
 [ext_resource type="PackedScene" uid="uid://ju46qobc5e5w" path="res://Assets/Meshes/wires/pared cable color.glb" id="13_eigvp"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="14_mkx05"]
 [ext_resource type="PackedScene" uid="uid://wtmoqmqj2768" path="res://Scenes/Objects/tunel.tscn" id="15_7bomk"]
 [ext_resource type="PackedScene" uid="uid://dimpa466oc8rm" path="res://Scenes/Objects/Shrek.tscn" id="16_c4du3"]
-[ext_resource type="Script" uid="uid://ci2pbmlmk2odj" path="res://Scripts/triggerScene.gd" id="20_ywgaw"]
+[ext_resource type="Script" path="res://Scripts/triggerScene.gd" id="20_ywgaw"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("1_5ite6")
@@ -127,7 +127,7 @@ transform = Transform3D(35.286045, 0, 1.6584921, 0, 35.325, 0, -1.6584921, 0, 35
 
 [node name="Player" parent="." unique_id=1268550398 node_paths=PackedStringArray("hand_canvas") instance=ExtResource("2_ulksl")]
 transform = Transform3D(-1.260672e-07, 0, -2.8840814, 0, 2.8840814, 0, 2.8840814, 0, -1.260672e-07, -1, 4.931196, -6.5552387)
-speed = 200.0
+speed = 900.0
 horizontal_sensitivity = 0.001
 hand_canvas = NodePath("../HandCanvas")
 
@@ -956,9 +956,6 @@ transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245
 transform = Transform3D(0.5194147, 0, -0.8545223, 0, 1, 0, 0.8545223, 0, 0.5194147, -70.807465, 7.825755, -19.459816)
 player = NodePath("../Player")
 
-[node name="InteractArea" parent="come_cables" index="2" unique_id=461385779 node_paths=PackedStringArray("interact_canvas")]
-interact_canvas = NodePath("../../InteractUI")
-
 [node name="HandCanvas" parent="." unique_id=174721428 instance=ExtResource("7_5ite6")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HandCanvas" unique_id=1324013467]
@@ -1119,5 +1116,3 @@ SceneIndex = 1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=839549160]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.619324, 13.75592, 1.4894104)
 shape = SubResource("BoxShape3D_ywgaw")
-
-[editable path="come_cables"]

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cvxlopvk4tvqy"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Objects/player_symbol.tscn" id="1_ppn0g"]
+[ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_ppn0g"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_px3ck"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="3_jeusc"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_px3ck"]
-[ext_resource type="Resource" uid="uid://xktn0k36rxrw" path="res://Assets/Placeholders/CombatDialogue.dialogue" id="5_0rcf7"]
+[ext_resource type="Resource" uid="uid://cfop5tsntu84p" path="res://Assets/Placeholders/CombatDialogue.dialogue" id="5_0rcf7"]
 [ext_resource type="Script" path="res://Scripts/combatTransition.gd" id="6_44wcw"]
 [ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/sounds/pelea.wav" id="8_srmwc"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="9_n8pu7"]
@@ -125,8 +125,8 @@ position = Vector2(583, 330)
 [node name="background" type="Sprite2D" parent="." unique_id=1317558563]
 modulate = Color(0, 0, 0, 1)
 z_index = -50
-position = Vector2(564.99994, 314)
-scale = Vector2(16.0625, 8.9375)
+position = Vector2(637.4998, 433.49997)
+scale = Vector2(28.054686, 17.585938)
 texture = ExtResource("9_n8pu7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=219638632]

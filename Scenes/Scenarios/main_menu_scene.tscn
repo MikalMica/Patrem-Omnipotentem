@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cevgr4e0tavrq"]
 
-[ext_resource type="Script" uid="uid://dunhwmspu2ylp" path="res://Scripts/main_menu_scene.gd" id="1_8un3e"]
+[ext_resource type="Script" path="res://Scripts/main_menu_scene.gd" id="1_8un3e"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="2_424te"]
 [ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="3_jrvk8"]
 [ext_resource type="FontFile" uid="uid://c77ctv1jc5aj7" path="res://Assets/fonts/ACID_REF.TTF" id="4_lyt50"]
@@ -12,27 +12,35 @@ font_color = Color(0, 0.7361397, 0.21829212, 1)
 
 [sub_resource type="Theme" id="Theme_5wdp2"]
 
-[node name="main_menu_scene" type="Node2D" unique_id=2018993804]
+[node name="main_menu_scene" type="Control" unique_id=107082614]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_8un3e")
 
-[node name="background" type="Sprite2D" parent="." unique_id=1657970627]
+[node name="background" type="TextureRect" parent="." unique_id=1721727080]
 modulate = Color(0, 0, 0, 1)
 z_index = -50
-position = Vector2(948, 536)
+layout_mode = 0
+offset_left = -319.0
+offset_top = -151.0
+offset_right = -157.87938
+offset_bottom = 4.8601227
 scale = Vector2(16.0625, 8.9375)
 texture = ExtResource("2_424te")
 
 [node name="Label" type="Label" parent="." unique_id=1592083763]
+layout_mode = 0
 offset_left = 13.0
-offset_top = 249.0
+offset_top = 246.0
 offset_right = 1925.0
-offset_bottom = 646.0
+offset_bottom = 643.0
 text = "PATREM 
 OMNIPOTENTEM"
 label_settings = SubResource("LabelSettings_ggu5f")
 horizontal_alignment = 1
 
 [node name="Exit" type="Button" parent="." unique_id=1612995920]
+layout_mode = 0
 offset_left = 760.0
 offset_top = 789.0
 offset_right = 1083.0
@@ -54,6 +62,7 @@ theme_override_font_sizes/font_size = 50
 text = "Salir"
 
 [node name="Start" type="Button" parent="." unique_id=938086948]
+layout_mode = 0
 offset_left = 760.0
 offset_top = 672.0
 offset_right = 1083.0

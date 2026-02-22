@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 @onready var start: Button = $Start
 @onready var exit: Button = $Exit
 
