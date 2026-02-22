@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cryaj723lq0ib"]
+
+[ext_resource type="Texture2D" uid="uid://bf60f7furd35i" path="res://Assets/178-six-lane-highway-asphalt-texture-seamless.jpg" id="1_w5loh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6heil"]
+size = Vector3(18.64244, 0.29919434, 8.539032)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hd7a5"]
+albedo_texture = ExtResource("1_w5loh")
+
+[sub_resource type="BoxMesh" id="BoxMesh_hs1n0"]
+material = SubResource("StandardMaterial3D_hd7a5")
+
+[node name="Floor_corridor" type="StaticBody3D" unique_id=1513593116]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=564368285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.017562866)
+shape = SubResource("BoxShape3D_6heil")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=412284394]
+transform = Transform3D(-18.256151, 0, 0, 0, 0.1808022, 0, 0, 0, 8.087439, 0, 0, 0)
+mesh = SubResource("BoxMesh_hs1n0")
