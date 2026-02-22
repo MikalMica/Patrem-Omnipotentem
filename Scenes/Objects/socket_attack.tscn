@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bh0sc5e65g4l3"]
 
-[ext_resource type="Script" uid="uid://djns1x0r4obxk" path="res://Scripts/socket.gd" id="1_yvsqh"]
+[ext_resource type="Script" path="res://Scripts/socket.gd" id="1_yvsqh"]
 [ext_resource type="Shader" uid="uid://bryy5eile5knj" path="res://Assets/Shaders/wobbly.gdshader" id="2_mevx6"]
-[ext_resource type="Texture2D" uid="uid://dqox3ouvrxgsa" path="res://Assets/Sprites/cable.png" id="3_2atyh"]
-[ext_resource type="Texture2D" uid="uid://bsmt3qeenkd8a" path="res://Assets/Sprites/enchufe.png" id="4_irfp2"]
+[ext_resource type="Texture2D" uid="uid://cqammjsa3v7lw" path="res://Assets/Sprites/cable.png" id="3_2atyh"]
+[ext_resource type="Texture2D" uid="uid://cx7oa826oxd23" path="res://Assets/Sprites/enchufe.png" id="4_irfp2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yx27u"]
 shader = ExtResource("2_mevx6")
@@ -39,7 +39,6 @@ head = NodePath("head_parent")
 target = NodePath("../target")
 
 [node name="wire" type="TextureRect" parent="socket" unique_id=61301726]
-visible = false
 material = SubResource("ShaderMaterial_yx27u")
 offset_left = -5.0
 offset_top = -22.0

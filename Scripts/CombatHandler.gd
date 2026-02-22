@@ -1,18 +1,16 @@
 extends Node2D
 
-@export var speed = 1.0
-@export var density = 1.0
-@export var speedIncrease = .5
-@export var densityIncrease = .5
 @export var attacks: Array[PackedScene]
 @export var waitTime = 2.0
 @export var nAttacks = 1
+@export var dialogue: DialogueResource
 var attacksSpawned = 0
 var currIndex
 var currAttack : IAttack
 
 func _ready() -> void:
 	_spawn_random_attack()
+	SignalBus.defeated.connect(_delete_everything)
 
 func _spawn_random_attack() -> void:
 	if(attacks.size() == 0): 
@@ -21,14 +19,20 @@ func _spawn_random_attack() -> void:
 	attacksSpawned += 1
 	currIndex = randi() % attacks.size()
 	currAttack = attacks[currIndex].instantiate() as IAttack
-	currAttack.set_speed_and_density(speed, density)
 	add_child(currAttack)
 	currAttack.global_position = global_position
 	currAttack.attack_finished.connect(_despawn_attack)
-	# añade velocidad y densidad al ataque
 
 func _despawn_attack() -> void:
 	remove_child(currAttack)
-	await get_tree().create_timer(waitTime).timeout
+	if dialogue != null:
+		var start = "Combat" + str(attacksSpawned)
+		DialogueManager.show_dialogue_balloon(dialogue, start)
+		await DialogueManager.dialogue_ended
+	else: await get_tree().create_timer(waitTime).timeout
 	if attacksSpawned < nAttacks:
 		_spawn_random_attack()
+
+func _delete_everything() -> void:
+	for i in get_children():
+		i.queue_free()

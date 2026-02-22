@@ -9,4 +9,4 @@ func _ready() -> void:
 func _defeat_animation() -> void:
 	play("Defeated")
 	await animation_finished
-	SignalBus.emit_signal("defeat_animation_ended")
+	SceneManager.change_scene("res://Scenes/Scenarios/defeat_scene.tscn")

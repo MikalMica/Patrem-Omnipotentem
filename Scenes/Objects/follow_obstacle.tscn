@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bj2s8tvr074e6" path="res://Scripts/follow_and_kill_player.gd" id="1_0cctl"]
 [ext_resource type="Texture2D" uid="uid://dq0b4uuy4hd1o" path="res://Assets/Placeholders/MarioVaquerizo.jpg" id="1_f3mpj"]
 [ext_resource type="Script" uid="uid://dosmxk3i22yjh" path="res://Scripts/HurtPlayer.gd" id="2_f3mpj"]
+[ext_resource type="Script" uid="uid://dw73j5ay5tcpt" path="res://Scripts/trail.gd" id="4_i5acm"]
+[ext_resource type="PackedScene" uid="uid://ulr3ffjccnpg" path="res://Scenes/Objects/trail_link.tscn" id="5_vtjn4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3mpj"]
 radius = 633.7
@@ -19,4 +21,7 @@ script = ExtResource("2_f3mpj")
 position = Vector2(0, 9.536743e-06)
 shape = SubResource("CircleShape2D_f3mpj")
 
-[node name="Trail" type="Node2D" parent="." unique_id=598854637]
+[node name="Trail" type="Node" parent="." unique_id=1864695616 node_paths=PackedStringArray("bulletArea")]
+script = ExtResource("4_i5acm")
+link = ExtResource("5_vtjn4")
+bulletArea = NodePath("../Area2D")

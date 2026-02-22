@@ -15,4 +15,3 @@ func _spawn_obstacle():
 	var randomAngle := randf_range(0, 360)
 	var randomDir := Vector2(sin(deg_to_rad(randomAngle)), cos(deg_to_rad(randomAngle)))
 	child.global_position = player.global_position + randomDir * radius
-	print(randomDir)

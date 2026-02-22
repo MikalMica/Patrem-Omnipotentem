@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ulr3ffjccnpg"]
+
+[ext_resource type="Texture2D" uid="uid://bh7k5ejcc86o" path="res://Assets/Sprites/cables.png" id="1_l5r6l"]
+[ext_resource type="Script" uid="uid://dosmxk3i22yjh" path="res://Scripts/HurtPlayer.gd" id="2_ewxry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewxry"]
+size = Vector2(566.9131, 1260.3486)
+
+[node name="TrailLink" type="Sprite2D" unique_id=19176979]
+z_index = -1
+rotation = 1.5707964
+scale = Vector2(0.036623143, 0.035153747)
+texture = ExtResource("1_l5r6l")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=217456976 groups=["TRAIL"]]
+script = ExtResource("2_ewxry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=685206222]
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_ewxry")

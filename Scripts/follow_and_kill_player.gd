@@ -7,7 +7,14 @@ var rotation_time : float = 2.
 var speed : float = 100.
 var speed_factor = 2
 
+@export var lifeTime = 10.
+
 var current_time : float = .0 
+
+signal waiting
+
+func _ready() -> void:
+	get_tree().create_timer(lifeTime).timeout.connect(despawn)
 
 func _process(delta: float) -> void:
 	current_time += delta
@@ -20,3 +27,9 @@ func _process(delta: float) -> void:
 func _look_towards_player() -> void:
 	look_at(player.global_position)
 	direction = (player.global_position - global_position).normalized()
+
+func despawn() -> void:
+	speed = 0
+	waiting.emit()
+	await ($Trail as trail).trailDespawned
+	queue_free()
