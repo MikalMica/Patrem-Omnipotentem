@@ -18,7 +18,7 @@ func _ready() -> void:
 	mLink.global_position = bulletArea.global_position
 	mLink.visible = false
 	add_child(mLink)
-	lastLink = mLink.get_child(0) as Area2D
+	lastLink = mLink as Area2D
 
 func _spawnTrail(area: Area2D) -> void:
 	if area == lastLink:
@@ -27,7 +27,7 @@ func _spawnTrail(area: Area2D) -> void:
 		mLink.global_position = bulletArea.global_position
 		mLink.global_rotation = bulletArea.global_rotation + (PI/2)
 		links.push_back(mLink)
-		lastLink = mLink.get_child(0) as Area2D
+		lastLink = mLink as Area2D
 
 func _despawnTrail() -> void:
 	for i in range(0, links.size()):

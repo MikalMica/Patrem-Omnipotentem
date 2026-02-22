@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 	
 func _look_towards_player() -> void:
 	look_at(player.global_position)
+	rotate(PI/2)
 	direction = (player.global_position - global_position).normalized()
 
 func despawn() -> void:
