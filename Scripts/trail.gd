@@ -3,7 +3,7 @@ class_name trail
 
 @export var link: PackedScene
 @export var bulletArea: Area2D
-@export var linkLifeTime: float = 2.
+@export var linkLifeTime: float = 1.
 var links: Array[Node2D]
 var lastLink: Area2D
 var timeBetweenDespawns = .2

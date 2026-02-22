@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://bddvoiar7322o"]
+
+[ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_p7s1m"]
+[ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_bfe3q"]
+[ext_resource type="PackedScene" uid="uid://dggu6qiims6fa" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_hf87n"]
+[ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_kx7bi"]
+[ext_resource type="Resource" uid="uid://dc3caik8sdgvi" path="res://Assets/Placeholders/CombatDialogue.dialogue" id="5_l5qmh"]
+[ext_resource type="Script" uid="uid://7gqdoajhxq6h" path="res://Scripts/combatTransition.gd" id="6_ul77o"]
+[ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="7_rqbw2"]
+[ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/Sounds/pelea.wav" id="8_pfsuf"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0rcf7"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_44wcw"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_srmwc"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yx27u"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="Animation" id="Animation_0rcf7"]
+resource_name = "Fade_out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.94, 1.94), Vector2(1.94, 1.94), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(385, 200), Vector2(385, 200), Vector2(580, 330)]
+}
+
+[sub_resource type="Animation" id="Animation_44wcw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.615, 1.615)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 200)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_srmwc"]
+_data = {
+&"Fade_out": SubResource("Animation_0rcf7"),
+&"RESET": SubResource("Animation_44wcw")
+}
+
+[node name="CombatScene" type="Node2D" unique_id=835763651]
+
+[node name="PlayerSymbol" parent="." unique_id=1723358663 instance=ExtResource("1_p7s1m")]
+position = Vector2(643, 352)
+
+[node name="CombatHandler" type="Node2D" parent="." unique_id=1442692332]
+position = Vector2(-449, -248)
+script = ExtResource("2_bfe3q")
+attacks = Array[PackedScene]([ExtResource("3_hf87n"), ExtResource("4_kx7bi")])
+dialogue = ExtResource("5_l5qmh")
+enemyName = "Comecables"
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
+
+[node name="BottomWall" type="CollisionShape2D" parent="Walls" unique_id=1534140838]
+position = Vector2(577, 867)
+shape = SubResource("WorldBoundaryShape2D_0rcf7")
+
+[node name="TopWall" type="CollisionShape2D" parent="Walls" unique_id=252940894]
+position = Vector2(576, -213)
+shape = SubResource("WorldBoundaryShape2D_44wcw")
+
+[node name="LeftWall" type="CollisionShape2D" parent="Walls" unique_id=1565301508]
+position = Vector2(-377, 327)
+shape = SubResource("WorldBoundaryShape2D_srmwc")
+
+[node name="RightWall" type="CollisionShape2D" parent="Walls" unique_id=1159334862]
+position = Vector2(1544, 325)
+shape = SubResource("WorldBoundaryShape2D_yx27u")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1280868185]
+offset = Vector2(300, 200)
+zoom = Vector2(1.615, 1.615)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=1054728192]
+libraries/ = SubResource("AnimationLibrary_srmwc")
+script = ExtResource("6_ul77o")
+
+[node name="CENTER" type="Node2D" parent="." unique_id=1924016792 groups=["CENTER"]]
+position = Vector2(583, 330)
+
+[node name="background" type="Sprite2D" parent="." unique_id=1317558563]
+modulate = Color(0, 0, 0, 1)
+z_index = -50
+position = Vector2(564.99994, 314)
+scale = Vector2(16.0625, 8.9375)
+texture = ExtResource("7_rqbw2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=219638632]
+stream = ExtResource("8_pfsuf")
+autoplay = true
