@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cevgr4e0tavrq"]
+
+[ext_resource type="Script" uid="uid://dunhwmspu2ylp" path="res://Scenes/Scenarios/main_menu_scene.gd" id="1_8un3e"]
+[ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="2_424te"]
+[ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="3_jrvk8"]
+[ext_resource type="FontFile" uid="uid://c77ctv1jc5aj7" path="res://Assets/fonts/ACID_REF.TTF" id="4_lyt50"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ggu5f"]
+font = ExtResource("3_jrvk8")
+font_size = 120
+font_color = Color(0, 0.7361397, 0.21829212, 1)
+
+[sub_resource type="Theme" id="Theme_5wdp2"]
+
+[node name="main_menu_scene" type="Node2D" unique_id=2018993804]
+script = ExtResource("1_8un3e")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1657970627]
+modulate = Color(0, 0, 0, 1)
+z_index = -50
+position = Vector2(948, 536)
+scale = Vector2(16.0625, 8.9375)
+texture = ExtResource("2_424te")
+
+[node name="Label" type="Label" parent="." unique_id=1592083763]
+offset_left = 13.0
+offset_top = 249.0
+offset_right = 1925.0
+offset_bottom = 646.0
+text = "PATREM 
+OMNIPOTENTEM"
+label_settings = SubResource("LabelSettings_ggu5f")
+horizontal_alignment = 1
+
+[node name="Exit" type="Button" parent="." unique_id=1612995920]
+offset_left = 760.0
+offset_top = 789.0
+offset_right = 1083.0
+offset_bottom = 860.0
+theme = SubResource("Theme_5wdp2")
+theme_override_colors/font_color = Color(0, 0.7372549, 0.21960784, 1)
+theme_override_colors/font_focus_color = Color(0, 0.5019608, 0.21960784, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.35686275, 0.21960784, 1)
+theme_override_colors/font_hover_color = Color(0, 0.5019608, 0.21960784, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.35686275, 0.21960784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("4_lyt50")
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+
+[node name="Start" type="Button" parent="." unique_id=938086948]
+offset_left = 760.0
+offset_top = 672.0
+offset_right = 1083.0
+offset_bottom = 743.0
+theme_override_colors/font_color = Color(0, 0.7372549, 0.21960784, 1)
+theme_override_colors/font_focus_color = Color(0, 0.5019608, 0.21960784, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.35686275, 0.21960784, 1)
+theme_override_colors/font_hover_color = Color(0, 0.5019608, 0.21960784, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.35686275, 0.21960784, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("4_lyt50")
+theme_override_font_sizes/font_size = 50
+text = "Empezar"
+
+[connection signal="pressed" from="Exit" to="." method="_exit"]
+[connection signal="pressed" from="Start" to="." method="_start"]

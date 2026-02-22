@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Patrem Omnipoténtem"
-run/main_scene="uid://fhuk0vhv67eb"
+run/main_scene="uid://cevgr4e0tavrq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/Placeholders/icon.svg"
 

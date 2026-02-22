@@ -1,17 +1,17 @@
 extends Node2D
-@onready var retry: Button = $Retry
+@onready var start: Button = $Start
 @onready var exit: Button = $Exit
 
 func _ready() -> void:
 	var stylebox: StyleBox = exit.get_theme_stylebox("normal")
 	stylebox.bg_color = Color(0.0, 0.0, 0.0, 0.0)
 	exit.add_theme_stylebox_override("normal", stylebox)
-	retry.add_theme_stylebox_override("normal", stylebox)
+	start.add_theme_stylebox_override("normal", stylebox)
 	exit.add_theme_stylebox_override("hover", stylebox)
-	retry.add_theme_stylebox_override("hover", stylebox)
+	start.add_theme_stylebox_override("hover", stylebox)
 
 func _exit() -> void:
-	SceneManager.change_scene("res://Scenes/Scenarios/main_menu_scene.tscn")
+	get_tree().quit()
 
-func _retry() -> void:
-	SceneHandler.returnToLastCombat()
+func _start() -> void:
+	SceneManager.change_scene("res://Scenes/Scenarios/main_scene.tscn")
