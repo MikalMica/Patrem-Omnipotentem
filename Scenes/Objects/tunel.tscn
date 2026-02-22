@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://blygki8haclni"]
+
+[ext_resource type="Texture2D" uid="uid://d3km0c10ibj6p" path="res://Assets/rustymetal.jpg" id="1_v0wig"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkx05"]
+size = Vector3(50.76126, 1, 37.18286)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4du3"]
+albedo_texture = ExtResource("1_v0wig")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mkx05"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxapd"]
+albedo_texture = ExtResource("1_v0wig")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwead"]
+albedo_texture = ExtResource("1_v0wig")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oy23i"]
+albedo_texture = ExtResource("1_v0wig")
+
+[node name="tunel" type="Node3D" unique_id=1261593996]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=938185049]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1353518269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15596008, -20.103241, 0.6570492)
+shape = SubResource("BoxShape3D_mkx05")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=729243724]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.15596008, -1.4417877, -13.463791)
+shape = SubResource("BoxShape3D_mkx05")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=794924260]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.15596008, -1.4417877, 16.934439)
+shape = SubResource("BoxShape3D_mkx05")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1877624761]
+transform = Transform3D(53.043102, 0, 0, 0, 3.5838025, 0, 0, 0, 39.187298, 0, -20.23175, 0)
+material_override = SubResource("StandardMaterial3D_c4du3")
+mesh = SubResource("BoxMesh_mkx05")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=376635524]
+transform = Transform3D(53.043102, 0, 0, 0, -1.5665299e-07, -39.187298, 0, 3.5838025, -1.7129312e-06, 0, 0, 21.007217)
+material_override = SubResource("StandardMaterial3D_lxapd")
+mesh = SubResource("BoxMesh_mkx05")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1915390723]
+transform = Transform3D(53.043102, 0, 0, 0, -1.5665299e-07, -39.187298, 0, 3.5838025, -1.7129312e-06, 0, 0, -17.791615)
+material_override = SubResource("StandardMaterial3D_kwead")
+mesh = SubResource("BoxMesh_mkx05")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=236246023]
+transform = Transform3D(53.043102, 0, 0, 0, 3.5838025, 0, 0, 0, 39.187298, 0, 17.203186, 0)
+material_override = SubResource("StandardMaterial3D_oy23i")
+mesh = SubResource("BoxMesh_mkx05")

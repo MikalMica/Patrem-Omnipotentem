@@ -14,6 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="12_jcxkm"]
 [ext_resource type="PackedScene" uid="uid://ju46qobc5e5w" path="res://Assets/Meshes/wires/pared cable color.glb" id="13_eigvp"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="14_mkx05"]
+[ext_resource type="PackedScene" uid="uid://blygki8haclni" path="res://Scenes/Objects/tunel.tscn" id="15_7bomk"]
+[ext_resource type="PackedScene" uid="uid://dimpa466oc8rm" path="res://Scenes/Objects/Shrek.tscn" id="16_c4du3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("1_5ite6")
@@ -113,7 +115,7 @@ transform = Transform3D(4.53466, 0, 0, 0, 6.555977, 0, 0, 0, 4.2790504, 0, 0, -1
 transform = Transform3D(4.53466, 0, 0, 0, 6.555977, 0, 0, 0, 4.2790504, -83.14708, 0, -1)
 
 [node name="Floor_Placeholder3" parent="." unique_id=976699337 instance=ExtResource("1_vnmfx")]
-transform = Transform3D(25.8925, 0, 15.2051525, 0, 33.001358, 0, -14.527221, 0, 27.100803, -308.52008, -6.5635986, -1)
+transform = Transform3D(32.118835, 0, 17.211964, 0, 33.001358, 0, -18.020561, 0, 30.67763, -308.52008, -6.5635986, -1)
 
 [node name="Floor_Placeholder4" parent="." unique_id=1074245067 instance=ExtResource("1_vnmfx")]
 transform = Transform3D(22.539589, 0, 10.788205, 0, 37.384903, 0, -12.64604, 0, 19.228289, -296.2859, -8.766464, -234.08876)
@@ -487,6 +489,16 @@ mesh = SubResource("PlaneMesh_jcxkm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="mundo/montaña" unique_id=1717473298]
 transform = Transform3D(75.14412, 40.361267, 92.828354, -29.293056, 119.33534, -28.173777, -96.89195, -4.776306, 80.5103, -558.3838, 45.408813, -185.4588)
+material_override = SubResource("StandardMaterial3D_5ite6")
+mesh = SubResource("BoxMesh_5ite6")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="mundo/montaña" unique_id=1405074105]
+transform = Transform3D(35.1109, 35.717064, 115.69049, -29.244581, 119.39179, -27.98432, -117.49364, -19.043633, 41.53746, -584.1478, 31.782166, -159.51947)
+material_override = SubResource("StandardMaterial3D_5ite6")
+mesh = SubResource("BoxMesh_5ite6")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="mundo/montaña" unique_id=985483824]
+transform = Transform3D(75.14412, 40.361267, 92.828354, -29.293056, 119.33534, -28.173777, -96.89195, -4.776306, 80.5103, -706.4094, 45.408813, -176.396)
 material_override = SubResource("StandardMaterial3D_5ite6")
 mesh = SubResource("BoxMesh_5ite6")
 
@@ -905,13 +917,43 @@ transform = Transform3D(3.2111487, 0, -0.040110946, 0, 3.4868, 0, 0.062554, 0, 2
 transform = Transform3D(3.2111487, 0, -0.040110946, 0, 3.4868, 0, 0.062554, 0, 2.0590591, -140.6412, 46.3349, -174.0514)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="mundo" unique_id=1794298388]
-transform = Transform3D(0.5894841, -0.19538067, -0.78379506, 0.09437812, -0.9470037, 0.30704537, -0.8022477, -0.25497147, -0.539804, -580.4767, 33.178467, -83.64965)
+transform = Transform3D(0.5894841, -0.1953807, -0.78379524, 0.09437812, -0.9470037, 0.30704534, -0.8022477, -0.25497144, -0.5398039, -676.7066, 33.178467, -83.64965)
 light_color = Color(0.7372549, 1, 0, 1)
 light_energy = 16.0
 light_volumetric_fog_energy = 3.455
 light_specular = 0.885
 spot_range = 205.1815
 spot_angle = 35.60774
+
+[node name="servidores" parent="mundo" unique_id=738924275 instance=ExtResource("11_mtft4")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -53.695633, 1.6617572, -26.303822)
+
+[node name="servidores2" parent="mundo" unique_id=305000610 instance=ExtResource("11_mtft4")]
+transform = Transform3D(2.8791513, 0, -0.8429047, 0, 3, 0, 0.8429047, 0, 2.8791513, 27.915794, 1.6617572, -26.303822)
+
+[node name="servidores3" parent="mundo" unique_id=954590454 instance=ExtResource("11_mtft4")]
+transform = Transform3D(-2.9962187, 0, -0.15057606, 0, 3, 0, 0.15057606, 0, -2.9962187, 22.665382, 1.6617572, 27.185265)
+
+[node name="pared cable color" parent="mundo" unique_id=436592569 instance=ExtResource("13_eigvp")]
+transform = Transform3D(1.3598965, 0, 0, 0, 1.3076785, 0.8870616, 0, -0.8453926, 1.3721334, 32.253464, -1.7141571, -10.4356575)
+
+[node name="pared cable color2" parent="mundo" unique_id=974751526 instance=ExtResource("13_eigvp")]
+transform = Transform3D(1.3598965, 0, 0, 0, 1.3076785, 0.8870616, 0, -0.8453926, 1.3721334, -106.36661, -1.7141571, -8.183994)
+
+[node name="pared de cables3" parent="mundo" unique_id=737377418 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-0.044897832, 0.053278722, -1.0622696, -0.10869876, 1.8245417, 0.033827618, 1.3131675, 0.15284969, -0.03351936, 22.841797, -61.190674, 86.81056)
+
+[node name="pared de cables4" parent="mundo" unique_id=1206686219 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -74.93933, -61.190674, 14.368923)
+
+[node name="pared de cables5" parent="mundo" unique_id=1627328250 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -125.91399, -61.190674, 21.038502)
+
+[node name="pared de cables7" parent="mundo" unique_id=262527592 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-1.3131863, -0.14888084, -0.0386605, -0.108698756, 1.8245412, 0.033827614, 0.0443382, 0.06353067, -1.0620947, -92.27266, -61.190674, -22.052633)
+
+[node name="pared de cables6" parent="mundo" unique_id=2125516708 instance=ExtResource("14_mkx05")]
+transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -151.92921, -61.190674, -28.268757)
 
 [node name="come_cables" parent="." unique_id=840245654 node_paths=PackedStringArray("player") instance=ExtResource("6_h3cbu")]
 transform = Transform3D(0.5194147, 0, -0.8545223, 0, 1, 0, 0.8545223, 0, 0.5194147, -70.807465, 7.825755, -19.459816)
@@ -1064,34 +1106,11 @@ transform = Transform3D(0.865816, 0, 0.50036263, 0, 1, 0, -0.50036263, 0, 0.8658
 transform = Transform3D(0.6977404, 0, 0.7163505, 0, 1, 0, -0.7163505, 0, 0.6977404, 42.907562, 0, -74.246216)
 shape = SubResource("BoxShape3D_h3cbu")
 
-[node name="servidores" parent="." unique_id=738924275 instance=ExtResource("11_mtft4")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -53.695633, 1.6617572, -26.303822)
+[node name="tunel" parent="." unique_id=1261593996 instance=ExtResource("15_7bomk")]
+transform = Transform3D(0.9755077, 0, -0.21996538, 0, 1, 0, 0.21996538, 0, 0.9755077, -654.5007, 15.535446, -79.43818)
 
-[node name="servidores2" parent="." unique_id=305000610 instance=ExtResource("11_mtft4")]
-transform = Transform3D(2.8791513, 0, -0.8429047, 0, 3, 0, 0.8429047, 0, 2.8791513, 27.915794, 1.6617572, -26.303822)
-
-[node name="servidores3" parent="." unique_id=954590454 instance=ExtResource("11_mtft4")]
-transform = Transform3D(-2.9962187, 0, -0.15057606, 0, 3, 0, 0.15057606, 0, -2.9962187, 22.665382, 1.6617572, 27.185265)
-
-[node name="pared cable color" parent="." unique_id=436592569 instance=ExtResource("13_eigvp")]
-transform = Transform3D(1.3598965, 0, 0, 0, 1.3076785, 0.8870616, 0, -0.8453926, 1.3721334, 32.253464, -1.7141571, -10.4356575)
-
-[node name="pared cable color2" parent="." unique_id=974751526 instance=ExtResource("13_eigvp")]
-transform = Transform3D(1.3598965, 0, 0, 0, 1.3076785, 0.8870616, 0, -0.8453926, 1.3721334, -106.36661, -1.7141571, -8.183994)
-
-[node name="pared de cables3" parent="." unique_id=737377418 instance=ExtResource("14_mkx05")]
-transform = Transform3D(-0.044897832, 0.053278722, -1.0622696, -0.10869876, 1.8245417, 0.033827618, 1.3131675, 0.15284969, -0.03351936, 22.841797, -61.190674, 86.81056)
-
-[node name="pared de cables4" parent="." unique_id=1206686219 instance=ExtResource("14_mkx05")]
-transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -74.93933, -61.190674, 14.368923)
-
-[node name="pared de cables5" parent="." unique_id=1627328250 instance=ExtResource("14_mkx05")]
-transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -125.91399, -61.190674, 21.038502)
-
-[node name="pared de cables7" parent="." unique_id=262527592 instance=ExtResource("14_mkx05")]
-transform = Transform3D(-1.3131863, -0.14888084, -0.0386605, -0.108698756, 1.8245412, 0.033827614, 0.0443382, 0.06353067, -1.0620947, -92.27266, -61.190674, -22.052633)
-
-[node name="pared de cables6" parent="." unique_id=2125516708 instance=ExtResource("14_mkx05")]
-transform = Transform3D(-1.3130437, -0.15299052, 0.03633736, -0.10869876, 1.8245414, 0.033827618, -0.04838141, 0.05287304, -1.0621768, -151.92921, -61.190674, -28.268757)
+[node name="shrek" parent="." unique_id=2119660619 node_paths=PackedStringArray("player") instance=ExtResource("16_c4du3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -388.59396, -0.20135498, -166.18611)
+player = NodePath("../Player")
 
 [editable path="come_cables"]
