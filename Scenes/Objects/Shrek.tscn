@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bfo4gsietvbv7" path="res://Scripts/billboarding.gd" id="1_8k7ic"]
 [ext_resource type="Texture2D" uid="uid://dviv1ctvs6irm" path="res://Assets/Sprites/Shrek/Shrek.png" id="2_8k7ic"]
-[ext_resource type="Texture2D" uid="uid://3o5h4jfshbyp" path="res://Assets/Sprites/ComeCables/ComecablesOutline.png" id="3_in32i"]
+[ext_resource type="Texture2D" uid="uid://h46apackt3hy" path="res://Assets/Sprites/Shrek/shrek_outline.png" id="3_8k7ic"]
 [ext_resource type="PackedScene" uid="uid://cjbmxvjw7qqpp" path="res://Scenes/Objects/interact_area.tscn" id="4_u1rtb"]
-[ext_resource type="Resource" uid="uid://7u7utciwmco3" path="res://Assets/Dialogues/SHREK.dialogue" id="5_8k7ic"]
+[ext_resource type="Resource" uid="uid://b1yf334mw0e1o" path="res://Assets/Dialogues/SHREK.dialogue" id="5_8k7ic"]
 
 [node name="shrek" type="Node3D" unique_id=840245654]
 script = ExtResource("1_8k7ic")
@@ -18,9 +18,9 @@ texture = ExtResource("2_8k7ic")
 region_rect = Rect2(281.373, 0, 1301.63, 1369)
 
 [node name="outline" type="Sprite3D" parent="body" unique_id=1805235344]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43301, 0, -0.386297)
+transform = Transform3D(1, 0, 1.8626451e-09, 0, 1, 0, -1.8626451e-09, 0, 1, 0.048488796, -0.026456892, -0.37003216)
 visible = false
-texture = ExtResource("3_in32i")
+texture = ExtResource("3_8k7ic")
 
 [node name="InteractArea" parent="." unique_id=461385779 node_paths=PackedStringArray("outline") instance=ExtResource("4_u1rtb")]
 outline = NodePath("../body/outline")
