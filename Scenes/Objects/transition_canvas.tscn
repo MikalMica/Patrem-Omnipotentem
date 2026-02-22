@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://c2mpvyxy871f8"]
 
-[ext_resource type="Script" uid="uid://bo3ti2f1fylti" path="res://Scripts/wire_transition.gd" id="1_j5hqx"]
+[ext_resource type="Script" path="res://Scripts/wire_transition.gd" id="1_j5hqx"]
 [ext_resource type="PackedScene" uid="uid://wmtruk8fv35h" path="res://Scenes/Objects/wire_trans.tscn" id="2_j5hqx"]
 
 [node name="TransitionCanvas" type="CanvasLayer" unique_id=1995619054]
-layer = 2
 script = ExtResource("1_j5hqx")
 
 [node name="WIRE_TRANS" parent="." unique_id=1567415696 instance=ExtResource("2_j5hqx")]
