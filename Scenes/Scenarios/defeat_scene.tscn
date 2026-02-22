@@ -31,10 +31,10 @@ text = "PATREM SCYRE"
 label_settings = SubResource("LabelSettings_ggu5f")
 
 [node name="Exit" type="Button" parent="." unique_id=1612995920]
-offset_left = 760.0
-offset_top = 789.0
-offset_right = 1083.0
-offset_bottom = 860.0
+offset_left = 562.0
+offset_top = 674.0
+offset_right = 1307.0
+offset_bottom = 745.0
 theme = SubResource("Theme_5wdp2")
 theme_override_colors/font_color = Color(0, 0.7372549, 0.21960784, 1)
 theme_override_colors/font_focus_color = Color(0, 0.5019608, 0.21960784, 1)
@@ -49,13 +49,13 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
 theme_override_fonts/font = ExtResource("3_k2yfa")
 theme_override_font_sizes/font_size = 50
-text = "Antes muerto"
+text = "Aceptar al padre en tu corazon"
 
 [node name="Retry" type="Button" parent="." unique_id=938086948]
 offset_left = 690.0
-offset_top = 672.0
+offset_top = 778.0
 offset_right = 1178.0
-offset_bottom = 743.0
+offset_bottom = 849.0
 theme_override_colors/font_color = Color(0, 0.7372549, 0.21960784, 1)
 theme_override_colors/font_focus_color = Color(0, 0.5019608, 0.21960784, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.35686275, 0.21960784, 1)
@@ -69,7 +69,7 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
 theme_override_fonts/font = ExtResource("3_k2yfa")
 theme_override_font_sizes/font_size = 50
-text = "Enfrentarse al Padre"
+text = "Antes muerto"
 
 [connection signal="pressed" from="Exit" to="." method="_exit"]
 [connection signal="pressed" from="Retry" to="." method="_retry"]
