@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dimur6d8btsog"]
+
+[ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="1_38qbd"]
+[ext_resource type="Texture2D" uid="uid://dn7vlislnlitl" path="res://Assets/metal.jpg" id="2_4ofem"]
+[ext_resource type="ArrayMesh" uid="uid://dgfwj762b7fpg" path="res://Assets/Meshes/untitled.obj" id="2_p1f3h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bdyu"]
+albedo_texture = ExtResource("2_4ofem")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ofem"]
+size = Vector3(100.602936, 1, 53.946327)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1f3h"]
+albedo_texture = ExtResource("2_4ofem")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4ofem"]
+
+[node name="Church" type="Node2D" unique_id=1848605186]
+
+[node name="Player" parent="." unique_id=597419909 instance=ExtResource("1_38qbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45213187, 2.0317564, 4.8160286)
+
+[node name="church" type="MeshInstance3D" parent="." unique_id=1586324582]
+transform = Transform3D(3.335387, 0, 0, 0, 3.335387, 0, 0, 0, 3.335387, -5.6229253, 0, 5.0812063)
+material_override = SubResource("StandardMaterial3D_4bdyu")
+mesh = ExtResource("2_p1f3h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1852228606]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1736408746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.828644, 0.2127409, 4.9988937)
+shape = SubResource("BoxShape3D_4ofem")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1185250501]
+transform = Transform3D(59.80263, 0, 0, 0, 1, 0, 0, 0, 26.912329, -16.277496, 0, 4.1301193)
+material_override = SubResource("StandardMaterial3D_p1f3h")
+mesh = SubResource("PlaneMesh_4ofem")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=539363789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.140659, 17.070892, 4.3011436)
+light_color = Color(0.3128919, 0.885402, 0, 1)
+light_energy = 6.737
+omni_range = 22.379108
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1060542747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.070496, 17.070892, 4.3011436)
+light_color = Color(0.3128919, 0.885402, 0, 1)
+light_energy = 6.737
+omni_range = 22.379108
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=569801966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.82477, 17.070892, 4.3011436)
+light_color = Color(0.3128919, 0.885402, 0, 1)
+light_energy = 6.737
+omni_range = 22.379108
