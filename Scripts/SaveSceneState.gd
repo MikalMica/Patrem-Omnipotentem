@@ -33,6 +33,7 @@ func dialogue_saved() -> bool:
 	return savedDialogue
 
 func is_defeated(npc: String) -> bool:
+	if(!defeated.has(npc)): return false
 	return defeated[npc]
 
 func savePlayerTrans(plyr: Node3D):
