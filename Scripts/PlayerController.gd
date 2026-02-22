@@ -43,8 +43,8 @@ func _physics_process(delta: float) -> void:
 	dir.y = 0
 	dir += get_gravity()
 	
-	dir = dir.normalized()
 	dir = dir.rotated(Vector3.UP, rotation.y)
+	dir = dir.normalized()
 	velocity = dir * speed
 	
 	move_and_slide()
