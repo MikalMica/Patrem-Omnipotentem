@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://wmtruk8fv35h"]
+
+[ext_resource type="Texture2D" uid="uid://bh7k5ejcc86o" path="res://Assets/Sprites/cables.png" id="1_rb62m"]
+
+[sub_resource type="Animation" id="Animation_0hahq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wires3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15652.1, 10235.953)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("wires4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15658.1, 10269.953)]
+}
+
+[sub_resource type="Animation" id="Animation_rb62m"]
+resource_name = "start"
+length = 4.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wires3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(0.1, 0.1),
+"update": 0,
+"values": [Vector2(-15636.1, 10226.631), Vector2(1990, 50.000122)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("wires4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 4.1),
+"transitions": PackedFloat32Array(0.1, 0.1),
+"update": 0,
+"values": [Vector2(-15622.001, 10249.001), Vector2(2000, 74.99994)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0hahq"]
+_data = {
+&"RESET": SubResource("Animation_0hahq"),
+&"start": SubResource("Animation_rb62m")
+}
+
+[node name="WIRE_TRANS" type="Control" unique_id=1567415696]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WireTransition" type="Control" parent="." unique_id=822552329]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="wires3" type="TextureRect" parent="WireTransition" unique_id=2132135088]
+modulate = Color(0.7882353, 0.6431373, 0.6431373, 1)
+layout_mode = 0
+offset_left = -15652.1
+offset_top = 10235.953
+offset_right = -14886.1
+offset_bottom = 69795.55
+rotation = -2.0943952
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rb62m")
+stretch_mode = 1
+
+[node name="wires4" type="TextureRect" parent="WireTransition" unique_id=945902438]
+modulate = Color(0.7882353, 0.6431373, 0.6431373, 1)
+layout_mode = 0
+offset_left = -15658.1
+offset_top = 10269.953
+offset_right = -14892.1
+offset_bottom = 69813.64
+rotation = -2.0943952
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_rb62m")
+stretch_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=970692743]
+root_node = NodePath("../WireTransition")
+libraries/ = SubResource("AnimationLibrary_0hahq")

@@ -13,6 +13,8 @@ func transition_hand(path: String) -> void:
 	anim_player.play("show")
 	await anim_player.animation_finished
 	SceneHandler.changeTo(path)
+	await get_tree().create_timer(0.2).timeout
+	TransitionCanvas.play()
 	
 func papear() -> void:
 	self.visible = true
