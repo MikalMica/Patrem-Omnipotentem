@@ -1,25 +1,28 @@
 [gd_scene format=3 uid="uid://besjfew4uyl7a"]
 
 [ext_resource type="Script" uid="uid://bj2s8tvr074e6" path="res://Scripts/follow_and_kill_player.gd" id="1_0cctl"]
-[ext_resource type="Texture2D" uid="uid://dq0b4uuy4hd1o" path="res://Assets/Placeholders/MarioVaquerizo.jpg" id="1_f3mpj"]
+[ext_resource type="Texture2D" uid="uid://cx7oa826oxd23" path="res://Assets/Sprites/enchufe.png" id="1_i5acm"]
 [ext_resource type="Script" uid="uid://dosmxk3i22yjh" path="res://Scripts/HurtPlayer.gd" id="2_f3mpj"]
 [ext_resource type="Script" uid="uid://dw73j5ay5tcpt" path="res://Scripts/trail.gd" id="4_i5acm"]
 [ext_resource type="PackedScene" uid="uid://ulr3ffjccnpg" path="res://Scenes/Objects/trail_link.tscn" id="5_vtjn4"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_f3mpj"]
-radius = 633.7
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtjn4"]
+size = Vector2(333.33337, 966.6669)
 
 [node name="Proyectile" type="Sprite2D" unique_id=1101828014]
-scale = Vector2(0.03604584, 0.056944445)
-texture = ExtResource("1_f3mpj")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_i5acm")
+region_enabled = true
+region_rect = Rect2(1155.7401, 262.88605, 769.62646, 1266.9238)
 script = ExtResource("1_0cctl")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=113641656]
 script = ExtResource("2_f3mpj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=58528318]
-position = Vector2(0, 9.536743e-06)
-shape = SubResource("CircleShape2D_f3mpj")
+position = Vector2(-33.33332, 16.666708)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_vtjn4")
 
 [node name="Trail" type="Node" parent="." unique_id=1864695616 node_paths=PackedStringArray("bulletArea")]
 script = ExtResource("4_i5acm")
