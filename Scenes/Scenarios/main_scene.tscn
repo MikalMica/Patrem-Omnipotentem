@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://fhuk0vhv67eb"]
 
 [ext_resource type="Texture2D" uid="uid://cojotjhw2giqv" path="res://Assets/Fondo.png" id="1_5ite6"]
-[ext_resource type="Script" uid="uid://dnekf4leonu1m" path="res://Scripts/scene_register.gd" id="1_lxapd"]
+[ext_resource type="Script" path="res://Scripts/scene_register.gd" id="1_lxapd"]
 [ext_resource type="PackedScene" uid="uid://uytb14p5k0rm" path="res://Scenes/Objects/floor_placeholder.tscn" id="1_vnmfx"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="2_ulksl"]
 [ext_resource type="PackedScene" uid="uid://cocy7s3ad6vg5" path="res://Scenes/Objects/click_indicator_ui.tscn" id="4_jm5ki"]
-[ext_resource type="PackedScene" uid="uid://cryaj723lq0ib" path="res://Scenes/Objects/floor_corridor.tscn" id="4_kwead"]
-[ext_resource type="PackedScene" uid="uid://cdnv38yqf5dxk" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/floor_corridor.tscn" id="4_kwead"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/come_cables.tscn" id="6_h3cbu"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="7_5ite6"]
-[ext_resource type="ArrayMesh" uid="uid://dxk2i8scb13dw" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
+[ext_resource type="ArrayMesh" uid="uid://cek50iv2jqrjo" path="res://Assets/Meshes/farolaobj.obj" id="7_h3cbu"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="7_jpnrk"]
 [ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="7_kwead"]
 [ext_resource type="ArrayMesh" uid="uid://bydjen1ds54vo" path="res://Assets/Meshes/monitor.obj" id="8_jpnrk"]
-[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/Sounds/papeado.wav" id="9_6vav5"]
+[ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="9_6vav5"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="11_mtft4"]
-[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/Sounds/soundtrack.wav" id="12_jcxkm"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="12_jcxkm"]
 [ext_resource type="PackedScene" uid="uid://ju46qobc5e5w" path="res://Assets/Meshes/wires/pared cable color.glb" id="13_eigvp"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="14_mkx05"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/tunel.tscn" id="15_7bomk"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/Shrek.tscn" id="16_c4du3"]
+[ext_resource type="PackedScene" uid="uid://blygki8haclni" path="res://Scenes/Objects/tunel.tscn" id="15_7bomk"]
+[ext_resource type="PackedScene" uid="uid://dimpa466oc8rm" path="res://Scenes/Objects/Shrek.tscn" id="16_c4du3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_h6kwc"]
 panorama = ExtResource("1_5ite6")
@@ -1100,7 +1100,7 @@ shape = SubResource("BoxShape3D_h3cbu")
 transform = Transform3D(0.9755077, 0, -0.21996538, 0, 1, 0, 0.21996538, 0, 0.9755077, -654.5007, 15.535446, -79.43818)
 
 [node name="shrek" parent="." unique_id=2119660619 node_paths=PackedStringArray("player") instance=ExtResource("16_c4du3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -388.59396, -0.20135498, -166.18611)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -388.59396, 8.832005, -147.45833)
 player = NodePath("../Player")
 
 [editable path="come_cables"]
