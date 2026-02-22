@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ulr3ffjccnpg" path="res://Scenes/Objects/trail_link.tscn" id="5_vtjn4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtjn4"]
-size = Vector2(333.33337, 966.6669)
+size = Vector2(583.41736, 1130.5978)
 
 [node name="Proyectile" type="Sprite2D" unique_id=1101828014]
 scale = Vector2(0.1, 0.1)
@@ -20,8 +20,8 @@ script = ExtResource("1_0cctl")
 script = ExtResource("2_f3mpj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=58528318]
-position = Vector2(-33.33332, 16.666708)
-scale = Vector2(0.9999997, 0.9999997)
+position = Vector2(-35, -49.999943)
+scale = Vector2(0.59991336, 0.7429697)
 shape = SubResource("RectangleShape2D_vtjn4")
 
 [node name="Trail" type="Node" parent="." unique_id=1864695616 node_paths=PackedStringArray("bulletArea")]
