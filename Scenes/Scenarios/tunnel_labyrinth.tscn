@@ -242,7 +242,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 299.20703, -26.429688, -61.51
 shape = SubResource("BoxShape3D_0th0n")
 
 [node name="Player" parent="." unique_id=597419909 instance=ExtResource("11_hbh1i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1979866, 3.7025766, 1.5039272)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.1979866, 3.7025766, 1.5039272)
 
 [node name="shader" type="CanvasLayer" parent="." unique_id=962073725]
 layer = 10
