@@ -19,6 +19,7 @@ region_rect = Rect2(281.373, 0, 1301.63, 1369)
 
 [node name="outline" type="Sprite3D" parent="body" unique_id=1805235344]
 transform = Transform3D(1, 0, 9.313226e-10, 0, 1, 0, -9.313226e-10, 0, 1, -0.20091885, 0, -0.37277043)
+visible = false
 texture = ExtResource("3_hmh61")
 
 [node name="InteractArea" parent="." unique_id=461385779 node_paths=PackedStringArray("outline") instance=ExtResource("4_13p3m")]

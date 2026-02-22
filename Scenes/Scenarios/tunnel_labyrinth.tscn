@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://d28vpanfpm5om"]
 
-[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/Sounds/soundtrack.wav" id="1_0th0n"]
-[ext_resource type="PackedScene" uid="uid://wtmoqmqj2768" path="res://Scenes/Objects/tunel.tscn" id="1_t8hh8"]
+[ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="1_0th0n"]
+[ext_resource type="PackedScene" uid="uid://blygki8haclni" path="res://Scenes/Objects/tunel.tscn" id="1_t8hh8"]
 [ext_resource type="PackedScene" uid="uid://ctwffo4dc8s22" path="res://Scenes/Objects/tunel_t.tscn" id="2_u40kd"]
 [ext_resource type="PackedScene" uid="uid://c2ex3srnnimxc" path="res://Scenes/Objects/tunel_l.tscn" id="3_oaat8"]
 [ext_resource type="PackedScene" uid="uid://cwoss3xdc5fag" path="res://Scenes/Objects/wall.tscn" id="4_50h5r"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/monitor.tscn" id="5_o5uvm"]
+[ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="5_o5uvm"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="6_0th0n"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="7_hbh1i"]
-[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="8_epapc"]
 [ext_resource type="PackedScene" uid="uid://dndal8stijogx" path="res://Assets/Meshes/game_ready_light.glb" id="9_368xc"]
-[ext_resource type="Script" uid="uid://ci2pbmlmk2odj" path="res://Scripts/triggerScene.gd" id="11_epapc"]
+[ext_resource type="Script" path="res://Scripts/triggerScene.gd" id="11_epapc"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="11_hbh1i"]
+[ext_resource type="PackedScene" uid="uid://celesr8piu3iu" path="res://Scenes/Objects/lesbiana.tscn" id="12_368xc"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="12_epapc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0th0n"]
@@ -208,10 +208,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 485.
 [node name="pared de cables20" parent="Tunnels" unique_id=1460153776 instance=ExtResource("7_hbh1i")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 603.5382, -20.551453, -91.81326)
 
-[node name="npc_base" parent="Tunnels" unique_id=840245654 node_paths=PackedStringArray("player") instance=ExtResource("8_epapc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 375.70728, 8.391466, 95.20089)
-player = NodePath("../../Player")
-
 [node name="Luz" parent="Tunnels" unique_id=1113688591 instance=ExtResource("9_368xc")]
 transform = Transform3D(-8.3226485e-07, 0, 19.04, 0, 19.04, 0, -19.04, 0, -8.3226485e-07, 285.5085, 35.714542, 2.759426)
 
@@ -256,6 +252,10 @@ ScenePath = "res://Scenes/Scenarios/CableRoom.tscn"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tunnels/Area3D" unique_id=1261076507]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7519226, 20.18628, 4.0361958)
 shape = SubResource("BoxShape3D_hbh1i")
+
+[node name="npc_base2" parent="Tunnels" unique_id=1800550365 node_paths=PackedStringArray("player") instance=ExtResource("12_368xc")]
+transform = Transform3D(0.7793289, 0, 0, 0, 0.7793289, 0, 0, 0, 0.7793289, 346.4879, 11.314392, 103.57109)
+player = NodePath("../../Player")
 
 [node name="Player" parent="." unique_id=597419909 instance=ExtResource("11_hbh1i")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.1979866, 3.7025766, 1.5039272)
