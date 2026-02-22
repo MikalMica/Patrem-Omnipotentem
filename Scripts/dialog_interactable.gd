@@ -3,6 +3,7 @@ extends Area3D
 @export var outline : Sprite3D 
 @export var dialog : DialogueResource
 @export var interact_canvas : TextFadeIn
+@export var enemyName : String
 
 var player_is_near : bool
 var in_dialogue : bool = false
@@ -28,7 +29,7 @@ func on_body_change(body : Node3D, entered : bool) -> void:
 			interact_canvas.fade_in()
 
 func _input(event: InputEvent) -> void:
-	if(player_is_near and event.is_action_pressed("Interact") and not in_dialogue and not SaveSceneState.inDialogue()):
+	if(player_is_near and event.is_action_pressed("Interact") and not in_dialogue and !SaveSceneState.is_defeated(enemyName)):
 		in_dialogue = true
 		SaveSceneState.savePlayerTrans(player)
 		SaveSceneState.saveNextDialogue(dialog, "CombatEnd")
