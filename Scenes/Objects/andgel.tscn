@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://i2gl706qt332"]
+
+[ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="1_oaww4"]
+[ext_resource type="Texture2D" uid="uid://bwcmala0r1tsj" path="res://Assets/Sprites/Angel/Angel.png" id="2_g1oce"]
+[ext_resource type="Texture2D" uid="uid://eg0ulrgjsa2f" path="res://Assets/Sprites/Angel/AngelOutline.png" id="3_y8j5s"]
+
+[node name="npc_base" unique_id=840245654 instance=ExtResource("1_oaww4")]
+
+[node name="body" parent="." index="1" unique_id=1387285422]
+texture = ExtResource("2_g1oce")
+region_rect = Rect2(178, 335, 2056, 2609)
+
+[node name="outline" parent="body" index="0" unique_id=1805235344]
+transform = Transform3D(1, 0, 9.313226e-10, 0, 1, 0, -9.313226e-10, 0, 1, -0.60056937, 1.3711605, -0.37715796)
+texture = ExtResource("3_y8j5s")
