@@ -245,6 +245,9 @@ transform = Transform3D(-0.648638, 0, 0.76109695, 0, 1, 0, -0.76109695, 0, -0.64
 [node name="servidores2" parent="mundo" unique_id=1237587200 instance=ExtResource("5_5knis")]
 transform = Transform3D(0.82122886, 0, 0.5705989, 0, 1, 0, -0.5705989, 0, 0.82122886, -59.959126, 0.3444631, -3.6092143)
 
+[node name="servidores8" parent="mundo" unique_id=1590302481 instance=ExtResource("5_5knis")]
+transform = Transform3D(-0.18196097, 0, 0.9833059, 0, 1, 0, -0.9833059, 0, -0.18196097, -54.513885, 0.3444631, 6.3758774)
+
 [node name="servidores3" parent="mundo" unique_id=1348437866 instance=ExtResource("5_5knis")]
 transform = Transform3D(0.7397721, 0, 0.67285764, 0, 1, 0, -0.67285764, 0, 0.7397721, -45.32491, 0.3444631, -10.718882)
 
