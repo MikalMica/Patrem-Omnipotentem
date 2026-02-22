@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://celesr8piu3iu"]
+[gd_scene format=3 uid="uid://b0p00p4gynsyh"]
 
 [ext_resource type="Script" uid="uid://bfo4gsietvbv7" path="res://Scripts/billboarding.gd" id="1_kk4bi"]
 [ext_resource type="Texture2D" uid="uid://cot6pxsdwbn35" path="res://Assets/Sprites/Mecanica.png" id="2_kk4bi"]
@@ -25,3 +25,4 @@ texture = ExtResource("3_hmh61")
 [node name="InteractArea" parent="." unique_id=461385779 node_paths=PackedStringArray("outline") instance=ExtResource("4_13p3m")]
 outline = NodePath("../body/outline")
 dialog = ExtResource("5_xjnlr")
+enemyName = "Lesbiana"

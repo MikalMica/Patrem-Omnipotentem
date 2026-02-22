@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cnklvawlvsqr" path="res://Scenes/Objects/npc_base.tscn" id="1_rll3q"]
 [ext_resource type="Texture2D" uid="uid://d31ed7ln1wdam" path="res://Assets/Sprites/TheHanged/TheHanged.png" id="2_h7icc"]
 [ext_resource type="Texture2D" uid="uid://i8i5vvb3l8np" path="res://Assets/Sprites/TheHanged/The_Hanged_OUTLINE.png" id="3_88la2"]
-[ext_resource type="Resource" uid="uid://bffn72hort36a" path="res://Assets/Dialogues/BOCABAJO.dialogue" id="3_d7lff"]
+[ext_resource type="Resource" uid="uid://673ga3xvtyfk" path="res://Assets/Dialogues/BOCABAJO.dialogue" id="3_d7lff"]
 
 [node name="npc_base" unique_id=840245654 instance=ExtResource("1_rll3q")]
 
@@ -21,5 +21,6 @@ texture = ExtResource("3_88la2")
 [node name="InteractArea" parent="." index="2" unique_id=461385779]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.325475, 0)
 dialog = ExtResource("3_d7lff")
+enemyName = "Bocabajo"
 
 [editable path="InteractArea"]
