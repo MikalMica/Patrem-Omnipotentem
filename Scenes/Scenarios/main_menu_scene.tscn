@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://dunhwmspu2ylp" path="res://Scripts/main_menu_scene.gd" id="1_8un3e"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="2_424te"]
 [ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="3_jrvk8"]
+[ext_resource type="Texture2D" uid="uid://fodbkvlyrkt0" path="res://Assets/Sprites/Patrem.png" id="3_lyt50"]
 [ext_resource type="FontFile" uid="uid://c77ctv1jc5aj7" path="res://Assets/fonts/ACID_REF.TTF" id="4_lyt50"]
+[ext_resource type="Script" uid="uid://lksewwcbgy0f" path="res://Scripts/image_fade.gd" id="4_wnqfs"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="5_424te"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ggu5f"]
@@ -40,7 +42,11 @@ shader_parameter/glow_threshold = 0.65
 
 [node name="main_menu_scene" type="Control" unique_id=107082614]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_8un3e")
 
 [node name="background" type="TextureRect" parent="." unique_id=1721727080]
@@ -53,6 +59,23 @@ offset_right = -157.87938
 offset_bottom = 4.8601227
 scale = Vector2(16.0625, 8.9375)
 texture = ExtResource("2_424te")
+
+[node name="patrem" type="TextureRect" parent="." unique_id=1520775717]
+modulate = Color(1, 1, 1, 0.1882353)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -810.0
+offset_top = 11.0
+offset_right = 637.0
+offset_bottom = 1397.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_lyt50")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_wnqfs")
 
 [node name="Label" type="Label" parent="." unique_id=1592083763]
 layout_mode = 0

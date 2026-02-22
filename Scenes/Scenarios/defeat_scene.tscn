@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://456em218174n" path="res://Scripts/defeat_scene.gd" id="1_tcjc7"]
 [ext_resource type="FontFile" uid="uid://dhkgwjgsooo1d" path="res://Assets/fonts/ExtraBlur.ttf" id="2_tcjc7"]
 [ext_resource type="FontFile" uid="uid://c77ctv1jc5aj7" path="res://Assets/fonts/ACID_REF.TTF" id="3_k2yfa"]
+[ext_resource type="Texture2D" uid="uid://fodbkvlyrkt0" path="res://Assets/Sprites/Patrem.png" id="3_poa7g"]
+[ext_resource type="Script" uid="uid://lksewwcbgy0f" path="res://Scripts/image_fade.gd" id="4_eup1n"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="5_k2yfa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ggu5f"]
@@ -40,7 +42,11 @@ shader_parameter/glow_threshold = 0.65
 
 [node name="defeat_scene" type="Control" unique_id=780597902]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_tcjc7")
 
 [node name="background" type="TextureRect" parent="." unique_id=2014567862]
@@ -53,6 +59,22 @@ offset_right = 22.408554
 offset_bottom = 9.461533
 scale = Vector2(16.0625, 8.9375)
 texture = ExtResource("1_5wdp2")
+
+[node name="patrem" type="TextureRect" parent="." unique_id=1846646929]
+modulate = Color(1, 1, 1, 0.1882353)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -639.0
+offset_right = 494.0
+offset_bottom = 1604.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_poa7g")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("4_eup1n")
 
 [node name="Label" type="Label" parent="." unique_id=1592083763]
 layout_mode = 0
