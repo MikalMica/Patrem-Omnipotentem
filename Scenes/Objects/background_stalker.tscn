@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dtestuwkr6s75"]
+
+[ext_resource type="Texture2D" uid="uid://cpmusf2ttybuc" path="res://Assets/Sprites/Vaquerizo.png" id="1_v66np"]
+
+[node name="background_stalker" type="Sprite2D" unique_id=478206141]
+modulate = Color(1, 1, 1, 0.14117648)
+scale = Vector2(0.60000014, 0.60000014)
+texture = ExtResource("1_v66np")

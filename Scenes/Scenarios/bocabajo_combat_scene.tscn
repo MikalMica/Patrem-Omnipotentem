@@ -2,12 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_mhmbe"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_grpqj"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_eb761"]
+[ext_resource type="PackedScene" uid="uid://d25mq0uxv08tj" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_eb761"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_a010b"]
 [ext_resource type="Resource" uid="uid://bx43nh8w6f2x0" path="res://BOCAABAJO_COMBATE.dialogue" id="5_mhmbe"]
+[ext_resource type="Script" uid="uid://d3ml5oc5wl1tl" path="res://Scripts/attack_settings.gd" id="6_grpqj"]
 [ext_resource type="Script" path="res://Scripts/combatTransition.gd" id="6_o1ghi"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="7_4tf3u"]
 [ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/sounds/pelea.wav" id="8_tbihr"]
+
+[sub_resource type="Resource" id="Resource_eb761"]
+script = ExtResource("6_grpqj")
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
+
+[sub_resource type="Resource" id="Resource_a010b"]
+script = ExtResource("6_grpqj")
+density = 5
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0rcf7"]
 
@@ -90,9 +100,9 @@ position = Vector2(643, 352)
 position = Vector2(-449, -248)
 script = ExtResource("2_grpqj")
 attacks = Array[PackedScene]([ExtResource("3_eb761"), ExtResource("4_a010b")])
-nAttacks = 3
 dialogue = ExtResource("5_mhmbe")
 enemyName = "Bocabajo"
+attack_settings = Array[ExtResource("6_grpqj")]([SubResource("Resource_eb761"), SubResource("Resource_a010b")])
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
 

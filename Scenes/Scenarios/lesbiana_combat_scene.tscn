@@ -2,12 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_e5yim"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_0hw85"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_j2r7m"]
+[ext_resource type="PackedScene" uid="uid://d25mq0uxv08tj" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_j2r7m"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_rvhba"]
 [ext_resource type="Resource" uid="uid://2325ngjkiawv" path="res://INGENIERA_COMBATE.dialogue" id="5_e5yim"]
+[ext_resource type="Script" uid="uid://d3ml5oc5wl1tl" path="res://Scripts/attack_settings.gd" id="6_0hw85"]
 [ext_resource type="Script" path="res://Scripts/combatTransition.gd" id="6_ijxpn"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="7_fjbyc"]
 [ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/sounds/pelea.wav" id="8_lrios"]
+
+[sub_resource type="Resource" id="Resource_j2r7m"]
+script = ExtResource("6_0hw85")
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
+
+[sub_resource type="Resource" id="Resource_rvhba"]
+script = ExtResource("6_0hw85")
+density = 5
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0rcf7"]
 
@@ -90,9 +100,9 @@ position = Vector2(643, 352)
 position = Vector2(-449, -248)
 script = ExtResource("2_0hw85")
 attacks = Array[PackedScene]([ExtResource("3_j2r7m"), ExtResource("4_rvhba")])
-nAttacks = 3
 dialogue = ExtResource("5_e5yim")
 enemyName = "Lesbiana"
+attack_settings = Array[ExtResource("6_0hw85")]([SubResource("Resource_j2r7m"), SubResource("Resource_rvhba")])
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
 

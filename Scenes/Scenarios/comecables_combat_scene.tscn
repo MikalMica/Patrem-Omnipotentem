@@ -2,12 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_jh3l7"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_dieae"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_ypmj8"]
+[ext_resource type="PackedScene" uid="uid://d25mq0uxv08tj" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_ypmj8"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_7hwpq"]
 [ext_resource type="Resource" uid="uid://iafk4vhro8s" path="res://COMECABLES_COMBATE.dialogue" id="5_jh3l7"]
 [ext_resource type="Script" path="res://Scripts/combatTransition.gd" id="6_7ujxs"]
+[ext_resource type="Script" uid="uid://d3ml5oc5wl1tl" path="res://Scripts/attack_settings.gd" id="6_dieae"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="7_7erej"]
 [ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/sounds/pelea.wav" id="8_750gj"]
+
+[sub_resource type="Resource" id="Resource_ypmj8"]
+script = ExtResource("6_dieae")
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
+
+[sub_resource type="Resource" id="Resource_7hwpq"]
+script = ExtResource("6_dieae")
+density = 5
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0rcf7"]
 
@@ -90,9 +100,9 @@ position = Vector2(643, 352)
 position = Vector2(-449, -248)
 script = ExtResource("2_dieae")
 attacks = Array[PackedScene]([ExtResource("3_ypmj8"), ExtResource("4_7hwpq")])
-nAttacks = 3
 dialogue = ExtResource("5_jh3l7")
 enemyName = "Comecables"
+attack_settings = Array[ExtResource("6_dieae")]([SubResource("Resource_ypmj8"), SubResource("Resource_7hwpq")])
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
 
