@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://crwacyaarvjea"]
 
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_mhmbe"]
+[ext_resource type="PackedScene" uid="uid://dtestuwkr6s75" path="res://Scenes/Objects/background_stalker.tscn" id="1_sdnvd"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_grpqj"]
+[ext_resource type="Texture2D" uid="uid://d31ed7ln1wdam" path="res://Assets/Sprites/TheHanged/TheHanged.png" id="2_o1ghi"]
+[ext_resource type="Script" uid="uid://c4s10006jq08m" path="res://Scripts/background_stalker.gd" id="3_4tf3u"]
 [ext_resource type="PackedScene" uid="uid://d25mq0uxv08tj" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_eb761"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_a010b"]
 [ext_resource type="Resource" uid="uid://bx43nh8w6f2x0" path="res://BOCAABAJO_COMBATE.dialogue" id="5_mhmbe"]
@@ -92,6 +95,12 @@ _data = {
 }
 
 [node name="CombatScene" type="Node2D" unique_id=835763651]
+
+[node name="background_stalker" parent="." unique_id=478206141 instance=ExtResource("1_sdnvd")]
+position = Vector2(615, -152)
+scale = Vector2(0.6800001, 0.6800001)
+texture = ExtResource("2_o1ghi")
+script = ExtResource("3_4tf3u")
 
 [node name="PlayerSymbol" parent="." unique_id=1723358663 instance=ExtResource("1_mhmbe")]
 position = Vector2(643, 352)
