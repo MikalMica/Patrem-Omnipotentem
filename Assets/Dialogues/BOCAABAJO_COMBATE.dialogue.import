@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bx43nh8w6f2x0"
+path="res://.godot/imported/BOCAABAJO_COMBATE.dialogue-8dd520c03b4b94bc0f49c7d3fab4084d.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/BOCAABAJO_COMBATE.dialogue"
+dest_files=["res://.godot/imported/BOCAABAJO_COMBATE.dialogue-8dd520c03b4b94bc0f49c7d3fab4084d.tres"]
+
+[params]
+
+defaults=true

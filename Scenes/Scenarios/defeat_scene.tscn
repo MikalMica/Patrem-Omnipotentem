@@ -126,7 +126,7 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
 theme_override_fonts/font = ExtResource("3_k2yfa")
 theme_override_font_sizes/font_size = 50
-text = "Antes muerto"
+text = "Seguir luchando"
 
 [node name="shader" type="CanvasLayer" parent="." unique_id=1651622094]
 layer = 10

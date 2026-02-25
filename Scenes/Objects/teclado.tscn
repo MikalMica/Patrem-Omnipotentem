@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c783km3wpyanq" path="res://Assets/Sprites/Teclado.png" id="2_ob47d"]
 [ext_resource type="Texture2D" uid="uid://cr832b67yfenf" path="res://Assets/Sprites/Teclado zoutline.png" id="3_n70p1"]
 [ext_resource type="PackedScene" uid="uid://cjbmxvjw7qqpp" path="res://Scenes/Objects/interact_area.tscn" id="4_v8urt"]
-[ext_resource type="Resource" uid="uid://1n7amxbva7uq" path="res://FINAL.dialogue" id="5_ob47d"]
+[ext_resource type="Resource" uid="uid://1n7amxbva7uq" path="res://Assets/Dialogues/FINAL.dialogue" id="5_ob47d"]
 
 [node name="npc_base" type="Node3D" unique_id=840245654]
 script = ExtResource("1_ob47d")

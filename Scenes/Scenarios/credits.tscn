@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://cxwkaslf3jwru" path="res://Assets/fonts/Px437_IBM_Conv-2y.ttf" id="1_2if84"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="1_abrwn"]
+[ext_resource type="Script" uid="uid://c0niirdhsks7l" path="res://Scripts/credits.gd" id="2_rejnc"]
 
 [sub_resource type="Theme" id="Theme_rejnc"]
 default_font = ExtResource("1_2if84")
@@ -53,35 +54,16 @@ color = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 47.0
 offset_top = 44.0
-offset_right = 1891.0
-offset_bottom = 1550.0
+offset_right = 1874.0
+offset_bottom = 2817.0
 theme = SubResource("Theme_rejnc")
-text = "/init:  /init: 151 Syntaxt error:  0xPatrem=panic
-Kernel panic - Fatal Exception
-
---- Programación ---
-Micaela Rodriguez y  Diego Caballero
-
---- Diseño ---
-Pues buena pregunta
-
---- Arte 2D ---
-Javier Valseca
-Mayte APELLIDO
-
---- Arte 3D ---
-Mayte APELLIDO
-
---- Guión ---
-Eri Solórzano 
-
---- Diseño de entornos ---
-Eri Solórzano
-
---- Música y diseño sonoro---
-Mars Laguna
-
-"
+text = "/init:  /init: 151 Syntaxt error:  0xPatrem=panic"
+script = ExtResource("2_rejnc")
+array = ["Kernel panic - Fatal Exception", "", "--- Programación ---", "Micaela Rodriguez y  Diego Caballero", "", "--- Diseño ---", "Eri Solórzano", "", "--- Arte 2D ---", "Javier Valseca y Mayte APELLIDO", "", "--- Arte 3D ---", "Mayte APELLIDO", "", "--- Guión ---", "Eri Solórzano ", "", "--- Música ---", "Mars Laguna", "", "--- Assets adicionales ---", "Iglesia Low Poly por AlexFerrart3D (Sketchfav)", "Farola Low Poly por lupas (Sketchfav)", "Un montón de imágenes que Javi alfonsificó", "Luz game-ready por Voidy Entertainment (Sektchfav)", "Godot Dialogue Manager por Nathan Hoad", "Shader CRT + VHS por banwarfarms", "", "--- Agradecimientos ---", "Mario Vaquerizo", "Rubens por sus frases en latin", "", "", "-----------------", "   ___                     _             ", "  / __|  _ _   __ _   __  (_)  __ _   ___", " | (_ | | '_| / _` | / _| | | / _` | (_-<", "  \\___| |_|   \\__,_| \\__| |_| \\__,_| /__/", "", "-----------------"]
+timeForLine = 0.7
+linesToScroll = 12
+scrollAmount = 60
+timeForEnd = 4.0
 
 [node name="shader" type="CanvasLayer" parent="." unique_id=1665689748]
 layer = 10

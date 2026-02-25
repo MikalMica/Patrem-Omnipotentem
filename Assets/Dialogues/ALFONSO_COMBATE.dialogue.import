@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cmhq3m88jmyon"
+path="res://.godot/imported/ALFONSO_COMBATE.dialogue-fd4f33e360f313d5d9f4dd93b3b877d0.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/ALFONSO_COMBATE.dialogue"
+dest_files=["res://.godot/imported/ALFONSO_COMBATE.dialogue-fd4f33e360f313d5d9f4dd93b3b877d0.tres"]
+
+[params]
+
+defaults=true

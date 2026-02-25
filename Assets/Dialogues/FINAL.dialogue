@@ -5,5 +5,5 @@ Es... Agradable.
 ET HAERETICUS COGITAT...: v v v  
 - << Aceptas al Padre en tu corazón. >>
 - << Tiras del cable. Con fuerza. >>
-do SceneManager.change_scene("res://Scenes/Scenarios/main_menu_scene.tscn")
+do SceneManager.change_scene("res://Scenes/Scenarios/credits.tscn")
 => END

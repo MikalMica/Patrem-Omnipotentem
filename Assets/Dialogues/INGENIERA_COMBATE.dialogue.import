@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://2325ngjkiawv"
+path="res://.godot/imported/INGENIERA_COMBATE.dialogue-b98763f8ce3cb14fbdb23da45ef82e34.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/INGENIERA_COMBATE.dialogue"
+dest_files=["res://.godot/imported/INGENIERA_COMBATE.dialogue-b98763f8ce3cb14fbdb23da45ef82e34.tres"]
+
+[params]
+
+defaults=true

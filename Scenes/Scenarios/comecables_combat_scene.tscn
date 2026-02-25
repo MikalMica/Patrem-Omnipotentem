@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_dieae"]
 [ext_resource type="PackedScene" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_ypmj8"]
 [ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_7hwpq"]
-[ext_resource type="Resource" uid="uid://iafk4vhro8s" path="res://COMECABLES_COMBATE.dialogue" id="5_jh3l7"]
+[ext_resource type="Resource" uid="uid://iafk4vhro8s" path="res://Assets/Dialogues/COMECABLES_COMBATE.dialogue" id="5_jh3l7"]
 [ext_resource type="Script" path="res://Scripts/combatTransition.gd" id="6_7ujxs"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="7_7erej"]
 [ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/sounds/pelea.wav" id="8_750gj"]
