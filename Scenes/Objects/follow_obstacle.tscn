@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://besjfew4uyl7a"]
+[gd_scene format=3 uid="uid://dh2d1t5loa7iv"]
 
 [ext_resource type="Script" uid="uid://bj2s8tvr074e6" path="res://Scripts/follow_and_kill_player.gd" id="1_0cctl"]
-[ext_resource type="Texture2D" uid="uid://cx7oa826oxd23" path="res://Assets/Sprites/enchufe.png" id="1_i5acm"]
+[ext_resource type="Texture2D" uid="uid://bsmt3qeenkd8a" path="res://Assets/Sprites/enchufe.png" id="1_i5acm"]
 [ext_resource type="Script" uid="uid://dosmxk3i22yjh" path="res://Scripts/HurtPlayer.gd" id="2_f3mpj"]
 [ext_resource type="Script" uid="uid://dw73j5ay5tcpt" path="res://Scripts/trail.gd" id="4_i5acm"]
 [ext_resource type="PackedScene" uid="uid://ulr3ffjccnpg" path="res://Scenes/Objects/trail_link.tscn" id="5_vtjn4"]
