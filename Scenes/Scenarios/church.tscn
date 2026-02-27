@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b52fi8tnfrgpw"]
 
+[ext_resource type="Script" uid="uid://dnekf4leonu1m" path="res://Scripts/scene_register.gd" id="1_f6sj6"]
 [ext_resource type="PackedScene" uid="uid://be1cu1y3l22ka" path="res://Scenes/Objects/player.tscn" id="1_xfja8"]
 [ext_resource type="PackedScene" uid="uid://ck3dnnn5jld3w" path="res://Scenes/Objects/alfonso.tscn" id="2_vg00v"]
 [ext_resource type="Shader" uid="uid://dl02vj4j10q4a" path="res://Scripts/shaders/vhs.gdshader" id="3_db6tb"]
@@ -98,7 +99,8 @@ size = Vector3(25.471844, 1, 21.095722)
 [sub_resource type="BoxShape3D" id="BoxShape3D_3tsjs"]
 size = Vector3(14.011663, 1, 21.095722)
 
-[node name="Church" type="Node2D" unique_id=1848605186]
+[node name="Church" type="Node3D" unique_id=660700535]
+script = ExtResource("1_f6sj6")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=799079513]
 environment = SubResource("Environment_h0a4c")
