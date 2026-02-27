@@ -59,8 +59,8 @@ offset_bottom = 2817.0
 theme = SubResource("Theme_rejnc")
 text = "/init:  /init: 151 Syntaxt error:  0xPatrem=panic"
 script = ExtResource("2_rejnc")
-array = ["Kernel panic - Fatal Exception", "", "--- Programación ---", "Micaela Rodriguez y  Diego Caballero", "", "--- Diseño ---", "Eri Solórzano", "", "--- Arte 2D ---", "Javier Valseca y Mayte APELLIDO", "", "--- Arte 3D ---", "Mayte APELLIDO", "", "--- Guión ---", "Eri Solórzano ", "", "--- Música ---", "Mars Laguna", "", "--- Assets adicionales ---", "Iglesia Low Poly por AlexFerrart3D (Sketchfav)", "Farola Low Poly por lupas (Sketchfav)", "Un montón de imágenes que Javi alfonsificó", "Luz game-ready por Voidy Entertainment (Sektchfav)", "Godot Dialogue Manager por Nathan Hoad", "Shader CRT + VHS por banwarfarms", "", "--- Agradecimientos ---", "Mario Vaquerizo", "Rubens por sus frases en latin", "", "", "-----------------", "   ___                     _             ", "  / __|  _ _   __ _   __  (_)  __ _   ___", " | (_ | | '_| / _` | / _| | | / _` | (_-<", "  \\___| |_|   \\__,_| \\__| |_| \\__,_| /__/", "", "-----------------"]
-timeForLine = 0.7
+array = ["Kernel panic - Fatal Exception", "", "--- Programación ---", "Micaela Rodriguez y  Diego Caballero", "", "--- Diseño ---", "Eri Solórzano", "", "--- Arte 2D ---", "Javier Valseca y Mayte Jaen", "", "--- Arte 3D ---", "Mayte Jaen", "", "--- Guión ---", "Eri Solórzano ", "", "--- Música ---", "Mars Laguna", "", "--- Assets adicionales ---", "Iglesia Low Poly por AlexFerrart3D (Sketchfav)", "Farola Low Poly por lupas (Sketchfav)", "Un montón de imágenes que Javi alfonsificó", "Luz game-ready por Voidy Entertainment (Sektchfav)", "Godot Dialogue Manager por Nathan Hoad", "Shader CRT + VHS por banwarfarms", "", "--- Agradecimientos ---", "Mario Vaquerizo", "Rubens por sus frases en latin", "", "", "-----------------", "   ___                     _             ", "  / __|  _ _   __ _   __  (_)  __ _   ___", " | (_ | | '_| / _` | / _| | | / _` | (_-<", "  \\___| |_|   \\__,_| \\__| |_| \\__,_| /__/", "", "-----------------"]
+timeForLine = 1.0
 linesToScroll = 12
 scrollAmount = 60
 timeForEnd = 4.0
