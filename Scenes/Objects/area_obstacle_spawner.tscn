@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://du0fldnr4vtju" path="res://Scripts/appear_in_area.gd" id="1_hnooy"]
 [ext_resource type="PackedScene" uid="uid://c0ug0vm2iuhhm" path="res://Scenes/Objects/screen_area.tscn" id="2_hnooy"]
 
-[node name="FollowAndTrace" type="Sprite2D" unique_id=1663664325]
+[node name="AreaObstacle" type="Sprite2D" unique_id=1663664325]
 script = ExtResource("1_hnooy")
 obstacle = ExtResource("2_hnooy")
 radius = 1700.0

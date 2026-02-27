@@ -1,13 +1,40 @@
 [gd_scene format=3 uid="uid://d0fj54h03wnk3"]
 
+[ext_resource type="PackedScene" uid="uid://dtestuwkr6s75" path="res://Scenes/Objects/background_stalker.tscn" id="1_hf87n"]
 [ext_resource type="PackedScene" uid="uid://d1yf0ranyurq7" path="res://Scenes/Objects/player_symbol.tscn" id="1_p7s1m"]
 [ext_resource type="Script" uid="uid://dway2qno3gla7" path="res://Scripts/CombatHandler.gd" id="2_bfe3q"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_hf87n"]
-[ext_resource type="PackedScene" uid="uid://c47nuqmygcvhh" path="res://Scenes/Objects/area_obstacle_spawner.tscn" id="4_kx7bi"]
-[ext_resource type="Resource" uid="uid://cmhq3m88jmyon" path="res://Assets/Dialogues/ALFONSO_COMBATE.dialogue" id="5_p7s1m"]
+[ext_resource type="Texture2D" uid="uid://cpfxd48tmsjkp" path="res://Assets/Sprites/Alfonso/Alfonso.png" id="2_kx7bi"]
+[ext_resource type="PackedScene" uid="uid://d25mq0uxv08tj" path="res://Scenes/Objects/follow_obstacle_spawner.tscn" id="3_hf87n"]
+[ext_resource type="Script" uid="uid://c4s10006jq08m" path="res://Scripts/background_stalker.gd" id="3_l5qmh"]
+[ext_resource type="Resource" uid="uid://cmhq3m88jmyon" path="res://ALFONSO_COMBATE.dialogue" id="5_p7s1m"]
+[ext_resource type="Script" uid="uid://d3ml5oc5wl1tl" path="res://Scripts/attack_settings.gd" id="6_bfe3q"]
 [ext_resource type="Script" path="res://Scripts/combatTransition.gd" id="6_ul77o"]
 [ext_resource type="Texture2D" uid="uid://sy6nbcx3fy31" path="res://Assets/Placeholders/icon.svg" id="7_rqbw2"]
 [ext_resource type="AudioStream" uid="uid://1q837a2cwok7" path="res://Assets/sounds/pelea.wav" id="8_pfsuf"]
+
+[sub_resource type="Resource" id="Resource_hf87n"]
+script = ExtResource("6_bfe3q")
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
+
+[sub_resource type="Resource" id="Resource_kx7bi"]
+script = ExtResource("6_bfe3q")
+density = 5
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
+
+[sub_resource type="Resource" id="Resource_l5qmh"]
+script = ExtResource("6_bfe3q")
+density = 5
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
+
+[sub_resource type="Resource" id="Resource_ul77o"]
+script = ExtResource("6_bfe3q")
+density = 5
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
+
+[sub_resource type="Resource" id="Resource_rqbw2"]
+script = ExtResource("6_bfe3q")
+speed = 0.1
+metadata/_custom_type_script = "uid://d3ml5oc5wl1tl"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0rcf7"]
 
@@ -83,16 +110,21 @@ _data = {
 
 [node name="CombatScene3" type="Node2D" unique_id=835763651]
 
+[node name="background_stalker" parent="." unique_id=478206141 instance=ExtResource("1_hf87n")]
+position = Vector2(574, 641)
+texture = ExtResource("2_kx7bi")
+script = ExtResource("3_l5qmh")
+
 [node name="PlayerSymbol" parent="." unique_id=1723358663 instance=ExtResource("1_p7s1m")]
 position = Vector2(643, 352)
 
 [node name="CombatHandler" type="Node2D" parent="." unique_id=1442692332]
 position = Vector2(-449, -248)
 script = ExtResource("2_bfe3q")
-attacks = Array[PackedScene]([ExtResource("3_hf87n"), ExtResource("4_kx7bi")])
-nAttacks = 5
+attacks = Array[PackedScene]([ExtResource("3_hf87n")])
 dialogue = ExtResource("5_p7s1m")
 enemyName = "Alfonso"
+attack_settings = Array[ExtResource("6_bfe3q")]([SubResource("Resource_hf87n"), SubResource("Resource_kx7bi"), SubResource("Resource_l5qmh"), SubResource("Resource_ul77o"), SubResource("Resource_rqbw2")])
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=549923059]
 
