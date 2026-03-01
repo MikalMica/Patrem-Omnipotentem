@@ -8,13 +8,14 @@
 [ext_resource type="ArrayMesh" uid="uid://dgfwj762b7fpg" path="res://Assets/Meshes/untitled.obj" id="5_f6sj6"]
 [ext_resource type="PackedScene" uid="uid://b2q77yun84kyx" path="res://Assets/Meshes/servidores.glb" id="6_xft7t"]
 [ext_resource type="PackedScene" uid="uid://tl0ptpy208rh" path="res://Assets/Meshes/altarcross.glb" id="7_gubs2"]
+[ext_resource type="Texture2D" uid="uid://blpcgm5c837u8" path="res://Assets/pcb.jpg" id="7_xft7t"]
 [ext_resource type="PackedScene" uid="uid://crogy6uhejr0a" path="res://Scenes/Objects/monitor.tscn" id="8_h84p4"]
 [ext_resource type="PackedScene" uid="uid://x2hl4ofo0kpp" path="res://Assets/Meshes/wires/pared de cables3.glb" id="9_wrym6"]
 [ext_resource type="Texture2D" uid="uid://dvd6lcwq1ji5r" path="res://Assets/Sprites/ANGELCROSS.png" id="10_qjiek"]
 [ext_resource type="AudioStream" uid="uid://cuna1lkppkgh2" path="res://Assets/sounds/soundtrack.wav" id="11_84c0n"]
-[ext_resource type="PackedScene" uid="uid://cwsxrt7opfa12" path="res://Scenes/Objects/hand_canvas.tscn" id="12_db6tb"]
+[ext_resource type="PackedScene" path="res://Scenes/Objects/hand_canvas.tscn" id="12_db6tb"]
 [ext_resource type="AudioStream" uid="uid://d17312ov7mpwi" path="res://Assets/sounds/papeado.wav" id="13_5t0be"]
-[ext_resource type="PackedScene" path="res://Scenes/Objects/teclado.tscn" id="14_5t0be"]
+[ext_resource type="PackedScene" uid="uid://co01yticgpcg4" path="res://Scenes/Objects/teclado.tscn" id="14_5t0be"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4ofem"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -71,6 +72,9 @@ albedo_color = Color(0.175, 2.822, 0.309, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wjb2"]
 resource_local_to_scene = true
 albedo_color = Color(0.229, 3.505, 0.395, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gubs2"]
+albedo_texture = ExtResource("7_xft7t")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqu8f"]
 resource_local_to_scene = true
@@ -165,6 +169,12 @@ skeleton = NodePath("../..")
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="mundo" unique_id=974233015]
 transform = Transform3D(-4.1498572e-07, -0.9999998, 0, 9.493766, -4.371138e-08, 0, 0, 0, 3.1683517, 25.148014, 8.645193, 14.743755)
 material_override = SubResource("StandardMaterial3D_5wjb2")
+mesh = SubResource("PlaneMesh_p1f3h")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="mundo" unique_id=500788652]
+transform = Transform3D(-4.780098e-07, -0.9999998, 0, 10.935588, -4.371138e-08, 0, 0, 0, 5.3741593, 25.148014, 8.645193, 5.2282524)
+material_override = SubResource("StandardMaterial3D_gubs2")
 mesh = SubResource("PlaneMesh_p1f3h")
 skeleton = NodePath("../..")
 
